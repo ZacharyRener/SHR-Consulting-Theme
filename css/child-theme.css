@@ -1690,16 +1690,88 @@ pre {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25); }
+<<<<<<< HEAD
   .form-control::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder, .wpcf7 input[type=search]::-webkit-input-placeholder, .wpcf7 input[type=url]::-webkit-input-placeholder, .wpcf7 input[type=tel]::-webkit-input-placeholder, .wpcf7 input[type=number]::-webkit-input-placeholder, .wpcf7 input[type=range]::-webkit-input-placeholder, .wpcf7 input[type=date]::-webkit-input-placeholder, .wpcf7 input[type=month]::-webkit-input-placeholder, .wpcf7 input[type=week]::-webkit-input-placeholder, .wpcf7 input[type=time]::-webkit-input-placeholder, .wpcf7 input[type=datetime]::-webkit-input-placeholder, .wpcf7 input[type=datetime-local]::-webkit-input-placeholder, .wpcf7 input[type=color]::-webkit-input-placeholder, .wpcf7 input[type=email]::-webkit-input-placeholder, .wpcf7 input[type=file]::-webkit-input-placeholder, .wpcf7 input[type=submit]::-webkit-input-placeholder, .wpcf7 select::-webkit-input-placeholder, .wpcf7 textarea::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder {
+=======
+  .form-control::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder,
+  .wpcf7 input[type=search]::-webkit-input-placeholder,
+  .wpcf7 input[type=url]::-webkit-input-placeholder,
+  .wpcf7 input[type=tel]::-webkit-input-placeholder,
+  .wpcf7 input[type=number]::-webkit-input-placeholder,
+  .wpcf7 input[type=range]::-webkit-input-placeholder,
+  .wpcf7 input[type=date]::-webkit-input-placeholder,
+  .wpcf7 input[type=month]::-webkit-input-placeholder,
+  .wpcf7 input[type=week]::-webkit-input-placeholder,
+  .wpcf7 input[type=time]::-webkit-input-placeholder,
+  .wpcf7 input[type=datetime]::-webkit-input-placeholder,
+  .wpcf7 input[type=datetime-local]::-webkit-input-placeholder,
+  .wpcf7 input[type=color]::-webkit-input-placeholder,
+  .wpcf7 input[type=email]::-webkit-input-placeholder,
+  .wpcf7 input[type=file]::-webkit-input-placeholder,
+  .wpcf7 input[type=submit]::-webkit-input-placeholder,
+  .wpcf7 select::-webkit-input-placeholder,
+  .wpcf7 textarea::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder {
+>>>>>>> 95a3551fe13c8807eef493b525329caf94724671
     color: #6c757d;
     opacity: 1; }
-  .form-control::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder {
+  .form-control::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder,
+  .wpcf7 input[type=search]::-moz-placeholder,
+  .wpcf7 input[type=url]::-moz-placeholder,
+  .wpcf7 input[type=tel]::-moz-placeholder,
+  .wpcf7 input[type=number]::-moz-placeholder,
+  .wpcf7 input[type=range]::-moz-placeholder,
+  .wpcf7 input[type=date]::-moz-placeholder,
+  .wpcf7 input[type=month]::-moz-placeholder,
+  .wpcf7 input[type=week]::-moz-placeholder,
+  .wpcf7 input[type=time]::-moz-placeholder,
+  .wpcf7 input[type=datetime]::-moz-placeholder,
+  .wpcf7 input[type=datetime-local]::-moz-placeholder,
+  .wpcf7 input[type=color]::-moz-placeholder,
+  .wpcf7 input[type=email]::-moz-placeholder,
+  .wpcf7 input[type=file]::-moz-placeholder,
+  .wpcf7 input[type=submit]::-moz-placeholder,
+  .wpcf7 select::-moz-placeholder,
+  .wpcf7 textarea::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder, .wpcf7 input[type=search]:-ms-input-placeholder, .wpcf7 input[type=url]:-ms-input-placeholder, .wpcf7 input[type=tel]:-ms-input-placeholder, .wpcf7 input[type=number]:-ms-input-placeholder, .wpcf7 input[type=range]:-ms-input-placeholder, .wpcf7 input[type=date]:-ms-input-placeholder, .wpcf7 input[type=month]:-ms-input-placeholder, .wpcf7 input[type=week]:-ms-input-placeholder, .wpcf7 input[type=time]:-ms-input-placeholder, .wpcf7 input[type=datetime]:-ms-input-placeholder, .wpcf7 input[type=datetime-local]:-ms-input-placeholder, .wpcf7 input[type=color]:-ms-input-placeholder, .wpcf7 input[type=email]:-ms-input-placeholder, .wpcf7 input[type=file]:-ms-input-placeholder, .wpcf7 input[type=submit]:-ms-input-placeholder, .wpcf7 select:-ms-input-placeholder, .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
+  .wpcf7 input[type=search]:-ms-input-placeholder,
+  .wpcf7 input[type=url]:-ms-input-placeholder,
+  .wpcf7 input[type=tel]:-ms-input-placeholder,
+  .wpcf7 input[type=number]:-ms-input-placeholder,
+  .wpcf7 input[type=range]:-ms-input-placeholder,
+  .wpcf7 input[type=date]:-ms-input-placeholder,
+  .wpcf7 input[type=month]:-ms-input-placeholder,
+  .wpcf7 input[type=week]:-ms-input-placeholder,
+  .wpcf7 input[type=time]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime-local]:-ms-input-placeholder,
+  .wpcf7 input[type=color]:-ms-input-placeholder,
+  .wpcf7 input[type=email]:-ms-input-placeholder,
+  .wpcf7 input[type=file]:-ms-input-placeholder,
+  .wpcf7 input[type=submit]:-ms-input-placeholder,
+  .wpcf7 select:-ms-input-placeholder,
+  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder, .wpcf7 input[type=search]::-ms-input-placeholder, .wpcf7 input[type=url]::-ms-input-placeholder, .wpcf7 input[type=tel]::-ms-input-placeholder, .wpcf7 input[type=number]::-ms-input-placeholder, .wpcf7 input[type=range]::-ms-input-placeholder, .wpcf7 input[type=date]::-ms-input-placeholder, .wpcf7 input[type=month]::-ms-input-placeholder, .wpcf7 input[type=week]::-ms-input-placeholder, .wpcf7 input[type=time]::-ms-input-placeholder, .wpcf7 input[type=datetime]::-ms-input-placeholder, .wpcf7 input[type=datetime-local]::-ms-input-placeholder, .wpcf7 input[type=color]::-ms-input-placeholder, .wpcf7 input[type=email]::-ms-input-placeholder, .wpcf7 input[type=file]::-ms-input-placeholder, .wpcf7 input[type=submit]::-ms-input-placeholder, .wpcf7 select::-ms-input-placeholder, .wpcf7 textarea::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder {
+  .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
+  .wpcf7 input[type=search]::-ms-input-placeholder,
+  .wpcf7 input[type=url]::-ms-input-placeholder,
+  .wpcf7 input[type=tel]::-ms-input-placeholder,
+  .wpcf7 input[type=number]::-ms-input-placeholder,
+  .wpcf7 input[type=range]::-ms-input-placeholder,
+  .wpcf7 input[type=date]::-ms-input-placeholder,
+  .wpcf7 input[type=month]::-ms-input-placeholder,
+  .wpcf7 input[type=week]::-ms-input-placeholder,
+  .wpcf7 input[type=time]::-ms-input-placeholder,
+  .wpcf7 input[type=datetime]::-ms-input-placeholder,
+  .wpcf7 input[type=datetime-local]::-ms-input-placeholder,
+  .wpcf7 input[type=color]::-ms-input-placeholder,
+  .wpcf7 input[type=email]::-ms-input-placeholder,
+  .wpcf7 input[type=file]::-ms-input-placeholder,
+  .wpcf7 input[type=submit]::-ms-input-placeholder,
+  .wpcf7 select::-ms-input-placeholder,
+  .wpcf7 textarea::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
   .form-control::placeholder, .wpcf7 input[type=text]::placeholder,
@@ -4286,13 +4358,15 @@ input[type="button"].btn-block {
     background-color: white;
     border: 0;
     border-radius: 1rem;
-    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
          appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
-        -moz-transition: none;
+        -webkit-transition: none;
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: white; }
@@ -4313,12 +4387,14 @@ input[type="button"].btn-block {
     background-color: white;
     border: 0;
     border-radius: 1rem;
-    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
-        -ms-transition: none;
+        -webkit-transition: none;
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: white; }
