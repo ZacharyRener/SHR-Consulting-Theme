@@ -1,0 +1,23 @@
+body {
+    background-color: $utility-search-bg;
+    height:200vh;
+}
+
+h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: $h1-letter-spacing;
+    font-family: $font-family-primary;
+    font-size: $h1-font-size;
+}
+
+p {
+    font-family: $font-family-paragraph;
+    font-weight: 300;
+    font-size: $p-font-size;
+    line-height: 34px;
+}
+
+.btn {
+    text-transform:uppercase;
+}

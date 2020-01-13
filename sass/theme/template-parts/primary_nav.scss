@@ -1,0 +1,41 @@
+#primary-nav {
+
+    padding-top: 30px;  
+    z-index:1;
+
+    &.transparent {
+        background-color: transparent;
+    }
+
+    .navbar-brand {
+        img {
+            max-width: 193px;
+        }
+    }
+
+    a.nav-link {
+        font-family: $navigation-primary-font !important;
+        text-transform: uppercase;
+        color: $primary-nav-primary !important;
+        font-size: $primary-nav-font-size;
+        letter-spacing: 2px;
+        padding: $primary-nav-padding !important;
+    }
+
+    .right-section {
+        position: relative;
+    }
+
+    &.transparent {
+        .right-section {
+            top: -10px;
+        }
+    }
+
+    &.hasBackground {
+        .right-section {
+            top: 0;
+        }
+    }
+
+}

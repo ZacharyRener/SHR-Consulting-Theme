@@ -1,0 +1,39 @@
+body{
+
+    &:not(.logged-in){
+
+        #primary-nav.hasBackground{
+            top:0;
+            width:100%;
+        }
+
+    }
+
+    &.logged-in{
+
+        #primary-nav.hasBackground{
+            top:32px;
+        }
+
+    }
+
+    #primary-nav {
+
+        &.hasBackground {
+
+            background-color: black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            position:fixed;
+            z-index:3;
+            width:100%;
+
+            img {
+                max-width: 150px;
+            }
+
+        }
+
+    }
+}
