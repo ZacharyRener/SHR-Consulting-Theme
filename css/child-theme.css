@@ -11637,8 +11637,7 @@ p {
 
 #wrapper-navbar nav#utility-nav {
   z-index: 1;
-  /** background-color: $utility-nav-bg; **/
-  background-color: red;
+  background-color: black;
   padding-top: 4px;
   padding-bottom: 4px; }
   #wrapper-navbar nav#utility-nav .container {
