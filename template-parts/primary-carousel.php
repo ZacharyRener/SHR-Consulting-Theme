@@ -11,7 +11,7 @@
         <div class="carousel-wrapper">
         
           <div id="scene">
-            <div data-depth="0.1">
+            <div data-depth="-0.1">
               <img src="http://shr.hingedev.com/wp-content/uploads/2020/01/unnamed-1.jpg" />
             </div>
           </div>
