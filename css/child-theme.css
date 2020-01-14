@@ -11856,6 +11856,11 @@ body #primary-nav.hasBackground {
       height: 8px;
       width: 8px;
       margin: 0 8px; }
+  #primary-carousel .carousel-item img {
+    max-height: unset;
+    width: 120vw;
+    max-width: unset;
+    overflow: hidden; }
 
 /*
 * Use existing Bootstrap 4 classes and

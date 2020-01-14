@@ -92,5 +92,11 @@
         }
     }
 
+    .carousel-item img {
+        max-height: unset;
+        width: 120vw;
+        max-width: unset;
+        overflow: hidden;
+    }
     
 }
