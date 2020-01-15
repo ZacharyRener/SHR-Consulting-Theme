@@ -14,8 +14,6 @@ defined( 'ABSPATH' ) || exit;
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<script type='text/javascript' src="<?php echo get_stylesheet_directory_uri(); ?>/js/transparent-nav.js"></script>
-	<script type='text/javascript' src="<?php echo get_stylesheet_directory_uri(); ?>/js/carousel-parallax.js"></script>
-	<!-- <script type='text/javascript' src="<?php echo get_stylesheet_directory_uri() ?>/node_modules/parallax-js/src/parallax.js"></script> --> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 

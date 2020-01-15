@@ -11778,6 +11778,9 @@ body #primary-nav.hasBackground {
             transform: translateY(-50%) translateX(-50%);
     top: 50%;
     left: 50%; }
+    @media (max-width: 768px) {
+      #primary-carousel .text-content {
+        min-width: 80vw; } }
   #primary-carousel .carousel-wrapper {
     height: 650px;
     display: -webkit-box;
@@ -11793,6 +11796,7 @@ body #primary-nav.hasBackground {
       #primary-carousel .carousel-wrapper {
         padding: 0 30px; } }
   #primary-carousel .arrow-down-section {
+    z-index: 1;
     position: absolute;
     bottom: 20px;
     display: -webkit-box;
@@ -11823,29 +11827,51 @@ body #primary-nav.hasBackground {
     @media (min-width: 768px) {
       #primary-carousel .carousel-item .top-text {
         position: relative;
-        left: -15%; }
+        left: -100vw;
+        -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
       #primary-carousel .carousel-item .bottom-text {
+        left: 100vw;
+        -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        position: relative; } }
+    @media (max-width: 768px) {
+      #primary-carousel .carousel-item .top-text {
         position: relative;
-        left: 15%; } }
+        -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        left: -100vw; }
+      #primary-carousel .carousel-item .bottom-text {
+        left: 100vw;
+        -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        position: relative; } }
     #primary-carousel .carousel-item .slide-count {
       color: white;
       position: relative;
       top: -5px;
       font-family: "Montserrat", sans-serif;
-      letter-spacing: 1.5px; }
+      letter-spacing: 1.5px;
+      left: -100vw;
+      -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
     #primary-carousel .carousel-item .excerpt {
       position: relative;
-      margin: 50px 0; }
+      left: 100vw;
+      -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
       @media (min-width: 768px) {
         #primary-carousel .carousel-item .excerpt {
-          left: 35%; } }
+          margin: 50px 0; } }
+      @media (max-width: 768px) {
+        #primary-carousel .carousel-item .excerpt {
+          margin: 25px 0; } }
     #primary-carousel .carousel-item .btn,
     #primary-carousel .carousel-item .wpcf7 input[type=submit], .wpcf7 #primary-carousel .carousel-item input[type=submit] {
-      position: relative; }
-      @media (min-width: 768px) {
-        #primary-carousel .carousel-item .btn,
-        #primary-carousel .carousel-item .wpcf7 input[type=submit], .wpcf7 #primary-carousel .carousel-item input[type=submit] {
-          left: 35%; } }
+      position: relative;
+      left: 100vw;
+      -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
   #primary-carousel ol.carousel-indicators {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -11860,7 +11886,8 @@ body #primary-nav.hasBackground {
     max-height: unset;
     width: 120vw;
     max-width: unset;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100vh; }
 
 /*
 * Use existing Bootstrap 4 classes and
