@@ -10,8 +10,6 @@ defined( 'ABSPATH' ) || exit;
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<script type='text/javascript' src="<?php echo get_stylesheet_directory_uri(); ?>/js/transparent-nav.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -92,3 +90,15 @@ defined( 'ABSPATH' ) || exit;
 		</nav>
 
 	</div>
+
+	<script>
+	jQuery(".dropdown, .btn-group").hover(function(){
+		let dropdownMenu = jQuery(this).children('.dropdown-menu');
+		if(dropdownMenu.is(":hidden")){
+			dropdownMenu.toggleClass("show");
+		}
+	}, function(){
+		let dropdownMenu = jQuery(this).children('.dropdown-menu');
+		dropdownMenu.toggleClass("show");
+	});
+	</script>

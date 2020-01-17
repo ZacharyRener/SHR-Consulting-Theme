@@ -6,6 +6,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -11737,10 +11739,36 @@ p {
     padding: 0 15px !important; }
   #primary-nav .right-section {
     position: relative; }
-  #primary-nav.transparent .right-section {
-    top: -10px; }
+  #primary-nav.transparent .dropdown-menu.show {
+    background-color: black;
+    border-radius: 0 !important; }
+    #primary-nav.transparent .dropdown-menu.show .dropdown-item {
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-size: 13px; }
+      #primary-nav.transparent .dropdown-menu.show .dropdown-item:hover {
+        background-color: #2d2d2d !important; }
+  #primary-nav.hasBackground .dropdown-menu.show {
+    background-color: #2d2d2d;
+    border-radius: 0 !important; }
+    #primary-nav.hasBackground .dropdown-menu.show .dropdown-item {
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-size: 13px; }
+      #primary-nav.hasBackground .dropdown-menu.show .dropdown-item:hover {
+        background-color: black !important;
+        color: white !important; }
   #primary-nav.hasBackground .right-section {
-    top: 0; }
+    top: 10px; }
+  #primary-nav .dropdown-menu.show {
+    -webkit-transition: 0.22s ease;
+    transition: 0.22s ease; }
+  #primary-nav .nav-item.dropdown {
+    padding-bottom: 20px; }
+  #primary-nav .dropdown-menu {
+    margin-top: -10px; }
 
 body:not(.logged-in) #primary-nav.hasBackground {
   top: 0;

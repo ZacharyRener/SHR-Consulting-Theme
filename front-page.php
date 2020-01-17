@@ -6,10 +6,8 @@ get_header();
 
 get_template_part('template-parts/primary-carousel');
 
+get_template_part('template-parts/pathways-section');
+
+get_footer(); 
+
 ?>
-
-<section id="pathways">
-	
-</section>
-
-<?php get_footer(); ?>

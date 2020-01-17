@@ -51,11 +51,6 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
 
             echo 'function slide'.$slideCount.'Functionality() {';
 
-              echo 'var scene = document.getElementById("scene-'.$slideCount.'");';
-              echo 'var parallaxInstance = new Parallax(scene, {
-                      relativeInput: true
-                    });';
-
               echo 'let topText = jQuery(".slide-'.$slideCount.' .top-text");';
               echo 'let bottomText = jQuery(".slide-'.$slideCount.' .bottom-text");';
               echo 'let slideCount = jQuery(".slide-'.$slideCount.' .slide-count");';
@@ -80,7 +75,6 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
                 echo 'button.attr("style", "left: 0 !important;");';
               echo '}';
               
-
             echo '}';
           
           echo '</script>';
@@ -100,32 +94,35 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
 
 echo '</div>';
 
+echo "<script>";
+  echo "jQuery(document).ready( () => {";
+      echo "var scene = document.getElementById('scene-0');";
+      echo "var parallaxInstance = new Parallax(scene, { relativeInput: true });";
+      echo "slide0Functionality();";
+      echo "jQuery('.carousel').carousel({";
+          echo "interval: 5000";
+      echo "}).on('slid.bs.carousel', function (e) {";
+        $carousel = get_field('carousel_options', 5);
+        for($i=0; $i<sizeof($carousel); $i++){
+            echo 'if(e.relatedTarget.classList.contains("slide-'.$i.'"))';
+            echo '  slide'.$i.'Functionality();';
+        }
+      echo "});";
+      echo "jQuery('.carousel').on('slide.bs.carousel', function (e) {";
+          $carousel = get_field('carousel_options', 5);
+          for($i=0; $i<sizeof($carousel); $i++){
+              echo 'var scene = document.getElementById("scene-'.$i.'");';
+              echo 'var parallaxInstance = new Parallax(scene, {
+                      relativeInput: true
+                    });';
+              echo "jQuery('.slide-".$i." .top-text').attr('style', '');";
+              echo "jQuery('.slide-".$i." .bottom-text').attr('style', '');";
+              echo "jQuery('.slide-".$i." .slide-count').attr('style', '');";
+              echo "jQuery('.slide-".$i." .excerpt').attr('style', '');";
+              echo "jQuery('.slide-".$i." .btn').attr('style', '');";
+          }
+      echo "});";
+  echo "});";
+echo "</script>";
+
 ?>
-<script>
-  jQuery(document).ready( () => {
-      slide0Functionality();
-      jQuery('.carousel').carousel({
-          interval: 5000
-      }).on('slid.bs.carousel', function (e) {
-          <?php
-              $carousel = get_field('carousel_options', 5);
-              for($i=0; $i<sizeof($carousel); $i++){
-                  echo 'if(e.relatedTarget.classList.contains("slide-'.$i.'"))';
-                  echo '  slide'.$i.'Functionality();';
-              }
-          ?>
-      });
-      jQuery('.carousel').on('slide.bs.carousel', function (e) {
-          <?php
-            $carousel = get_field('carousel_options', 5);
-            for($i=0; $i<sizeof($carousel); $i++){
-                echo "jQuery('.slide-".$i." .top-text').attr('style', '');";
-                echo "jQuery('.slide-".$i." .bottom-text').attr('style', '');";
-                echo "jQuery('.slide-".$i." .slide-count').attr('style', '');";
-                echo "jQuery('.slide-".$i." .excerpt').attr('style', '');";
-                echo "jQuery('.slide-".$i." .btn').attr('style', '');";
-            }
-          ?>
-      });
-  });
-</script>
