@@ -12,8 +12,44 @@ section#from-our-blog {
         background-color:white;
         padding-top: 220px;
         padding-bottom: 220px;
-        margin-top: -180px;
+        margin-top: -200px;
         z-index:0;
+        padding-left: 60px;
+        padding-right: 150px;
+        .blog-posts {
+            .main-post{
+                padding: 0 20px;
+                .title {
+                    font-family: $font-family-primary;
+                    font-weight: 500;
+                    font-size: $p-font-size;
+                    text-transform: uppercase;
+                }
+                .author, .date {
+                    font-family: $font-family-paragraph;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #a0a0a0;
+                    margin-bottom:0;
+                    line-height:18px;
+                    letter-spacing: 1.15px;
+                }
+            }
+        }
+    }
+
+    .headline-section {
+        display:flex;
+        position: relative;
+        margin-bottom: 40px;
+        h2 {
+            font-family: $font-family-primary;
+            font-weight: 400;
+        }
+        div:nth-of-type(2) {
+            position: absolute;
+            right: 0;
+        }
     }
 
 }

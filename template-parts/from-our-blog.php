@@ -13,8 +13,8 @@ echo "
             <div class='content container'>
 
                 <div class='headline-section'>
-                    <h2>FROM OUR BLOG</h2>
-                    <a href='#' class='btn btn-secondary'>Go to the blog</a>
+                    <div><h2>FROM OUR BLOG</h2></div>
+                    <div><a href='#' class='btn btn-secondary'>Go to the blog</a></div>
                 </div>
 
                 <div class='blog-posts'>
@@ -42,10 +42,10 @@ echo "
                                 
                                 <div class='col-md-4'>
                                     <div class='main-post'>
-                                        <p>$title</p>
+                                        <p class='title'>$title</p>
                                         <hr/>
-                                        <p>By $author</p>
-                                        <p>$date</p>
+                                        <p class='author'>By $author</p>
+                                        <p class='date'>$date</p>
                                     </div>
                                 </div>
                                 
@@ -61,6 +61,7 @@ echo "
                 </div>
 
             </div>
+            
         </div>
 
     </div>
