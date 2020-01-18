@@ -1,0 +1,19 @@
+section#from-our-blog {
+
+    .section-with-background {
+        background-image: url(/wp-content/uploads/2020/01/from-the-blog-side.png);
+        background-size:contain;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-color: black;
+    }
+
+    .main-blog-section {
+        background-color:white;
+        padding-top: 220px;
+        padding-bottom: 220px;
+        margin-top: -180px;
+        z-index:0;
+    }
+
+}

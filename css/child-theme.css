@@ -11917,6 +11917,71 @@ body #primary-nav.hasBackground {
     overflow: hidden;
     height: 100vh; }
 
+section#pathways {
+  padding-top: 125px;
+  padding-bottom: 100px;
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: #000; }
+  section#pathways .pathways-top-text p, section#pathways .pathways-bottom-text p {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 0; }
+  section#pathways .pathways-top-text {
+    position: relative;
+    left: -275px; }
+  section#pathways .quickhit-copy {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin-top: 50px; }
+  section#pathways .three-pathways {
+    margin-top: 70px; }
+    section#pathways .three-pathways * {
+      z-index: 2; }
+    section#pathways .three-pathways .container {
+      padding: 0 75px; }
+    section#pathways .three-pathways .main-pathway {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 200px;
+      padding: 0 65px 0 35px;
+      background-size: cover;
+      background-position: bottom left;
+      margin: 0 10px; }
+      section#pathways .three-pathways .main-pathway p {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 0;
+        line-height: 30px;
+        letter-spacing: 2px; }
+
+section#from-our-blog .section-with-background {
+  background-image: url(/wp-content/uploads/2020/01/from-the-blog-side.png);
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: black; }
+
+section#from-our-blog .main-blog-section {
+  background-color: white;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  margin-top: -180px;
+  z-index: 0; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
