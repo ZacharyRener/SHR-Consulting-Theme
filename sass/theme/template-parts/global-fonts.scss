@@ -23,4 +23,11 @@ p {
 
 .btn {
     text-transform:uppercase;
+    padding-right: 70px;
+    &::after {
+        content: '\f005';
+        position:absolute;
+        right: 10px;
+        font-family: FontAwesome;
+    }
 }

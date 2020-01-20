@@ -10,8 +10,12 @@ echo "
 
         <div class='main-blog-section blog-match-height'>
 
+           
 
                 <div class='headline-section'>
+                    <div class='arrow-down-section'>
+                        <i class='fa fa-angle-down'></i>
+                    </div>
                     <div><h2>FROM OUR BLOG</h2></div>
                     <div><a href='#' class='btn btn-secondary'>Go to the blog</a></div>
                 </div>

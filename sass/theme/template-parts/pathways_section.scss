@@ -7,6 +7,13 @@ section#pathways {
     background-repeat: no-repeat;
     background-color: #000;
 
+    i.fa.fa-star {
+        color: white;
+        position: absolute;
+        right: 15px;
+        top: 11px;
+    }
+
     .pathways-top-text, .pathways-bottom-text {
         p {
             font-family: $font-family-primary;
@@ -38,6 +45,7 @@ section#pathways {
             
         }
         .main-pathway {
+            position: relative;
             display:flex;
             align-items: center;
             justify-content: center;

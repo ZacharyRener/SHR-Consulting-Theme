@@ -12,6 +12,8 @@ get_template_part('template-parts/from-our-blog');
 
 get_template_part('template-parts/homepage-offers');
 
+get_template_part('template-parts/seo-section');
+
 get_footer(); 
 
 ?>

@@ -1,0 +1,16 @@
+#wrapper-footer {
+    padding: 15px 0;
+    background-color: #292929;
+    .site-footer {
+        .site-info {
+            p {
+                color: #818181;
+                margin-bottom: 0;
+                font-family: $font-family-primary;
+                font-size: 11px;
+                text-transform:uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+}

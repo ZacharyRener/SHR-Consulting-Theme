@@ -11635,7 +11635,13 @@ p {
 
 .btn,
 .wpcf7 input[type=submit] {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-right: 70px; }
+  .btn::after, .wpcf7 input[type=submit]::after {
+    content: '\f005';
+    position: absolute;
+    right: 10px;
+    font-family: FontAwesome; }
 
 #wrapper-navbar nav#utility-nav {
   z-index: 1;
@@ -11928,6 +11934,11 @@ section#pathways {
   background-position: top left;
   background-repeat: no-repeat;
   background-color: #000; }
+  section#pathways i.fa.fa-star {
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 11px; }
   section#pathways .pathways-top-text p, section#pathways .pathways-bottom-text p {
     font-family: "Montserrat", sans-serif;
     color: white;
@@ -11947,6 +11958,7 @@ section#pathways {
     section#pathways .three-pathways * {
       z-index: 2; }
     section#pathways .three-pathways .main-pathway {
+      position: relative;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -11972,6 +11984,12 @@ section#pathways {
 
 section#from-our-blog {
   position: relative; }
+  section#from-our-blog .arrow-down-section {
+    bottom: unset;
+    top: -80px;
+    left: -130px; }
+    section#from-our-blog .arrow-down-section i {
+      color: #808080; }
   section#from-our-blog .section-with-background {
     background-image: url(/wp-content/uploads/2020/01/from-the-blog-side.png);
     background-size: contain;
@@ -12026,14 +12044,16 @@ section#from-our-blog {
     section#from-our-blog .headline-section h2 {
       font-family: "Montserrat", sans-serif;
       font-weight: 400; }
-    section#from-our-blog .headline-section div:nth-of-type(2) {
+    section#from-our-blog .headline-section div:nth-of-type(3) {
       position: absolute;
       right: 0; }
 
 section#offers-section {
   color: white;
-  padding-bottom: 100px;
+  padding-bottom: 175px;
   position: relative; }
+  section#offers-section .arrow-down-section {
+    bottom: 85px; }
   section#offers-section .text-section {
     background-color: #2a2a2a;
     min-height: 245px;
@@ -12057,6 +12077,55 @@ section#offers-section {
     padding-right: 40px; }
   section#offers-section .offer-1 {
     padding-left: 40px; }
+
+section#seo-section {
+  background-size: 52vw 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding-top: 75px;
+  padding-bottom: 75px; }
+  section#seo-section .seo-copy h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 30px; }
+  section#seo-section .credentials {
+    text-align: center;
+    padding-left: 8vw;
+    color: white; }
+    section#seo-section .credentials p {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 5px; }
+    section#seo-section .credentials hr {
+      border-color: #272727;
+      max-width: 200px;
+      border-width: 1px;
+      margin-top: 0; }
+    section#seo-section .credentials .carousel-inner {
+      color: transparent; }
+    section#seo-section .credentials .carousel-item .col-md-6 {
+      padding: 30px 0; }
+      section#seo-section .credentials .carousel-item .col-md-6 img {
+        -o-object-fit: contain;
+           object-fit: contain;
+        max-width: 150px;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%); }
+    section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(1), section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(2) {
+      padding-bottom: 0; }
+
+#wrapper-footer {
+  padding: 15px 0;
+  background-color: #292929; }
+  #wrapper-footer .site-footer .site-info p {
+    color: #818181;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600; }
 
 /*
 * Use existing Bootstrap 4 classes and

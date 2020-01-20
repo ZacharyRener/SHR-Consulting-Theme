@@ -1,9 +1,13 @@
 section#offers-section {
 
     color: white;
-    padding-bottom: 100px;
+    padding-bottom: 175px;
 
     position: relative;
+
+    .arrow-down-section {
+        bottom: 85px;
+    }
     
     .text-section {
         background-color: #2a2a2a;

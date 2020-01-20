@@ -2,6 +2,16 @@ section#from-our-blog {
 
     position: relative;
 
+    .arrow-down-section {
+        bottom:unset;
+        top: -80px;
+        left: -130px;
+        i {
+            color: #808080;
+        }
+        
+    }
+
     .section-with-background {
         background-image: url(/wp-content/uploads/2020/01/from-the-blog-side.png);
         background-size:contain;
@@ -76,7 +86,7 @@ section#from-our-blog {
             font-family: $font-family-primary;
             font-weight: 400;
         }
-        div:nth-of-type(2) {
+        div:nth-of-type(3) {
             position: absolute;
             right: 0;
         }

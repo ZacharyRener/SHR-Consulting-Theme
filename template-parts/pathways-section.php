@@ -69,8 +69,9 @@ echo '<section id="pathways" style="background-image:url('.$backgroundImage.');"
                         echo "
 
                         <div class='col-md-4'>
-
+                            
                             <div class='main-pathway pathway-$count' style='background-image:url($background_image);'>
+                            <i class='fa fa-star'></i>
                                 <p>$textHeadline</p>   
                             </div>
                         

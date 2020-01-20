@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<p>© 2019 SHR Consulting Group. All Rights Reserved</p>
 
 					</div><!-- .site-info -->
 
