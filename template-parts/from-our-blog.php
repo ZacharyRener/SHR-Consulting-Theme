@@ -4,13 +4,12 @@ echo "
 
 <section id='from-our-blog'>
 
-    <div class='row'>
+    
 
-        <div class='col-md-3 section-with-background'></div>
+        <div class='section-with-background blog-match-height'></div>
 
-        <div class='col-md-9 main-blog-section'>
+        <div class='main-blog-section blog-match-height'>
 
-            <div class='content container'>
 
                 <div class='headline-section'>
                     <div><h2>FROM OUR BLOG</h2></div>
@@ -36,13 +35,15 @@ echo "
 
                                 $title = get_the_title();
                                 $author = get_the_author();
-                                $date = get_the_date();
+                                $date = get_the_date('m/d/Y');
+
+                                $titleLink = get_the_permalink();
 
                                 echo "
                                 
-                                <div class='col-md-4'>
+                                <div class='col-md-4 '>
                                     <div class='main-post'>
-                                        <p class='title'>$title</p>
+                                        <a href='$titleLink'><p class='title match-height'>$title</p></a>
                                         <hr/>
                                         <p class='author'>By $author</p>
                                         <p class='date'>$date</p>
@@ -59,15 +60,45 @@ echo "
                     </div>
 
                 </div>
-
-            </div>
             
         </div>
 
-    </div>
+        <div class='right-white-section blog-match-height'></div>
+    
 
 </section>
 
 ";
 
+
 ?>
+
+<script>
+
+let backgroundSection = jQuery('.section-with-background');
+let mainBlog = jQuery('.main-blog-section');
+let pathways = jQuery('.three-pathways .container .row');
+let pathway0 = jQuery('.pathway-0');
+let pathway2 = jQuery('.pathway-2');
+let threePathways = jQuery('.three-pathways .container');
+let whiteSection = jQuery('.right-white-section');
+
+function positionBlog() {
+    
+    let leftOffset = pathway0.offset().left + (pathway0.innerWidth() / 2);
+    let maxWidth = threePathways.innerWidth() - 220;
+    let whiteSectionWidth = jQuery(document).innerWidth() - ( maxWidth + leftOffset ); 
+
+    whiteSection.attr('style', `width: ${whiteSectionWidth}px`);
+    mainBlog.attr('style', `position:relative; left: ${leftOffset}px; width:${maxWidth}px`);
+    backgroundSection.attr('style', `width: ${leftOffset}px`);
+    jQuery('.blog-match-height').matchHeight();
+    jQuery('.match-height').matchHeight();
+
+}
+
+jQuery(window).resize(positionBlog);
+
+positionBlog(); 
+
+</script>

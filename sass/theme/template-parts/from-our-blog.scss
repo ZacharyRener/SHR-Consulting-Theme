@@ -1,11 +1,28 @@
 section#from-our-blog {
 
+    position: relative;
+
     .section-with-background {
         background-image: url(/wp-content/uploads/2020/01/from-the-blog-side.png);
         background-size:contain;
-        background-position: top left;
+        background-position: center;
         background-repeat: no-repeat;
         background-color: black;
+
+        position:absolute;
+    
+        width: 25vw;
+        left: 0;
+        background-color: black;
+
+    }
+
+    .right-white-section {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: white;
+        z-index: 0;
     }
 
     .main-blog-section {
@@ -13,9 +30,14 @@ section#from-our-blog {
         padding-top: 220px;
         padding-bottom: 220px;
         margin-top: -200px;
+        margin-bottom: -100px;
         z-index:0;
-        padding-left: 60px;
-        padding-right: 150px;
+        
+        padding-left: 100px;
+
+        
+        
+        
         .blog-posts {
             .main-post{
                 padding: 0 20px;
@@ -24,6 +46,7 @@ section#from-our-blog {
                     font-weight: 500;
                     font-size: $p-font-size;
                     text-transform: uppercase;
+                    color:black;
                 }
                 .author, .date {
                     font-family: $font-family-paragraph;
@@ -32,7 +55,11 @@ section#from-our-blog {
                     color: #a0a0a0;
                     margin-bottom:0;
                     line-height:18px;
-                    letter-spacing: 1.15px;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                }
+                hr {
+                    border-color: #d9d9d9;
                 }
             }
         }
@@ -41,7 +68,10 @@ section#from-our-blog {
     .headline-section {
         display:flex;
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        margin-left:15px;
+        margin-right:15px;
+        
         h2 {
             font-family: $font-family-primary;
             font-weight: 400;

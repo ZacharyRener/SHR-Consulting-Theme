@@ -1,3 +1,7 @@
+body.home {
+    background-color: black;
+}
+
 #primary-carousel {
 
     margin-top: -98px;
@@ -20,21 +24,6 @@
         justify-content: center;
         @media(max-width:768px){
             padding: 0 30px;
-        }
-    }
-    
-    .arrow-down-section {
-        z-index:1;
-        position: absolute;
-        bottom: 20px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        i.fa.fa-angle-down {
-            font-size: 40px;
-            font-weight: 600;
-            color: white;
-            opacity: 0.5;
         }
     }
     
@@ -123,4 +112,19 @@
         height: 100vh;
     }
     
+}
+
+.arrow-down-section {
+    z-index:1;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    i.fa.fa-angle-down {
+        font-size: 40px;
+        font-weight: 600;
+        color: white;
+        opacity: 0.5;
+    }
 }
