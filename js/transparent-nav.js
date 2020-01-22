@@ -1,7 +1,9 @@
 function transparentNavigation() {
 
+    
     let breakpoint = 32;
-    let whiteSpaceHeight = 134;
+    //let whiteSpaceHeight = 170;
+    let whiteSpaceHeight = jQuery('body').hasClass('home') ? 134 : 170;
 
     let userHasScrolled = jQuery(window).scrollTop() >= breakpoint;
     let userHasReachedTop = jQuery(window).scrollTop() < breakpoint;
@@ -9,6 +11,8 @@ function transparentNavigation() {
     let primaryNav = jQuery('#primary-nav');
     let whiteSpace = jQuery('#headerWhiteSpace');
     let utilityNav = jQuery('#utility-nav');
+
+    let pageWrapper = jQuery('.page-wrapper');
 
     if(userHasScrolled){
         primaryNav.removeClass('transparent');
@@ -27,3 +31,4 @@ function transparentNavigation() {
 jQuery(window).scroll(e=>{
     transparentNavigation();
 });
+

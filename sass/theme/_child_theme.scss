@@ -1,11 +1,18 @@
-@import 'template-parts/global-fonts';
-@import 'template-parts/utility_nav';
-@import 'template-parts/primary_nav';
-@import 'template-parts/nav_transparency';
-@import 'template-parts/nav_transitions';
-@import 'template-parts/carousel';
-@import 'template-parts/pathways_section';
-@import 'template-parts/from-our-blog';
-@import 'template-parts/homepage-offers';
-@import 'template-parts/seo-section';
-@import 'template-parts/footer';
+/** Layout Styling **/
+@import 'template-parts/layout/global-fonts';
+@import 'template-parts/layout/utility_nav';
+@import 'template-parts/layout/primary_nav';
+@import 'template-parts/layout/nav_transparency';
+@import 'template-parts/layout/nav_transitions';
+@import 'template-parts/layout/footer';
+@import 'template-parts/layout/sidebar';
+
+/** Homepage Styling **/
+@import 'template-parts/home/carousel';
+@import 'template-parts/home/pathways_section';
+@import 'template-parts/home/from-our-blog';
+@import 'template-parts/home/homepage-offers';
+@import 'template-parts/home/seo-section';
+
+/** Default Page Styling **/
+@import 'template-parts/pages/default-page-styling';

@@ -49,8 +49,16 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 		</nav>
-
-		<nav id="primary-nav" class="navbar navbar-expand-lg navbar-light transparent">
+		<?php 
+			$globalPageHeader = get_field('global_page_header', 'options');
+			$singlePageHeader = get_field('header_image');
+			$headerUrl = empty($singlePageHeader) ? $globalPageHeader : $singlePageHeader; 
+			$needsGradientOverlay = is_page() && !is_front_page();
+		?>
+		<nav id="primary-nav" class="navbar navbar-expand-lg navbar-light transparent <?php if($needsGradientOverlay): echo 'extended-height'; endif; ?>" 
+			<?php if($needsGradientOverlay): echo 'style="background-image:url('.$headerUrl.');"'; endif; ?> >
+			
+			<div class='gradient-overlay'></div>
 
 			<div class="container">
 
@@ -63,25 +71,17 @@ defined( 'ABSPATH' ) || exit;
 				<div class="right-section">
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Features</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Pricing</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Dropdown link
-								</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
-								</div>
-							</li>
+							<?php wp_nav_menu(
+		                    array(
+			                    'menu'  => 3,
+			                    'container_id'    => 'navbarNavDropdown',
+			                    'menu_class'      => 'navbar-nav ml-auto',
+			                    'fallback_cb'     => '',
+			                    'depth'           => 3,
+			                    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+		                    )
+						); 
+						?>
 						</ul>
 					</div>
 				</div>

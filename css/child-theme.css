@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-p {
+p, body:not(.home) .main-content {
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -1897,7 +1897,7 @@ textarea.form-control,
 .wpcf7 textarea, .wpcf7 textarea.wpcf7-validation-errors {
   height: auto; }
 
-.form-group, .wpcf7 .wpcf7-form p {
+.form-group, .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form body:not(.home) .main-content, body:not(.home) .wpcf7 .wpcf7-form .main-content {
   margin-bottom: 1rem; }
 
 .form-text {
@@ -2428,7 +2428,7 @@ textarea.form-control,
           -ms-flex-pack: center;
               justify-content: center;
       margin-bottom: 0; }
-    .form-inline .form-group, .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .form-inline p {
+    .form-inline .form-group, .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .form-inline p, .form-inline .wpcf7 .wpcf7-form body:not(.home) .main-content, .wpcf7 .wpcf7-form body:not(.home) .form-inline .main-content, .form-inline body:not(.home) .wpcf7 .wpcf7-form .main-content, body:not(.home) .wpcf7 .wpcf7-form .form-inline .main-content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -9144,7 +9144,7 @@ a.text-dark:hover, a.text-dark:focus {
   tr,
   img {
     page-break-inside: avoid; }
-  p,
+  p, body:not(.home) .main-content,
   h2,
   h3 {
     orphans: 3;
@@ -11616,9 +11616,9 @@ figure.woocommerce-product-gallery__wrapper {
 .gallery-caption {
   display: block; }
 
+/** Layout Styling **/
 body {
-  background-color: #2d2d2d;
-  height: 200vh; }
+  background-color: #2d2d2d; }
 
 h1 {
   font-weight: 400;
@@ -11627,7 +11627,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px; }
 
-p {
+p, body:not(.home) .main-content {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -11635,13 +11635,14 @@ p {
 
 .btn,
 .wpcf7 input[type=submit] {
-  text-transform: uppercase;
-  padding-right: 70px; }
-  .btn::after, .wpcf7 input[type=submit]::after {
-    content: '\f005';
-    position: absolute;
-    right: 10px;
-    font-family: FontAwesome; }
+  text-transform: uppercase; }
+  .btn:not(.no-star), .wpcf7 input:not(.no-star)[type=submit] {
+    padding-right: 70px; }
+    .btn:not(.no-star)::after, .wpcf7 input[type=submit]:not(.no-star)::after {
+      content: '\f005';
+      position: absolute;
+      right: 10px;
+      font-family: FontAwesome; }
 
 #wrapper-navbar nav#utility-nav {
   z-index: 1;
@@ -11732,6 +11733,15 @@ p {
 #primary-nav {
   padding-top: 30px;
   z-index: 1; }
+  #primary-nav .dropdown-toggle::after {
+    display: none; }
+  #primary-nav #menu-primary-nav > .menu-item {
+    padding-right: 10px;
+    padding-left: 10px; }
+  #primary-nav.extended-height {
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: top left; }
   #primary-nav.transparent {
     background-color: transparent; }
   #primary-nav .navbar-brand img {
@@ -11744,30 +11754,50 @@ p {
     letter-spacing: 2px;
     padding: 0 15px !important; }
   #primary-nav .right-section {
-    position: relative; }
-  #primary-nav.transparent .dropdown-menu.show {
-    background-color: black;
-    border-radius: 0 !important; }
-    #primary-nav.transparent .dropdown-menu.show .dropdown-item {
-      color: white;
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      font-size: 13px; }
-      #primary-nav.transparent .dropdown-menu.show .dropdown-item:hover {
-        background-color: #2d2d2d !important; }
-  #primary-nav.hasBackground .dropdown-menu.show {
-    background-color: #2d2d2d;
-    border-radius: 0 !important; }
-    #primary-nav.hasBackground .dropdown-menu.show .dropdown-item {
-      color: white;
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      font-size: 13px; }
-      #primary-nav.hasBackground .dropdown-menu.show .dropdown-item:hover {
-        background-color: black !important;
-        color: white !important; }
-  #primary-nav.hasBackground .right-section {
+    position: relative;
     top: 10px; }
+  #primary-nav.transparent {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+    #primary-nav.transparent .gradient-overlay {
+      opacity: 0; }
+    #primary-nav.transparent .dropdown-menu.show {
+      background-color: black;
+      border-radius: 0 !important; }
+      #primary-nav.transparent .dropdown-menu.show .dropdown-item {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-size: 13px; }
+        #primary-nav.transparent .dropdown-menu.show .dropdown-item:hover {
+          background-color: #2d2d2d !important; }
+  #primary-nav.hasBackground {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7); }
+    #primary-nav.hasBackground .gradient-overlay {
+      opacity: 1; }
+    #primary-nav.hasBackground .dropdown-menu.show {
+      background-color: #2d2d2d;
+      border-radius: 0 !important; }
+      #primary-nav.hasBackground .dropdown-menu.show .dropdown-item {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-size: 13px; }
+        #primary-nav.hasBackground .dropdown-menu.show .dropdown-item:hover {
+          background-color: black !important;
+          color: white !important; }
+  #primary-nav .gradient-overlay {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+    background: linear-gradient(black, black);
+    -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
   #primary-nav .dropdown-menu.show {
     -webkit-transition: 0.22s ease;
     transition: 0.22s ease; }
@@ -11803,6 +11833,68 @@ body #primary-nav.hasBackground {
     -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
 
+#wrapper-footer {
+  padding: 15px 0;
+  background-color: #292929; }
+  #wrapper-footer .site-footer .site-info p, #wrapper-footer .site-footer .site-info body:not(.home) .main-content, body:not(.home) #wrapper-footer .site-footer .site-info .main-content {
+    color: #818181;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600; }
+
+.sidebar-section {
+  padding-top: 66px; }
+  @media (min-width: 768px) {
+    .sidebar-section {
+      padding-right: 70px; } }
+  .sidebar-section .site-title {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    display: block;
+    border-bottom: 2px solid #afafaf;
+    padding-bottom: 20px; }
+  .sidebar-section .nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px; }
+  .sidebar-section #sidebar-offers {
+    margin-top: 100px;
+    background-color: #292929;
+    position: relative; }
+    .sidebar-section #sidebar-offers .title {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      color: #595959 !important;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      position: absolute;
+      top: -35px;
+      left: 0; }
+    .sidebar-section #sidebar-offers .image {
+      width: 100%;
+      max-height: 125px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center; }
+    .sidebar-section #sidebar-offers .container {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .sidebar-section #sidebar-offers .container p, .sidebar-section #sidebar-offers .container body:not(.home) .main-content, body:not(.home) .sidebar-section #sidebar-offers .container .main-content {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        line-height: 25px; }
+
+/** Homepage Styling **/
 body.home {
   background-color: black; }
 
@@ -11939,7 +12031,7 @@ section#pathways {
     position: absolute;
     right: 15px;
     top: 11px; }
-  section#pathways .pathways-top-text p, section#pathways .pathways-bottom-text p {
+  section#pathways .pathways-top-text p, section#pathways .pathways-top-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-top-text .main-content, section#pathways .pathways-bottom-text p, section#pathways .pathways-bottom-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-bottom-text .main-content {
     font-family: "Montserrat", sans-serif;
     color: white;
     text-transform: uppercase;
@@ -11973,7 +12065,7 @@ section#pathways {
       background-size: cover;
       background-position: bottom left;
       margin: 0 10px; }
-      section#pathways .three-pathways .main-pathway p {
+      section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
         color: white;
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
@@ -12092,7 +12184,7 @@ section#seo-section {
     text-align: center;
     padding-left: 8vw;
     color: white; }
-    section#seo-section .credentials p {
+    section#seo-section .credentials p, section#seo-section .credentials body:not(.home) .main-content, body:not(.home) section#seo-section .credentials .main-content {
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 14px;
@@ -12116,16 +12208,21 @@ section#seo-section {
     section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(1), section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(2) {
       padding-bottom: 0; }
 
-#wrapper-footer {
-  padding: 15px 0;
-  background-color: #292929; }
-  #wrapper-footer .site-footer .site-info p {
-    color: #818181;
-    margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 600; }
+/** Default Page Styling **/
+body:not(.home) {
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(54%, black), color-stop(54%, white));
+  background: linear-gradient(90deg, black 0%, black 54%, white 54%); }
+  body:not(.home) .main-content {
+    background-color: white;
+    min-height: calc( 100vh - 268px);
+    margin-bottom: 0; }
+    @media (min-width: 768px) {
+      body:not(.home) .main-content {
+        padding: 50px; } }
+  body:not(.home) h1 {
+    margin-bottom: 10px;
+    margin-top: 10px; }
 
 /*
 * Use existing Bootstrap 4 classes and

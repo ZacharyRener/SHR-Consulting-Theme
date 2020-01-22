@@ -1,0 +1,64 @@
+.sidebar-section {
+
+    padding-top: 66px;
+
+    @media(min-width:768px){
+        padding-right: 70px;
+    }
+
+    .site-title {
+        font-family: $font-family-primary;
+        color: white;
+        text-transform: uppercase;
+        font-size: 22px;
+        letter-spacing: 2px;
+        display:block;
+        border-bottom: 2px solid #afafaf;
+        padding-bottom: 20px;
+    }
+
+    .nav-link {
+        font-family: $font-family-primary;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    #sidebar-offers {
+        margin-top: 100px;
+        background-color: #292929;
+        position: relative;
+        .title {
+            font-family: $font-family-primary;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            color: #595959 !important;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+            position:absolute;
+            top: -35px;
+            left: 0;
+        }
+        .image {
+            width: 100%;
+            max-height: 125px;
+            object-fit:cover;
+            object-position: center;
+        }
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            p {
+                color: white;
+                font-family: $font-family-paragraph;
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+        .btn {
+
+        }
+    }
+
+}

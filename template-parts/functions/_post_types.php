@@ -5,6 +5,7 @@ add_action( 'init', 'register_post_types', 0 );
 function register_post_types() {
 	codex_Offer_init();
 	codex_Library_init();
+	codex_Leadership_init();
 	codex_news_events_init();
 }
 
@@ -43,6 +44,43 @@ function codex_Offer_init() {
 	);
 
 	register_post_type( 'Offer', $args );
+}
+
+function codex_Leadership_init() {
+	$labels = array(
+		'name'               => _x( 'Leadership', 'post type general name', '' ),
+		'singular_name'      => _x( 'Leadership', 'post type singular name', '' ),
+		'menu_name'          => _x( 'Leadership', 'admin menu', '' ),
+		'name_admin_bar'     => _x( 'Leadership', 'add new on admin bar', '' ),
+		'add_new'            => _x( 'Add New', 'Leadership', '' ),
+		'add_new_item'       => __( 'Add New Leadership', '' ),
+		'new_item'           => __( 'New Leadership', '' ),
+		'edit_item'          => __( 'Edit Leadership', '' ),
+		'view_item'          => __( 'View Leadership', '' ),
+		'all_items'          => __( 'All Leadership', '' ),
+		'search_items'       => __( 'Search Leadership', '' ),
+		'parent_item_colon'  => __( 'Parent Leadership:', '' ),
+		'not_found'          => __( 'No Leadership found.', '' ),
+		'not_found_in_trash' => __( 'No Leadership found in Trash.', '' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'description'        => __( 'Description.', '' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'leadership' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title' )
+	);
+
+	register_post_type( 'Leadership', $args );
 }
 
 function codex_Library_init() {

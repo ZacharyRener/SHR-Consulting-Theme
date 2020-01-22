@@ -32,4 +32,4 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
-require('template-parts/_post_types.php');
+require('template-parts/functions/_post_types.php');

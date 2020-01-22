@@ -1,0 +1,21 @@
+body:not(.home) {
+
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 54%);
+
+    .main-content {
+        background-color: white;
+        min-height: calc( 100vh - 268px );
+        margin-bottom:0;
+        @media(min-width:768px){
+            padding: 50px;
+        }
+        @extend p;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+}
