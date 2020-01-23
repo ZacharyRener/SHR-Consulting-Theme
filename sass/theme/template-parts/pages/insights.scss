@@ -1,0 +1,88 @@
+.insights {
+    .featured-offer {
+        background-color:#303030;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 75px;
+        .headline {
+            font-size: 12px;
+            text-transform:uppercase;
+            color: white;
+            font-family: $font-family-primary;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom:10px;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            .offer-image {
+                width: 100%;
+                height: auto;
+                max-height: 90%;
+                object-fit:cover;
+            }
+        }
+        .text-section p {
+            @extend .content;
+        }
+        .title{
+            font-size: 17px;
+            color: white;
+            font-family: $font-family-primary;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        .content {
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            line-height: 25px;
+        }
+        .btn {
+
+        }
+    }
+
+    .bottom-section {
+        
+        .col-md-6 {
+            position:relative;
+            padding-bottom: 50px;
+            
+        }
+        .feed-title {
+            text-transform:uppercase;
+            font-family: $font-family-primary;
+            font-weight: 600;
+            margin-bottom:5px;
+        }
+        .feed-image {
+            margin-top: 0;
+            margin-bottom: 40px;
+            width: 100%;
+            height: auto;
+        }
+        .title {
+            font-family: $font-family-primary;
+            color: black;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+        .feed-cta {
+            color: #bb2c1e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: Montserrat,sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            padding-left: 3px;
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.team-members {
+    &:not(.single-team){
+        margin-top: 40px;
+    }
+
+    .team-member {
+        
+        margin-bottom: 70px;
+        
+        .image-section {
+            padding-right: 0;
+            .bio-image {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+
+        .text-section {
+            .h1-title {
+                color: black;
+                margin-bottom: 0;
+            }
+            .title {
+                font-family: $font-family-primary;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: black;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                margin-bottom: 0;
+                line-height: 15px;
+            }
+            .role {
+                font-family: Montserrat,sans-serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                color: #595959!important;
+                letter-spacing: 1px;
+                margin-top: 0;
+                margin-bottom: 0;
+                
+            }
+            .excerpt {
+                a:not(.icon):not(.collapse-link) {
+                    color: #bb2c1e;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-family: $font-family-primary;
+                    font-weight: 700;
+                    font-size: 12px;
+                    padding-left: 3px;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+.collapse-container {
+    margin-left:0;
+    padding-left:0;
+    border-bottom: 2px solid #f5f5f5;
+    .collapse-link {
+        font-family: $font-family-primary;
+        text-transform: none;
+        font-size: 20px;
+        color: #bb2c1e;
+        letter-spacing: 1px;
+        font-weight: 600;
+        display: block;
+        position: relative;
+        &[aria-expanded="false"]::after {content: "\f067";font-family: FontAwesome;} 
+        &[aria-expanded="true"]::after {content: "\f068";font-family: FontAwesome;}
+        &::after {
+            position: absolute;
+            right: 0;
+            color: #c4c4c4;
+        }
+        padding-bottom: 20px;
+        padding-top: 20px;
+        
+    }
+}
+.icons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    a.icon {
+        margin-right: 10px;
+        padding: 5px 7px 1px;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        background-color: #3dc14c;
+        border-radius: 3px !important;
+        width: 40px;
+        height: 40px;
+        i.fa {
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &.facebook {
+            background-color: #3d5997;
+        }
+        &.linkedin {
+            background-color: #0096c1;
+        }
+        &.twitter {
+            background-color: #44ccf6;
+        }
+    }
+}

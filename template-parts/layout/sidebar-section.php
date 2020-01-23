@@ -3,6 +3,7 @@
 $sidebarHeading = get_field('sidebar_heading');
 $sidebarTitle = !empty($sidebarHeading) ? $sidebarHeading : '';
 $titleUrl = get_field('sidebar_heading_url');
+$sidebarContent = get_field('extra_sidebar_content');
 
 echo "
 
@@ -57,11 +58,15 @@ echo "
                 endif;
 
                 echo "
-                </section>";
+                </section>             
+                
+                ";
 
         endif;
         echo"
-
+        <div class='extra-sidebar-content'>
+                    $sidebarContent
+        </div>
         </section>
 
     </div>

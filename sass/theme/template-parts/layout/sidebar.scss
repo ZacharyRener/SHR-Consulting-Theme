@@ -61,4 +61,19 @@
         }
     }
 
+    .extra-sidebar-content {
+        margin-top: 75px;
+        h3 {
+            font-family: $font-family-primary;
+            letter-spacing: 2px;
+            color: #595959;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        p {
+            color: white;
+        }
+    }
+
 }

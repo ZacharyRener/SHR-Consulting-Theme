@@ -1,0 +1,43 @@
+div.blog {
+
+    .title {
+        text-transform: uppercase;
+        font-family: $font-family-primary;
+        color: black;
+        letter-spacing: normal;
+        font-weight:400;
+    }
+
+    .author-date {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: black;
+        font-family: $font-family-paragraph;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .featured-image {
+        margin-bottom: 30px;
+    }
+
+    .content {
+
+    }
+
+    .read-more {
+        color: #bb2c1e;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        padding-left: 3px;
+    }
+
+    padding-bottom: 50px;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 50px;
+
+}

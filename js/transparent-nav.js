@@ -31,4 +31,3 @@ function transparentNavigation() {
 jQuery(window).scroll(e=>{
     transparentNavigation();
 });
-

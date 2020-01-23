@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 			$globalPageHeader = get_field('global_page_header', 'options');
 			$singlePageHeader = get_field('header_image');
 			$headerUrl = empty($singlePageHeader) ? $globalPageHeader : $singlePageHeader; 
-			$needsGradientOverlay = is_page() && !is_front_page();
+			$needsGradientOverlay = (is_page() || is_single() || is_home() ) && !is_front_page();
 		?>
 		<nav id="primary-nav" class="navbar navbar-expand-lg navbar-light transparent <?php if($needsGradientOverlay): echo 'extended-height'; endif; ?>" 
 			<?php if($needsGradientOverlay): echo 'style="background-image:url('.$headerUrl.');"'; endif; ?> >
@@ -82,6 +82,7 @@ defined( 'ABSPATH' ) || exit;
 		                    )
 						); 
 						?>
+						
 						</ul>
 					</div>
 				</div>
@@ -101,5 +102,9 @@ defined( 'ABSPATH' ) || exit;
 	}, function(){
 		let dropdownMenu = jQuery(this).children('.dropdown-menu');
 		dropdownMenu.toggleClass("show");
+	});
+	jQuery(".dropdown-toggle.nav-link").click(function () {
+		var anchorValue= jQuery(this).attr("href");
+		document.location = anchorValue;
 	});
 	</script>

@@ -1,0 +1,43 @@
+.news-events {
+
+    .page-content {
+
+    }
+
+    .year {
+        font-family: $font-family-primary;
+        text-transform: none;
+        font-size: 30px;
+        color: #bb2c1e;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 0;
+        margin-top: 60px;
+    }
+
+    hr {
+
+    }
+
+    .news-post {
+        margin-bottom: 30px;
+        .title {
+            font-family: $font-family-primary;
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 0;
+            line-height: 20px;
+        }
+        .date {
+            margin-top:0;
+            margin-bottom:0;
+            text-transform:uppercase;
+            font-family: $font-family-paragraph;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666666;
+        }
+    }
+
+}

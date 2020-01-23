@@ -11893,6 +11893,17 @@ body #primary-nav.hasBackground {
         font-family: "Roboto", sans-serif;
         font-size: 15px;
         line-height: 25px; }
+  .sidebar-section .extra-sidebar-content {
+    margin-top: 75px; }
+    .sidebar-section .extra-sidebar-content h3 {
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 2px;
+      color: #595959;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 20px; }
+    .sidebar-section .extra-sidebar-content p, .sidebar-section .extra-sidebar-content body:not(.home) .main-content, body:not(.home) .sidebar-section .extra-sidebar-content .main-content {
+      color: white; }
 
 /** Homepage Styling **/
 body.home {
@@ -12223,6 +12234,235 @@ body:not(.home) {
   body:not(.home) h1 {
     margin-bottom: 10px;
     margin-top: 10px; }
+
+/** Team Page Styling **/
+.team-members:not(.single-team) {
+  margin-top: 40px; }
+
+.team-members .team-member {
+  margin-bottom: 70px; }
+  .team-members .team-member .image-section {
+    padding-right: 0; }
+    .team-members .team-member .image-section .bio-image {
+      width: 100%;
+      height: auto; }
+  .team-members .team-member .text-section .h1-title {
+    color: black;
+    margin-bottom: 0; }
+  .team-members .team-member .text-section .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+    line-height: 15px; }
+  .team-members .team-member .text-section .role {
+    font-family: Montserrat,sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    color: #595959 !important;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .team-members .team-member .text-section .excerpt a:not(.icon):not(.collapse-link) {
+    color: #bb2c1e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 3px; }
+
+.collapse-container {
+  margin-left: 0;
+  padding-left: 0;
+  border-bottom: 2px solid #f5f5f5; }
+  .collapse-container .collapse-link {
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+    font-size: 20px;
+    color: #bb2c1e;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+    .collapse-container .collapse-link[aria-expanded="false"]::after {
+      content: "\f067";
+      font-family: FontAwesome; }
+    .collapse-container .collapse-link[aria-expanded="true"]::after {
+      content: "\f068";
+      font-family: FontAwesome; }
+    .collapse-container .collapse-link::after {
+      position: absolute;
+      right: 0;
+      color: #c4c4c4; }
+
+.icons {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .icons a.icon {
+    margin-right: 10px;
+    padding: 5px 7px 1px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    background-color: #3dc14c;
+    border-radius: 3px !important;
+    width: 40px;
+    height: 40px; }
+    .icons a.icon i.fa {
+      font-size: 22px;
+      line-height: 28px; }
+    .icons a.icon.facebook {
+      background-color: #3d5997; }
+    .icons a.icon.linkedin {
+      background-color: #0096c1; }
+    .icons a.icon.twitter {
+      background-color: #44ccf6; }
+
+/** News & Events Page Styling **/
+.news-events .year {
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  font-size: 30px;
+  color: #bb2c1e;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 60px; }
+
+.news-events .news-post {
+  margin-bottom: 30px; }
+  .news-events .news-post .title {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 20px; }
+  .news-events .news-post .date {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666; }
+
+/** Single Styling **/
+.single .featured-image {
+  margin-bottom: 30px; }
+
+/** Insights Page Styling **/
+.insights .featured-offer {
+  background-color: #303030;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 75px; }
+  .insights .featured-offer .headline {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .insights .featured-offer .image-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .insights .featured-offer .image-section .offer-image {
+      width: 100%;
+      height: auto;
+      max-height: 90%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .insights .featured-offer .title {
+    font-size: 17px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0; }
+  .insights .featured-offer .content, .insights .featured-offer .text-section p, .insights .featured-offer .text-section body:not(.home) .main-content, body:not(.home) .insights .featured-offer .text-section .main-content {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    line-height: 25px; }
+
+.insights .bottom-section .col-md-6 {
+  position: relative;
+  padding-bottom: 50px; }
+
+.insights .bottom-section .feed-title {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px; }
+
+.insights .bottom-section .feed-image {
+  margin-top: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  height: auto; }
+
+.insights .bottom-section .title {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px; }
+
+.insights .bottom-section .feed-cta {
+  color: #bb2c1e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding-left: 3px;
+  position: absolute;
+  bottom: 20px;
+  right: 0; }
+
+/** Blog Landing Page Styling **/
+div.blog {
+  padding-bottom: 50px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 50px; }
+  div.blog .title {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    letter-spacing: normal;
+    font-weight: 400; }
+  div.blog .author-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  div.blog .featured-image {
+    margin-bottom: 30px; }
+  div.blog .read-more {
+    color: #bb2c1e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 3px; }
 
 /*
 * Use existing Bootstrap 4 classes and
