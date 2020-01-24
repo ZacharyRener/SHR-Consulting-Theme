@@ -11635,7 +11635,8 @@ p, body:not(.home) .main-content {
 
 .btn,
 .wpcf7 input[type=submit] {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
   .btn:not(.no-star), .wpcf7 input:not(.no-star)[type=submit] {
     padding-right: 70px; }
     .btn:not(.no-star)::after, .wpcf7 input[type=submit]:not(.no-star)::after {
@@ -12463,6 +12464,80 @@ div.blog {
     font-weight: 700;
     font-size: 12px;
     padding-left: 3px; }
+
+/** Careers Page Styling **/
+@media (min-width: 900px) {
+  .page-template-template-careers .text-content {
+    min-width: 781px; } }
+
+.page-template-template-careers .text-content p, .page-template-template-careers .text-content body:not(.home) .main-content, body:not(.home) .page-template-template-careers .text-content .main-content {
+  max-width: 450px; }
+
+.page-template-template-careers #primary-carousel .carousel-item {
+  max-height: 750px; }
+
+.page-template-template-careers #primary-carousel .carousel-wrapper {
+  height: 750px; }
+
+.page-template-template-careers #primary-carousel .slide-count {
+  text-transform: uppercase; }
+
+.page-template-template-careers .videos-wrapper {
+  background-size: 100vw auto;
+  background-color: black;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 100px; }
+  .page-template-template-careers .videos-wrapper .text-wrapper {
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 60px; }
+    .page-template-template-careers .videos-wrapper .text-wrapper .title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 35px;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+  .page-template-template-careers .videos-wrapper #video-section {
+    background-size: 52vw 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    min-height: 445px; }
+    .page-template-template-careers .videos-wrapper #video-section .credentials {
+      padding-left: 8vw;
+      color: white; }
+
+.page-template-template-careers #from-our-blog {
+  padding-top: 200px;
+  padding-bottom: 300px;
+  background-color: black;
+  background-image: url(/wp-content/uploads/2020/01/blog-section.png);
+  background-size: cover;
+  background-position: center; }
+  .page-template-template-careers #from-our-blog .section-with-background {
+    background-image: none;
+    background: transparent; }
+  .page-template-template-careers #from-our-blog .main-blog-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
+            clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%); }
+    .page-template-template-careers #from-our-blog .main-blog-section h1, .page-template-template-careers #from-our-blog .main-blog-section h2, .page-template-template-careers #from-our-blog .main-blog-section h3, .page-template-template-careers #from-our-blog .main-blog-section h4 {
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .page-template-template-careers #from-our-blog .main-blog-section .mt-5 {
+      margin-top: 125px !important; }
+    .page-template-template-careers #from-our-blog .main-blog-section li {
+      margin-bottom: 20px; }
+    .page-template-template-careers #from-our-blog .main-blog-section ul {
+      margin-top: 20px;
+      margin-left: 0;
+      padding-left: 20px;
+      list-style-position: outside; }
 
 /*
 * Use existing Bootstrap 4 classes and

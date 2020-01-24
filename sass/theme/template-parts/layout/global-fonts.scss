@@ -22,6 +22,7 @@ p {
 
 .btn {
     text-transform:uppercase;
+    position: relative;
     &:not(.no-star){
         padding-right: 70px;
         &::after {

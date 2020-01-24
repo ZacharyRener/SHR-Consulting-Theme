@@ -1,0 +1,113 @@
+.page-template-template-careers {
+
+	.text-content {
+		@media(min-width:900px) {
+			min-width: 781px;
+		}
+		p {
+			max-width: 450px;
+		}
+	}
+
+	#primary-carousel {
+		.carousel-item {
+			max-height: 750px;
+		}
+		.carousel-wrapper {
+			height: 750px;
+		}
+		.slide-count {
+			text-transform: uppercase;
+		}
+	}
+
+	.videos-wrapper {
+
+
+		background-size: 100vw auto;
+		background-color: black;
+		background-repeat: no-repeat;
+
+		position:relative;
+
+		padding-bottom: 100px;
+
+		.text-wrapper {
+			color: white;
+			text-align: center;
+			padding-top: 120px;
+			padding-bottom: 60px;
+			.title {
+				font-family: $font-family-primary;
+				font-size: 35px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+
+		#video-section {
+
+			background-size: 52vw 100%;
+			background-position: top left;
+			background-repeat: no-repeat;
+
+
+			min-height: 445px;
+
+			.text-wrapper {
+
+			}
+			.credentials {
+				padding-left: 8vw;
+				color: white;
+			}
+
+		}
+
+
+
+	}
+
+	#from-our-blog {
+		padding-top: 200px;
+		padding-bottom: 300px;
+		background-color: black;
+
+		background-image:url(/wp-content/uploads/2020/01/blog-section.png);
+		background-size:cover;
+		background-position: center;
+		.section-with-background {
+			background-image:none;
+			background: transparent;
+		}
+		.main-blog-section {
+			margin-top: 100px;
+			margin-bottom: 100px;
+
+			padding-top: 70px;
+			padding-bottom: 70px;
+
+			clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
+
+			h1, h2, h3, h4 {
+				font-weight: 400;
+				font-family: $font-family-primary;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+			.mt-5 {
+				margin-top: 125px !important;
+			}
+			li {
+				margin-bottom: 20px;
+			}
+			ul {
+				margin-top: 20px;
+				margin-left: 0;
+				padding-left:20px;
+				list-style-position: outside;
+			}
+		}
+	}
+
+}
