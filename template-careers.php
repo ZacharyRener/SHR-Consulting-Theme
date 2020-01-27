@@ -12,6 +12,8 @@ get_template_part('template-parts/careers/videos');
 
 get_template_part('template-parts/careers/from-our-blog');
 
+get_template_part('template-parts/careers/jobs-section');
+
 get_footer();
 
 ?>

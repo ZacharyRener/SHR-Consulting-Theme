@@ -27,7 +27,10 @@ echo "
         </div>
 
         <div class='right-white-section blog-match-height'></div>
-    
+        
+<div class=\"arrow-down-section\">
+    	<i class=\"fa fa-angle-down\"></i>
+  	</div>    
 
 </section>
 

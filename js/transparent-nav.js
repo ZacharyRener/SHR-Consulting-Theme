@@ -1,9 +1,8 @@
 function transparentNavigation() {
 
-    
     let breakpoint = 32;
     //let whiteSpaceHeight = 170;
-    let whiteSpaceHeight = jQuery('body').hasClass('home') ? 134 : 170;
+    let whiteSpaceHeight = jQuery('body').hasClass('transparentNav') ? 134 : 170;
 
     let userHasScrolled = jQuery(window).scrollTop() >= breakpoint;
     let userHasReachedTop = jQuery(window).scrollTop() < breakpoint;

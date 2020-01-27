@@ -12,11 +12,21 @@ defined( 'ABSPATH' ) || exit;
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 	<script type='text/javascript' src="<?php echo get_stylesheet_directory_uri(); ?>/js/transparent-nav.js"></script>
+    <script>
+	    <?php if(get_field('transparent_navigation')): ?>
+            //transparentNavigation(134);
+	    <?php else: ?>
+            //transparentNavigation(170);
+	    <?php endif; ?>
+    </script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.matchHeight.js" type="text/javascript"></script>
+    <?php if(is_front_page()): ?>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/animations.js" type="text/javascript" ></script>
+    <?php endif; ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php $bodyClass = get_field('transparent_navigation') ? 'transparentNav' : 'hasBackgroundNav'; ?>
+<body <?php body_class($bodyClass); ?>>
     <?php do_action( 'wp_body_open' ); ?>
 
     <div class="site" id="page">

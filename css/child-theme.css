@@ -12037,7 +12037,8 @@ section#pathways {
   background-size: contain;
   background-position: top left;
   background-repeat: no-repeat;
-  background-color: #000; }
+  background-color: #000;
+  overflow: hidden; }
   section#pathways i.fa.fa-star {
     color: white;
     position: absolute;
@@ -12051,7 +12052,21 @@ section#pathways {
     margin-bottom: 0; }
   section#pathways .pathways-top-text {
     position: relative;
-    left: -275px; }
+    -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+    section#pathways .pathways-top-text.animateNow {
+      left: -275px; }
+    section#pathways .pathways-top-text:not(.animateNow) {
+      left: -100vw; }
+  section#pathways .pathways-bottom-text {
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+    section#pathways .pathways-bottom-text:not(.animateNow) {
+      left: 100vw; }
+    section#pathways .pathways-bottom-text.animateNow {
+      left: 0; }
   section#pathways .quickhit-copy {
     color: white;
     font-family: "Roboto", sans-serif;
@@ -12062,6 +12077,9 @@ section#pathways {
     section#pathways .three-pathways * {
       z-index: 2; }
     section#pathways .three-pathways .main-pathway {
+      overflow: hidden;
+      -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
       position: relative;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -12078,6 +12096,22 @@ section#pathways {
       background-position: bottom left;
       margin: 0 10px; }
       section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
+        position: absolute;
+        left: 40px;
+        padding-right: 70px; }
+      section#pathways .three-pathways .main-pathway.animateNow {
+        top: 0;
+        opacity: 1; }
+      section#pathways .three-pathways .main-pathway:not(.animateNow) {
+        top: 50px;
+        opacity: 0; }
+      section#pathways .three-pathways .main-pathway .prlx-image {
+        width: 500px;
+        height: auto;
+        max-width: unset;
+        -o-object-fit: cover;
+           object-fit: cover; }
+      section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
         color: white;
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
@@ -12087,7 +12121,8 @@ section#pathways {
         letter-spacing: 2px; }
 
 section#from-our-blog {
-  position: relative; }
+  position: relative;
+  background-color: white; }
   section#from-our-blog .arrow-down-section {
     bottom: unset;
     top: -80px;
@@ -12109,7 +12144,7 @@ section#from-our-blog {
     right: 0;
     top: 0;
     background-color: white;
-    z-index: 0; }
+    z-index: -1; }
   section#from-our-blog .main-blog-section {
     background-color: white;
     padding-top: 220px;
@@ -12151,6 +12186,10 @@ section#from-our-blog {
     section#from-our-blog .headline-section div:nth-of-type(3) {
       position: absolute;
       right: 0; }
+
+.home .main-pathway {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 85%, 0% 25%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 85%, 0% 25%); }
 
 section#offers-section {
   color: white;
@@ -12509,11 +12548,18 @@ div.blog {
 
 .page-template-template-careers #from-our-blog {
   padding-top: 200px;
-  padding-bottom: 300px;
+  padding-bottom: 80px;
   background-color: black;
+  position: relative;
   background-image: url(/wp-content/uploads/2020/01/blog-section.png);
   background-size: cover;
   background-position: center; }
+  .page-template-template-careers #from-our-blog .right-white-section {
+    z-index: 0 !important; }
+  .page-template-template-careers #from-our-blog .arrow-down-section {
+    bottom: 100px;
+    top: unset;
+    left: auto; }
   .page-template-template-careers #from-our-blog .section-with-background {
     background-image: none;
     background: transparent; }
@@ -12522,6 +12568,7 @@ div.blog {
     margin-bottom: 100px;
     padding-top: 70px;
     padding-bottom: 70px;
+    z-index: 1 !important;
     -webkit-clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
             clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%); }
     .page-template-template-careers #from-our-blog .main-blog-section h1, .page-template-template-careers #from-our-blog .main-blog-section h2, .page-template-template-careers #from-our-blog .main-blog-section h3, .page-template-template-careers #from-our-blog .main-blog-section h4 {
@@ -12538,6 +12585,46 @@ div.blog {
       margin-left: 0;
       padding-left: 20px;
       list-style-position: outside; }
+
+.page-template-template-careers #jobs-section {
+  background-color: black; }
+  .page-template-template-careers #jobs-section .text-section {
+    background-image: url(http://localhost/wp-content/uploads/2020/01/job-openings-bg.png);
+    background-size: cover;
+    -webkit-clip-path: polygon(95% 0, 100% 12%, 100% 75%, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(95% 0, 100% 12%, 100% 75%, 100% 100%, 0 100%, 0 0); }
+    .page-template-template-careers #jobs-section .text-section > .container {
+      padding-top: 85px;
+      padding-bottom: 115px;
+      padding-left: 50px;
+      padding-right: 50px; }
+    .page-template-template-careers #jobs-section .text-section .headline-section .content-section p, .page-template-template-careers #jobs-section .text-section .headline-section .content-section body:not(.home) .main-content, body:not(.home) .page-template-template-careers #jobs-section .text-section .headline-section .content-section .main-content {
+      line-height: 25px; }
+    .page-template-template-careers #jobs-section .text-section .headline-section .title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px; }
+    .page-template-template-careers #jobs-section .text-section .job-listings {
+      margin-top: 70px; }
+      .page-template-template-careers #jobs-section .text-section .job-listings .main-post .position-title, .page-template-template-careers #jobs-section .text-section .job-listings .main-post .job-title {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: black;
+        font-size: 18px;
+        font-weight: 600; }
+      .page-template-template-careers #jobs-section .text-section .job-listings .main-post .department, .page-template-template-careers #jobs-section .text-section .job-listings .main-post .date {
+        font-family: Roboto,sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #a0a0a0;
+        margin-bottom: 0;
+        line-height: 18px;
+        font-weight: 400;
+        letter-spacing: .5px; }
 
 /*
 * Use existing Bootstrap 4 classes and

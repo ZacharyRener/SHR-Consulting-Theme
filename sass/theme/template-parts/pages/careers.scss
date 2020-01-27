@@ -69,9 +69,19 @@
 	}
 
 	#from-our-blog {
+		.right-white-section {
+			z-index: 0 !important;
+		}
+		.arrow-down-section {
+			bottom: 100px;
+			top: unset;
+			left: auto;
+		}
+
 		padding-top: 200px;
-		padding-bottom: 300px;
+		padding-bottom:80px;
 		background-color: black;
+		position: relative;
 
 		background-image:url(/wp-content/uploads/2020/01/blog-section.png);
 		background-size:cover;
@@ -86,7 +96,7 @@
 
 			padding-top: 70px;
 			padding-bottom: 70px;
-
+			z-index: 1 !important;
 			clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
 
 			h1, h2, h3, h4 {
@@ -106,6 +116,72 @@
 				margin-left: 0;
 				padding-left:20px;
 				list-style-position: outside;
+			}
+		}
+	}
+
+	#jobs-section {
+		background-color: black;
+		.text-section {
+			background-image: url(http://localhost/wp-content/uploads/2020/01/job-openings-bg.png);
+			background-size: cover;
+			clip-path: polygon(95% 0, 100% 12%, 100% 75%, 100% 100%, 0 100%, 0 0);
+			> .container {
+				padding-top: 85px;
+				padding-bottom: 115px;
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+			.headline-section {
+				.content-section p {
+					line-height: 25px;
+				}
+				.title {
+					font-family: $font-family-primary;
+					font-weight: 400;
+					font-size: 30px;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					margin-bottom: 30px;
+				}
+
+				.btn {
+
+				}
+			}
+
+			.job-listings {
+				margin-top:70px;
+				.main-post {
+					.position-title {
+						font-family: $font-family-primary;
+						text-transform: uppercase;
+						margin-bottom:0;
+						color: black;
+						font-size: 18px;
+						font-weight: 600;
+					}
+
+					.job-title {
+						@extend .position-title;
+					}
+
+					.department {
+						font-family: Roboto,sans-serif;
+						text-transform: uppercase;
+						font-size: 14px;
+						color: #a0a0a0;
+						margin-bottom: 0;
+						line-height: 18px;
+						font-weight: 400;
+						letter-spacing: .5px;
+
+					}
+
+					.date {
+						@extend .department;
+					}
+				}
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 section#from-our-blog {
 
     position: relative;
+    background-color: white;
 
     .arrow-down-section {
         bottom:unset;
@@ -32,7 +33,7 @@ section#from-our-blog {
         right: 0;
         top: 0;
         background-color: white;
-        z-index: 0;
+        z-index:-1;
     }
 
     .main-blog-section {
@@ -92,4 +93,10 @@ section#from-our-blog {
         }
     }
 
+}
+
+.home {
+    .main-pathway {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 85%, 0% 25%);
+    }
 }

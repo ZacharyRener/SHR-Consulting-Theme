@@ -7,6 +7,7 @@ function register_post_types() {
 	codex_Library_init();
 	codex_Leadership_init();
 	codex_news_events_init();
+	codex_Job_init();
 }
 
 function codex_Offer_init() {
@@ -177,6 +178,43 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 
+}
+
+function codex_Job_init() {
+	$labels = array(
+		'name'               => _x( 'Jobs', 'post type general name', '' ),
+		'singular_name'      => _x( 'Job', 'post type singular name', '' ),
+		'menu_name'          => _x( 'Jobs', 'admin menu', '' ),
+		'name_admin_bar'     => _x( 'Job', 'add new on admin bar', '' ),
+		'add_new'            => _x( 'Add New', 'Job', '' ),
+		'add_new_item'       => __( 'Add New Job', '' ),
+		'new_item'           => __( 'New Job', '' ),
+		'edit_item'          => __( 'Edit Job', '' ),
+		'view_item'          => __( 'View Job', '' ),
+		'all_items'          => __( 'All Jobs', '' ),
+		'search_items'       => __( 'Search Jobs', '' ),
+		'parent_item_colon'  => __( 'Parent Jobs:', '' ),
+		'not_found'          => __( 'No Jobs found.', '' ),
+		'not_found_in_trash' => __( 'No Jobs found in Trash.', '' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'description'        => __( 'Description.', '' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'job' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title' )
+	);
+
+	register_post_type( 'job', $args );
 }
 
 ?>

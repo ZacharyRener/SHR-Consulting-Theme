@@ -6,6 +6,7 @@ section#pathways {
     background-position: top left;
     background-repeat: no-repeat;
     background-color: #000;
+    overflow:hidden;
 
     i.fa.fa-star {
         color: white;
@@ -26,7 +27,25 @@ section#pathways {
 
     .pathways-top-text {
         position: relative;
-        left: -275px;
+        transition: $transition-primary;
+        &.animateNow {
+            left: -275px;
+        }
+        &:not(.animateNow) {
+            left: -100vw;
+        }
+    }
+
+    .pathways-bottom-text {
+        overflow:hidden;
+        position: relative;
+        transition: $transition-primary;
+        &:not(.animateNow) {
+            left: 100vw;
+        }
+        &.animateNow {
+            left: 0;
+        }
     }
 
     .quickhit-copy {
@@ -45,6 +64,30 @@ section#pathways {
             
         }
         .main-pathway {
+            p {
+                position: absolute;
+                left: 40px;
+                padding-right: 70px;
+            }
+            overflow: hidden;
+            transition: $transition-primary;
+
+            &.animateNow {
+                top: 0;
+                opacity: 1;
+            }
+            &:not(.animateNow) {
+                top: 50px;
+                opacity: 0;
+            }
+
+            .prlx-image {
+                width: 500px;
+                height: auto;
+                max-width: unset;
+                object-fit: cover;
+            }
+
             position: relative;
             display:flex;
             align-items: center;

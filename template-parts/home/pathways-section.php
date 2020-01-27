@@ -70,10 +70,21 @@ echo '<section id="pathways" style="background-image:url('.$backgroundImage.');"
 
                         <div class='col-md-4'>
                             
-                            <div class='main-pathway pathway-$count' style='background-image:url($background_image);'>
-                            <i class='fa fa-star'></i>
-                                <p>$textHeadline</p>   
+                            
+                            <div class='main-pathway pathway-$count' >
+	                             <div class='scene' id='pathway-$count-id'>
+					                <div data-depth='-0.1'>
+					                    <img class='prlx-image' src='$background_image' />
+					                </div>
+					            </div>
+					            <i class='fa fa-star'></i>
+	                            <p>$textHeadline</p> 
                             </div>
+				            
+				            <script>
+					            var scene = document.getElementById('pathway-$count-id');
+	                            var parallaxInstance = new Parallax(scene, { relativeInput: true });
+                            </script>
                         
                         </div>
                         
