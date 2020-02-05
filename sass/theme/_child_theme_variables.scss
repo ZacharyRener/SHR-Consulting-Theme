@@ -2,6 +2,12 @@ $primary: white !default;
 
 $secondary: #e7e7e7;
 
+$carousel-height: calc( 100vh - 30px );
+$carousel-height-logged-in: calc( 100vh - 65px );
+
+$fullscreen-height: calc( 100vh - 30px );
+$fullscreen-height-logged-in: calc( 100vh - 125px );
+
 $utility-nav-bg: black;
 $utility-nav-fa: #4c4c4c;
 $utility-nav-primary: white;

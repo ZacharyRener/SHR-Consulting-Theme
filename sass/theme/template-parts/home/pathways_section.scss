@@ -1,12 +1,31 @@
-section#pathways {
+body.home.logged-in {
+    section#pathways{
+        height: $fullscreen-height-logged-in;
+        min-height: 728px;
+    }
+}
+body.home:not(.logged-in) {
+    section#pathways{
+        height: $fullscreen-height;
+        min-height: 728px;
+    }
+}
 
-    padding-top: 125px;
+section#pathways {
+    @media(max-height: 870px) {
+        padding-top: 70px;
+    }
+    @media(min-height: 870px) {
+        padding-top: 125px;
+    }
     padding-bottom: 100px;
     background-size:contain;
     background-position: top left;
     background-repeat: no-repeat;
     background-color: #000;
     overflow:hidden;
+
+
 
     i.fa.fa-star {
         color: white;
@@ -53,6 +72,7 @@ section#pathways {
         font-family: $font-family-paragraph;
         font-size: $p-font-size;
         margin-top:50px;
+
     }
 
     .three-pathways {

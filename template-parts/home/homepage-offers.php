@@ -44,13 +44,12 @@ echo "
 
         echo "
         </div>
-    </div>
+    </div>";
 
-    <div class='arrow-down-section'>
-        <i class='fa fa-angle-down'></i>
-    </div>
+	arrowDown('#seo-section');
 
-</section>
+echo
+"</section>
 
 ";
 

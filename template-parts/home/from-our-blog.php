@@ -10,13 +10,12 @@ echo "
 
         <div class='main-blog-section blog-match-height'>
 
-           
+                <div class='headline-section'>";
 
-                <div class='headline-section'>
-                    <div class='arrow-down-section'>
-                        <i class='fa fa-angle-down'></i>
-                    </div>
-                    <div><h2>FROM OUR BLOG</h2></div>
+                arrowDown('#from-our-blog .headline-section');
+
+                    echo
+                    "<div><h2>FROM OUR BLOG</h2></div>
                     <div><a href='#' class='btn btn-secondary'>Go to the blog</a></div>
                 </div>
 
@@ -67,42 +66,38 @@ echo "
             
         </div>
 
-        <div class='right-white-section blog-match-height'></div>
-    
-
-</section>
-
-";
-
-
+        <div class='right-white-section blog-match-height'></div>";
 ?>
+
 
 <script>
 
-let backgroundSection = jQuery('.section-with-background');
-let mainBlog = jQuery('.main-blog-section');
-let pathways = jQuery('.three-pathways .container .row');
-let pathway0 = jQuery('.pathway-0');
-let pathway2 = jQuery('.pathway-2');
-let threePathways = jQuery('.three-pathways .container');
-let whiteSection = jQuery('.right-white-section');
+    let backgroundSection = jQuery('.section-with-background');
+    let mainBlog = jQuery('.main-blog-section');
+    let pathways = jQuery('.three-pathways .container .row');
+    let pathway0 = jQuery('.pathway-0');
+    let pathway2 = jQuery('.pathway-2');
+    let threePathways = jQuery('.three-pathways .container');
+    let whiteSection = jQuery('.right-white-section');
 
-function positionBlog() {
-    
-    let leftOffset = pathway0.offset().left + (pathway0.innerWidth() / 2);
-    let maxWidth = threePathways.innerWidth() - 220;
-    let whiteSectionWidth = jQuery(document).innerWidth() - ( maxWidth + leftOffset ); 
+    function positionBlog() {
 
-    whiteSection.attr('style', `width: ${whiteSectionWidth}px`);
-    mainBlog.attr('style', `position:relative; left: ${leftOffset}px; width:${maxWidth}px`);
-    backgroundSection.attr('style', `width: ${leftOffset}px`);
-    jQuery('.blog-match-height').matchHeight();
-    jQuery('.match-height').matchHeight();
+        let leftOffset = pathway0.offset().left + (pathway0.innerWidth() / 2);
+        let maxWidth = threePathways.innerWidth() - 220;
+        let whiteSectionWidth = jQuery(document).innerWidth() - ( maxWidth + leftOffset );
 
-}
+        whiteSection.attr('style', `width: ${whiteSectionWidth}px`);
+        mainBlog.attr('style', `position:relative; left: ${leftOffset}px; width:${maxWidth}px`);
+        backgroundSection.attr('style', `width: ${leftOffset}px`);
+        jQuery('.blog-match-height').matchHeight();
+        jQuery('.match-height').matchHeight();
 
-jQuery(window).resize(positionBlog);
+    }
 
-positionBlog(); 
+    jQuery(window).resize(positionBlog);
+
+    positionBlog();
 
 </script>
+
+</section>

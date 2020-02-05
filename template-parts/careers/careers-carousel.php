@@ -93,9 +93,8 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
  
   echo '</div>';
 
-  echo '<div class="arrow-down-section">';
-    echo '<i class="fa fa-angle-down"></i>';
-  echo '</div>';
+  get_template_part('template-parts/components/arrow-down');
+  arrowDown('');
 
 echo '</div>';
 

@@ -98,7 +98,7 @@ echo '<section id="pathways" style="background-image:url('.$backgroundImage.');"
                 echo "</div>
             </div>
         </div>
-    </div>
+    
 
     ";
 

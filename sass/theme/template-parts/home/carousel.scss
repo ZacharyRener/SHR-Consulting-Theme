@@ -1,7 +1,30 @@
 body.home {
     background-color: black;
 }
-
+body.home.logged-in {
+    .carousel-wrapper {
+        height: $carousel-height-logged-in;
+    }
+    .carousel-item {
+        max-height: $carousel-height-logged-in;
+    }
+    img {
+        max-height: $carousel-height-logged-in;
+        object-fit: cover;
+    }
+}
+body.home:not(.logged-in){
+    .carousel-wrapper {
+        height: $carousel-height;
+    }
+    .carousel-item {
+        max-height: $carousel-height;
+    }
+    img {
+        max-height: $carousel-height;
+        object-fit: cover;
+    }
+}
 #primary-carousel {
 
     margin-top: -98px;
@@ -18,7 +41,6 @@ body.home {
     }
 
     .carousel-wrapper {
-        height: 650px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,11 +50,8 @@ body.home {
     }
     
     .carousel-item {
-        max-height: 660px;
-        img {
-            max-height: 660px;
-            object-fit: cover;
-        }
+
+
         i.fa.fa-chevron-right {
             padding-left: 7px;
             font-size: 7px;
@@ -94,6 +113,7 @@ body.home {
     }
     
     ol.carousel-indicators {
+        z-index: 17 !important;
         justify-content: flex-end;
         bottom: 24px;
         li {
@@ -115,7 +135,7 @@ body.home {
 }
 
 .arrow-down-section {
-    z-index:1;
+    z-index:16;
     position: absolute;
     bottom: 20px;
     display: flex;

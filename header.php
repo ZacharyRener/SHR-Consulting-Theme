@@ -47,4 +47,44 @@ defined( 'ABSPATH' ) || exit;
             var anchorValue= jQuery(this).attr("href");
             document.location = anchorValue;
         });
+        function offset(el) {
+            var rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
+        function scrollToSection(section) {
+            var div = document.querySelector(section);
+            var divOffset = offset(div);
+            var topValue = divOffset.top - 105;
+            window.scroll({
+                top: topValue,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function makePathwaysResponsive() {
+            var div = document.querySelector('.three-pathways');
+            var divOffset = offset(div);
+            var div2 = document.querySelector('#from-our-blog');
+            var div2Offset = offset(div2);
+            var topValue = div2Offset.top - divOffset.top - (div.offsetHeight / 2);
+            // top value is
+            // white bg y pos - three pathways y pos
+            jQuery('.three-pathways').attr('style', `position:relative; top:${topValue}px`);
+        }
+
+        jQuery(document).ready(e=>{
+            makePathwaysResponsive();
+        });
+
+        var resizeId;
+        jQuery(window).resize(pathwayResize);
+
+        function pathwayResize() {
+
+        }
+
+        //makePathwaysResponsive();
         </script>

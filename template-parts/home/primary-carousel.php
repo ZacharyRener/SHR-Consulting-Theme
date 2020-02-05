@@ -2,7 +2,7 @@
 
 $parallaxDepth = get_field('parallax_depth');
 
-echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride="carousel">';
+echo '<section id="primary-carousel" class="carousel slide carousel-fade" data-ride="carousel">';
 
   echo '<ol class="carousel-indicators">';
     
@@ -88,41 +88,42 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
  
   echo '</div>';
 
-  echo '<div class="arrow-down-section">';
-    echo '<i class="fa fa-angle-down"></i>';
-  echo '</div>';
-
-echo '</div>';
+	get_template_part('template-parts/components/arrow-down');
+	arrowDown('#pathways');
 
 echo "<script>";
-  echo "jQuery(document).ready( () => {";
-      echo "var scene = document.getElementById('scene-0');";
-      echo "var parallaxInstance = new Parallax(scene, { relativeInput: true });";
-      echo "slide0Functionality();";
-      echo "jQuery('.carousel').carousel({";
-          echo "interval: 5000";
-      echo "}).on('slid.bs.carousel', function (e) {";
-        $carousel = get_field('carousel_options', 5);
-        for($i=0; $i<sizeof($carousel); $i++){
-            echo 'if(e.relatedTarget.classList.contains("slide-'.$i.'"))';
-            echo '  slide'.$i.'Functionality();';
-        }
-      echo "});";
-      echo "jQuery('.carousel').on('slide.bs.carousel', function (e) {";
-          $carousel = get_field('carousel_options', 5);
-          for($i=0; $i<sizeof($carousel); $i++){
-              echo 'var scene = document.getElementById("scene-'.$i.'");';
-              echo 'var parallaxInstance = new Parallax(scene, {
+echo "jQuery(document).ready( () => {";
+echo "var scene = document.getElementById('scene-0');";
+echo "var parallaxInstance = new Parallax(scene, { relativeInput: true });";
+echo "slide0Functionality();";
+echo "jQuery('.carousel').carousel({";
+echo "interval: 5000";
+echo "}).on('slid.bs.carousel', function (e) {";
+$carousel = get_field('carousel_options', 5);
+for($i=0; $i<sizeof($carousel); $i++){
+	echo 'if(e.relatedTarget.classList.contains("slide-'.$i.'"))';
+	echo '  slide'.$i.'Functionality();';
+}
+echo "});";
+echo "jQuery('.carousel').on('slide.bs.carousel', function (e) {";
+$carousel = get_field('carousel_options', 5);
+for($i=0; $i<sizeof($carousel); $i++){
+	echo 'var scene = document.getElementById("scene-'.$i.'");';
+	echo 'var parallaxInstance = new Parallax(scene, {
                       relativeInput: true
                     });';
-              echo "jQuery('.slide-".$i." .top-text').attr('style', '');";
-              echo "jQuery('.slide-".$i." .bottom-text').attr('style', '');";
-              echo "jQuery('.slide-".$i." .slide-count').attr('style', '');";
-              echo "jQuery('.slide-".$i." .excerpt').attr('style', '');";
-              echo "jQuery('.slide-".$i." .btn').attr('style', '');";
-          }
-      echo "});";
-  echo "});";
+	echo "jQuery('.slide-".$i." .top-text').attr('style', '');";
+	echo "jQuery('.slide-".$i." .bottom-text').attr('style', '');";
+	echo "jQuery('.slide-".$i." .slide-count').attr('style', '');";
+	echo "jQuery('.slide-".$i." .excerpt').attr('style', '');";
+	echo "jQuery('.slide-".$i." .btn').attr('style', '');";
+}
+echo "});";
+echo "});";
 echo "</script>";
+
+echo '</section>';
+
+
 
 ?>
