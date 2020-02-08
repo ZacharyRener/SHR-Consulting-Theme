@@ -1,4 +1,4 @@
-function transparentNavigation() {
+export function transparentNavigation() {
 
     let breakpoint = 32;
     //let whiteSpaceHeight = 170;
@@ -25,8 +25,21 @@ function transparentNavigation() {
         whiteSpace.attr('style', 'height:0;');
         utilityNav.attr('style', '');
     }
+
 }
 
-jQuery(window).scroll(e=>{
-    transparentNavigation();
-});
+export function dropMenuOnHover() {
+    jQuery(".dropdown, .btn-group").hover(function(){
+        let dropdownMenu = jQuery(this).children('.dropdown-menu');
+        if(dropdownMenu.is(":hidden")){
+            dropdownMenu.toggleClass("show");
+        }
+    }, function(){
+        let dropdownMenu = jQuery(this).children('.dropdown-menu');
+        dropdownMenu.toggleClass("show");
+    });
+    jQuery(".dropdown-toggle.nav-link").click(function () {
+        var anchorValue= jQuery(this).attr("href");
+        document.location = anchorValue;
+    });
+}
