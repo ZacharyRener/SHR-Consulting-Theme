@@ -7,7 +7,7 @@ function arrowDown($link) {
 	
 	
 	<div class='arrow-down-section'>
-		<span onclick='scrollToSection(\"$link\")'>
+		<span onclick='window.scrollToSection(\"$link\")'>
 			<i class='fa fa-angle-down'></i>
 		</span>
 	</div>

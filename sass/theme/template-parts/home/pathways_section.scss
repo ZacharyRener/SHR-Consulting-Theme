@@ -1,13 +1,18 @@
+$pathways-min-height: 625px;
+$pathways-max-height: 900px;
+
 body.home.logged-in {
     section#pathways{
         height: $fullscreen-height-logged-in;
-        min-height: 728px;
+        min-height: $pathways-min-height;
+        max-height: $pathways-max-height;
     }
 }
 body.home:not(.logged-in) {
     section#pathways{
         height: $fullscreen-height;
-        min-height: 728px;
+        min-height: $pathways-min-height;
+        max-height: $pathways-max-height;
     }
 }
 
@@ -71,8 +76,21 @@ section#pathways {
         color: $primary;
         font-family: $font-family-paragraph;
         font-size: $p-font-size;
-        margin-top:50px;
-
+        @media(min-height:915px) {
+            margin-top: 50px;
+        }
+        @media(max-height:915px){
+            margin-top:15px;
+        }
+        p {
+            @media(max-height:760px) {
+                font-size: 17px;
+                line-height: 25px;
+            }
+            @media(max-height: 830px) and (min-height: 760px) {
+                line-height: 30px;
+            }
+        }
     }
 
     .three-pathways {
@@ -121,7 +139,13 @@ section#pathways {
                 line-height: 30px;
                 letter-spacing: 2px;
             }
-            height: 200px;
+            @media(min-height:760px){
+                height: 200px;
+            }
+            @media(max-height: 760px){
+                height: 150px;
+            }
+
             padding: 0 65px 0 35px;
             background-size: cover;
             background-position: bottom left;

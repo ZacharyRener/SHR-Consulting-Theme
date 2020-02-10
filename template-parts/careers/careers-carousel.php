@@ -94,7 +94,7 @@ echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride=
   echo '</div>';
 
   get_template_part('template-parts/components/arrow-down');
-  arrowDown('');
+  arrowDown('.videos-wrapper .title');
 
 echo '</div>';
 
