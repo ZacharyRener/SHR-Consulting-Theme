@@ -1,7 +1,20 @@
+body.home {
+    section#from-our-blog{
+        @media(max-height: 915px) and (min-height: 857px) {
+            max-height: 640px;
+        }
+        @media(max-height:857px){
+            max-height: 600px;
+        }
+    }
+}
+
 section#from-our-blog {
 
     position: relative;
     background-color: white;
+
+
 
     .arrow-down-section {
         bottom:unset;
@@ -58,6 +71,9 @@ section#from-our-blog {
                     font-size: $p-font-size;
                     text-transform: uppercase;
                     color:black;
+                    @media(max-height: 780px){
+                        line-height: 25px;
+                    }
                 }
                 .author, .date {
                     font-family: $font-family-paragraph;

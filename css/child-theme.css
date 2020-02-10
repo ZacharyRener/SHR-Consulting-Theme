@@ -11913,24 +11913,24 @@ body #primary-nav.hasBackground {
 body.home {
   background-color: black; }
 
-body.home.logged-in .carousel-wrapper {
+body.logged-in .carousel-wrapper {
   height: calc( 100vh - 65px); }
 
-body.home.logged-in .carousel-item {
+body.logged-in .carousel-item {
   max-height: calc( 100vh - 65px); }
 
-body.home.logged-in img {
+body.logged-in img {
   max-height: calc( 100vh - 65px);
   -o-object-fit: cover;
      object-fit: cover; }
 
-body.home:not(.logged-in) .carousel-wrapper {
+body:not(.logged-in) .carousel-wrapper {
   height: calc( 100vh - 30px); }
 
-body.home:not(.logged-in) .carousel-item {
+body:not(.logged-in) .carousel-item {
   max-height: calc( 100vh - 30px); }
 
-body.home:not(.logged-in) img {
+body:not(.logged-in) img {
   max-height: calc( 100vh - 30px);
   -o-object-fit: cover;
      object-fit: cover; }
@@ -12052,11 +12052,13 @@ body.home:not(.logged-in) img {
 
 body.home.logged-in section#pathways {
   height: calc( 100vh - 125px);
-  min-height: 728px; }
+  min-height: 625px;
+  max-height: 900px; }
 
 body.home:not(.logged-in) section#pathways {
   height: calc( 100vh - 30px);
-  min-height: 728px; }
+  min-height: 625px;
+  max-height: 900px; }
 
 section#pathways {
   padding-bottom: 100px;
@@ -12102,8 +12104,20 @@ section#pathways {
   section#pathways .quickhit-copy {
     color: white;
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    margin-top: 50px; }
+    font-size: 18px; }
+    @media (min-height: 915px) {
+      section#pathways .quickhit-copy {
+        margin-top: 50px; } }
+    @media (max-height: 915px) {
+      section#pathways .quickhit-copy {
+        margin-top: 15px; } }
+    @media (max-height: 760px) {
+      section#pathways .quickhit-copy p, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
+        font-size: 17px;
+        line-height: 25px; } }
+    @media (max-height: 830px) and (min-height: 760px) {
+      section#pathways .quickhit-copy p, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
+        line-height: 30px; } }
   section#pathways .three-pathways {
     margin-top: 70px; }
     section#pathways .three-pathways * {
@@ -12122,7 +12136,6 @@ section#pathways {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      height: 200px;
       padding: 0 65px 0 35px;
       background-size: cover;
       background-position: bottom left;
@@ -12151,6 +12164,20 @@ section#pathways {
         margin-bottom: 0;
         line-height: 30px;
         letter-spacing: 2px; }
+      @media (min-height: 760px) {
+        section#pathways .three-pathways .main-pathway {
+          height: 200px; } }
+      @media (max-height: 760px) {
+        section#pathways .three-pathways .main-pathway {
+          height: 150px; } }
+
+@media (max-height: 915px) and (min-height: 857px) {
+  body.home section#from-our-blog {
+    max-height: 640px; } }
+
+@media (max-height: 857px) {
+  body.home section#from-our-blog {
+    max-height: 600px; } }
 
 section#from-our-blog {
   position: relative;
@@ -12193,6 +12220,9 @@ section#from-our-blog {
         font-size: 18px;
         text-transform: uppercase;
         color: black; }
+        @media (max-height: 780px) {
+          section#from-our-blog .main-blog-section .blog-posts .main-post .title {
+            line-height: 25px; } }
       section#from-our-blog .main-blog-section .blog-posts .main-post .author, section#from-our-blog .main-blog-section .blog-posts .main-post .date {
         font-family: "Roboto", sans-serif;
         text-transform: uppercase;
@@ -12234,9 +12264,14 @@ section#offers-section {
     bottom: 85px; }
   section#offers-section .text-section {
     background-color: #2a2a2a;
-    min-height: 245px;
     position: relative;
     padding: 0 30px; }
+    @media (max-height: 825px) {
+      section#offers-section .text-section {
+        min-height: 200px; } }
+    @media (min-height: 825px) {
+      section#offers-section .text-section {
+        min-height: 245px; } }
     section#offers-section .text-section .title {
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
@@ -12249,8 +12284,13 @@ section#offers-section {
       width: 100%;
       text-align: left; }
   section#offers-section .background-section {
-    background-repeat: no-repeat;
-    background-position: top right; }
+    background-repeat: no-repeat; }
+    @media (max-height: 835px) {
+      section#offers-section .background-section {
+        background-position: bottom right; } }
+    @media (min-height: 835px) {
+      section#offers-section .background-section {
+        background-position: top right; } }
   section#offers-section .offer-0 {
     padding-right: 40px; }
   section#offers-section .offer-1 {
@@ -12540,6 +12580,15 @@ div.blog {
     padding-left: 3px; }
 
 /** Careers Page Styling **/
+.page-template-template-careers .video-wrapper, .page-template-template-careers .row, .page-template-template-careers .container {
+  position: static; }
+
+.page-template-template-careers .white-bg {
+  min-height: 445px; }
+  .page-template-template-careers .white-bg iframe {
+    width: 100%;
+    height: 100%; }
+
 @media (min-width: 900px) {
   .page-template-template-careers .text-content {
     min-width: 781px; } }
@@ -12547,16 +12596,12 @@ div.blog {
 .page-template-template-careers .text-content p, .page-template-template-careers .text-content body:not(.home) .main-content, body:not(.home) .page-template-template-careers .text-content .main-content {
   max-width: 450px; }
 
-.page-template-template-careers #primary-carousel .carousel-item {
-  max-height: 750px; }
-
-.page-template-template-careers #primary-carousel .carousel-wrapper {
-  height: 750px; }
-
 .page-template-template-careers #primary-carousel .slide-count {
   text-transform: uppercase; }
 
 .page-template-template-careers .videos-wrapper {
+  height: 100vh;
+  max-height: 850px;
   background-size: 100vw auto;
   background-color: black;
   background-repeat: no-repeat;
@@ -12565,17 +12610,16 @@ div.blog {
   .page-template-template-careers .videos-wrapper .text-wrapper {
     color: white;
     text-align: center;
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: 60px; }
     .page-template-template-careers .videos-wrapper .text-wrapper .title {
       font-family: "Montserrat", sans-serif;
       font-size: 35px;
       text-transform: uppercase;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      padding-top: 20px; }
   .page-template-template-careers .videos-wrapper #video-section {
-    background-size: 52vw 100%;
-    background-position: top left;
-    background-repeat: no-repeat;
+    position: relative;
     min-height: 445px; }
     .page-template-template-careers .videos-wrapper #video-section .credentials {
       padding-left: 8vw;
@@ -12623,6 +12667,8 @@ div.blog {
 
 .page-template-template-careers #jobs-section {
   background-color: black; }
+  .page-template-template-careers #jobs-section > .row {
+    max-width: 99vw; }
   .page-template-template-careers #jobs-section .text-section {
     background-image: url(http://localhost/wp-content/uploads/2020/01/job-openings-bg.png);
     background-size: cover;
@@ -12660,6 +12706,9 @@ div.blog {
         line-height: 18px;
         font-weight: 400;
         letter-spacing: .5px; }
+
+.page-template-template-careers .black-section {
+  padding-right: 0; }
 
 /*
 * Use existing Bootstrap 4 classes and

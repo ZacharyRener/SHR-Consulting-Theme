@@ -11,7 +11,12 @@ section#offers-section {
     
     .text-section {
         background-color: #2a2a2a;
-        min-height: 245px;
+        @media(max-height:825px){
+            min-height: 200px;
+        }
+        @media(min-height: 825px) {
+            min-height: 245px;
+        }
         position: relative;
         padding: 0 30px;
         .title {
@@ -33,7 +38,12 @@ section#offers-section {
 
     .background-section {
         background-repeat:no-repeat;
-        background-position: top right;
+        @media(max-height:835px) {
+            background-position: bottom right;
+        }
+        @media(min-height: 835px) {
+            background-position: top right;
+        }
     }
 
     .offer-0 {
