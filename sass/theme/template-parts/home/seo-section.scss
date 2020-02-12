@@ -1,11 +1,23 @@
 section#seo-section {
 
-    background-size:52vw 100%;
-    background-position:top left;
+    @include desktop {
+        background-size:52vw 100%;
+        background-position:top left;
+    }
+
+    @include phone {
+        background-size: 100%;
+        background-position: top right;
+        background-color: #f5f5f5;
+    }
+
     background-repeat: no-repeat;
 
     padding-top: 75px;
-    padding-bottom: 75px;
+
+    @include desktop {
+        padding-bottom: 75px;
+    }
 
     .seo-copy {
         h1 {
@@ -13,9 +25,17 @@ section#seo-section {
             letter-spacing: 2px;
             margin-bottom: 30px;
         }
+        padding-bottom: 20px;
     }
 
     .credentials {
+
+        @include phone {
+            background-color: black;
+            padding-top: 50px;
+            padding-bottom: 75px;
+        }
+
         text-align:center;
         padding-left: 8vw;
         color: white;
@@ -36,8 +56,15 @@ section#seo-section {
             color: transparent;
         }
        .carousel-item {
+
+
            
            .col-md-6 {
+
+               @include phone {
+                   width: 48%;
+               }
+               
                padding: 30px 0;
                img {
                    object-fit:contain;

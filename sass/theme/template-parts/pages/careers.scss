@@ -5,20 +5,28 @@
 	}
 
 	.white-bg {
-		min-height: 445px;
+
+		@include desktop {
+			min-height: 445px;
+		}
+
 		iframe {
 			width: 100%;
 			height: 100%;
 		}
+
 	}
 
 	.text-content {
+
 		@media(min-width:900px) {
 			min-width: 781px;
 		}
+		
 		p {
 			max-width: 450px;
 		}
+
 	}
 
 	#primary-carousel {
@@ -26,6 +34,7 @@
 		.slide-count {
 			text-transform: uppercase;
 		}
+
 	}
 
 	.videos-wrapper {
@@ -42,10 +51,22 @@
 		padding-bottom: 100px;
 
 		.text-wrapper {
+
 			color: white;
 			text-align: center;
-			padding-top: 100px;
-			padding-bottom: 60px;
+
+			@include desktop {
+				padding-top: 100px;
+				padding-bottom: 60px;
+			}
+
+			@include phone {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+
+			
+
 			.title {
 				font-family: $font-family-primary;
 				font-size: 35px;
@@ -53,60 +74,77 @@
 				letter-spacing: 2px;
 				padding-top: 20px;
 			}
+
 		}
 
 		#video-section {
 
 			position:relative;
-
-
-
 			min-height: 445px;
 
-			.text-wrapper {
-
-			}
 			.credentials {
 				padding-left: 8vw;
 				color: white;
+				padding-top: 60px;
 			}
 
 		}
-
-
 
 	}
 
 	#from-our-blog {
+
 		.right-white-section {
 			z-index: 0 !important;
 		}
+
 		.arrow-down-section {
 			bottom: 100px;
 			top: unset;
 			left: auto;
 		}
 
-		padding-top: 200px;
+		@include desktop {
+			padding-top: 200px;
+		}
+		
+		@include phone {
+			padding-top: 40px;
+		}
+
 		padding-bottom:80px;
 		background-color: black;
 		position: relative;
-
 		background-image:url(/wp-content/uploads/2020/01/blog-section.png);
 		background-size:cover;
 		background-position: center;
+
 		.section-with-background {
 			background-image:none;
 			background: transparent;
 		}
+
 		.main-blog-section {
+
+			.content-section {
+				@include phone {
+					padding: 0 20px;
+				}
+			}
+
 			margin-top: 100px;
 			margin-bottom: 100px;
-
 			padding-top: 70px;
 			padding-bottom: 70px;
 			z-index: 1 !important;
-			clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
+
+			@include desktop {
+				clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
+			}
+
+			@include phone {
+				clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 2%);
+			}
 
 			h1, h2, h3, h4 {
 				font-weight: 400;
@@ -114,40 +152,68 @@
 				text-transform: uppercase;
 				margin-bottom: 20px;
 			}
+
 			.mt-5 {
 				margin-top: 125px !important;
 			}
+
 			li {
 				margin-bottom: 20px;
 			}
+
 			ul {
 				margin-top: 20px;
 				margin-left: 0;
 				padding-left:20px;
 				list-style-position: outside;
 			}
+
 		}
+
 	}
 
 	#jobs-section {
+		
 		background-color: black;
-		> .row {
-			max-width: 99vw;
+
+		@include desktop {
+			> .row {
+				max-width: 99vw;
+			}
 		}
+
 		.text-section {
-			background-image: url(http://localhost/wp-content/uploads/2020/01/job-openings-bg.png);
+
+			background-image: url(/wp-content/uploads/2020/01/job-openings-bg.png);
 			background-size: cover;
-			clip-path: polygon(95% 0, 100% 12%, 100% 75%, 100% 100%, 0 100%, 0 0);
+
+			@include desktop {
+				clip-path: polygon(95% 0, 100% 12%, 100% 75%, 100% 100%, 0 100%, 0 0);
+			}
+
+			@include phone {
+				clip-path: polygon(86% 0,100% 5%,100% 75%,100% 100%,0 100%,0 0);
+			}
+
 			> .container {
 				padding-top: 85px;
 				padding-bottom: 115px;
 				padding-left: 50px;
 				padding-right: 50px;
 			}
+
 			.headline-section {
+				
+				.content-section {
+					@include phone {
+						margin-top: 25px;
+					}
+				}
+
 				.content-section p {
 					line-height: 25px;
 				}
+
 				.title {
 					font-family: $font-family-primary;
 					font-weight: 400;
@@ -157,14 +223,36 @@
 					margin-bottom: 30px;
 				}
 
-				.btn {
+			}
 
-				}
+			#jobs-section > .row {
+				max-width: 100vw;
 			}
 
 			.job-listings {
-				margin-top:70px;
+
+				@include desktop{
+					margin-top:70px;
+				}
+
+				@include phone {
+					margin-top: 40px;
+				}
+
 				.main-post {
+
+					@include phone {
+
+						margin-top: 20px;
+						margin-bottom: 20px;
+
+						hr {
+							margin-top:3px;
+							margin-bottom: 3px;
+						}
+
+					}
+
 					.position-title {
 						font-family: $font-family-primary;
 						text-transform: uppercase;
@@ -193,9 +281,13 @@
 					.date {
 						@extend .department;
 					}
+
 				}
+
 			}
+
 		}
+
 	}
 
 	.black-section {

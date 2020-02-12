@@ -41,3 +41,15 @@ $brand-primary: white !default;
 $btn-font-size: 14px;
 
 $quick-hit-headline-size: 24px;
+
+@mixin phone {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width:768px) {
+        @content;
+    }
+}

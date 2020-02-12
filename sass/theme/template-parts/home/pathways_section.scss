@@ -3,16 +3,20 @@ $pathways-max-height: 900px;
 
 body.home.logged-in {
     section#pathways{
-        height: $fullscreen-height-logged-in;
-        min-height: $pathways-min-height;
-        max-height: $pathways-max-height;
+        @include desktop {
+            height: $fullscreen-height-logged-in;
+            min-height: $pathways-min-height;
+            max-height: $pathways-max-height;
+        }
     }
 }
 body.home:not(.logged-in) {
     section#pathways{
-        height: $fullscreen-height;
-        min-height: $pathways-min-height;
-        max-height: $pathways-max-height;
+        @include desktop {
+            height: $fullscreen-height;
+            min-height: $pathways-min-height;
+            max-height: $pathways-max-height;
+        }
     }
 }
 
@@ -22,6 +26,9 @@ section#pathways {
     }
     @media(min-height: 870px) {
         padding-top: 125px;
+    }
+    @include phone {
+        padding-top: 30px;
     }
     padding-bottom: 100px;
     background-size:contain;
@@ -97,11 +104,21 @@ section#pathways {
         * {
             z-index:2;
         }
-        margin-top: 70px;
+        @include desktop {
+            margin-top: 70px;
+        }
+        @include phone {
+            margin-top: 10px;
+        }
         .container {
             
         }
         .main-pathway {
+
+            @include phone {
+                margin-top: 20px;
+            }
+
             p {
                 position: absolute;
                 left: 40px;

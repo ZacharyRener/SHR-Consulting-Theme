@@ -1,9 +1,16 @@
 body:not(.home) {
 
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 54%);
+    @include desktop {
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 54%);
+    }
 
     .main-content {
+        @include phone {
+            order: -1;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
         background-color: white;
         min-height: calc( 100vh - 268px );
         margin-bottom:0;

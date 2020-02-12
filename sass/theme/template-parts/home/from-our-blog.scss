@@ -1,9 +1,9 @@
 body.home {
     section#from-our-blog{
-        @media(max-height: 915px) and (min-height: 857px) {
+        @media(max-height: 915px) and (min-height: 857px) and (min-width:768px) {
             max-height: 640px;
         }
-        @media(max-height:857px){
+        @media(max-height:857px) and (min-width:768px){
             max-height: 600px;
         }
     }
@@ -14,12 +14,27 @@ section#from-our-blog {
     position: relative;
     background-color: white;
 
-
+    @include phone {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        .blog-posts {
+            padding-bottom: 30px;
+        }
+    }
 
     .arrow-down-section {
+
         bottom:unset;
         top: -80px;
-        left: -130px;
+
+        @include desktop {
+            left: -130px;
+        }
+
+        @include phone {
+            left: 0;
+        }
+
         i {
             color: #808080;
         }
@@ -51,20 +66,29 @@ section#from-our-blog {
 
     .main-blog-section {
         background-color:white;
-        padding-top: 220px;
-        padding-bottom: 220px;
-        margin-top: -200px;
-        margin-bottom: -100px;
+
+        @include desktop {
+            padding-top: 220px;
+            padding-bottom: 220px;
+            padding-left: 100px;
+            margin-top: -200px;
+            margin-bottom: -100px;
+        }
+
+
         z-index:0;
         
-        padding-left: 100px;
-
-        
-        
-        
         .blog-posts {
+            .row {
+                @include phone {
+                    max-width: 100vw;
+                }
+            }
             .main-post{
                 padding: 0 20px;
+                @include phone {
+                    margin-top: 45px;
+                }
                 .title {
                     font-family: $font-family-primary;
                     font-weight: 500;
@@ -73,6 +97,10 @@ section#from-our-blog {
                     color:black;
                     @media(max-height: 780px){
                         line-height: 25px;
+                    }
+                    @include phone {
+                        line-height: 20px;
+                        margin-bottom: 7px;
                     }
                 }
                 .author, .date {
@@ -87,15 +115,37 @@ section#from-our-blog {
                 }
                 hr {
                     border-color: #d9d9d9;
+                    @include phone {
+                        margin-top: 3px;
+                        margin-bottom: 3px;
+                    }
+                }
+                @include phone {
+                    p.date {
+                        display: inline;
+                        padding-left: 5px;
+                    }
+                    
+                    p.author {
+                        display: inline;
+                        
+                        padding-right: 10px;
+                    }
                 }
             }
         }
     }
 
     .headline-section {
-        display:flex;
-        position: relative;
-        margin-bottom: 60px;
+
+        @include desktop {
+            display:flex;
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        
+
         margin-left:15px;
         margin-right:15px;
         
@@ -104,13 +154,18 @@ section#from-our-blog {
             font-weight: 400;
             padding-top:30px;
         }
+
         a.btn {
             margin-top:30px;
         }
-        div:nth-of-type(3) {
-            position: absolute;
-            right: 0;
+
+        @include desktop {
+            div:nth-of-type(3) {
+                position: absolute;
+                right: 0;
+            }
         }
+
     }
 
 }

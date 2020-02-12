@@ -1,5 +1,9 @@
 section#offers-section {
 
+    @include phone {
+        padding-top: 0px;
+    }
+
     color: white;
     padding-bottom: 175px;
 
@@ -10,23 +14,30 @@ section#offers-section {
     }
     
     .text-section {
+
         background-color: #2a2a2a;
+
         @media(max-height:825px){
             min-height: 200px;
         }
+
         @media(min-height: 825px) {
             min-height: 245px;
         }
+
         position: relative;
         padding: 0 30px;
+
         .title {
             font-family: $font-family-primary;
             font-size: 20px;
             text-transform:uppercase;
         }
+
         .content {
             
         }
+
         .btn {
             position:absolute;
             bottom: 0;
@@ -34,6 +45,7 @@ section#offers-section {
             width: 100%;
             text-align: left;
         }
+
     }
 
     .background-section {
@@ -46,11 +58,19 @@ section#offers-section {
         }
     }
 
-    .offer-0 {
-        padding-right: 40px;
+    @include desktop {
+        .offer-0 {
+            padding-right: 40px;
+        }
+        .offer-1{
+            padding-left: 40px;
+        }
     }
-    .offer-1{
-        padding-left: 40px;
+
+    @include phone {
+        .offer-0 {
+            
+        }
     }
 
 }
