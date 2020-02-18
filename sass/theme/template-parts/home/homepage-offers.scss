@@ -75,3 +75,25 @@ section#offers-section {
     }
 
 }
+
+@include phone {
+    #offers-section .col-md-8.text-section {
+        clip-path: polygon(0 0,100% 0,100% 100%,4% 100%,0 93%,0 54%);
+    }
+
+    #offers-section a.btn.btn-primary {
+        padding-left: 30px;
+    }
+
+    section#offers-section p.title {
+        line-height: 26px;
+    }
+
+    section#offers-section .text-section .wrapper {
+        padding-bottom: 45px;
+    }
+
+    #offers-section .text-section p {
+        line-height: 23px;
+    }
+}

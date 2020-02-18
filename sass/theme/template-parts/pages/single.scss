@@ -5,3 +5,30 @@
     }
 
 }
+
+.single-leadership {
+    .alignright img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0% 25%);
+        margin-bottom:10px;
+    }
+    @include phone {
+        .alignright {
+            display: block !important;
+            float: unset;
+            margin-left: 0;
+            margin-bottom: 22px;
+            .icon {
+                margin: 0 10px;
+            }
+        }
+        .col-md-4.sidebar-section {
+            display: none;
+        }
+    }
+}
+
+.search {
+    .col-md-4.sidebar-section {
+        display: none;
+    }
+}

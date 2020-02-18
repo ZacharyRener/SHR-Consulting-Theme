@@ -69,17 +69,21 @@ export function transparentNavigation() {
 }
 
 export function dropMenuOnHover() {
-    jQuery(".dropdown, .btn-group").hover(function(){
-        let dropdownMenu = jQuery(this).children('.dropdown-menu');
-        if(dropdownMenu.is(":hidden")){
+
+    if(window.innerWidth > 768) {
+        jQuery(".dropdown, .btn-group").hover(function(){
+            let dropdownMenu = jQuery(this).children('.dropdown-menu');
+            if(dropdownMenu.is(":hidden")){
+                dropdownMenu.toggleClass("show");
+            }
+        }, function(){
+            let dropdownMenu = jQuery(this).children('.dropdown-menu');
             dropdownMenu.toggleClass("show");
-        }
-    }, function(){
-        let dropdownMenu = jQuery(this).children('.dropdown-menu');
-        dropdownMenu.toggleClass("show");
-    });
-    jQuery(".dropdown-toggle.nav-link").click(function () {
-        var anchorValue= jQuery(this).attr("href");
-        document.location = anchorValue;
-    });
+        });
+        jQuery(".dropdown-toggle.nav-link").click(function () {
+            var anchorValue= jQuery(this).attr("href");
+            document.location = anchorValue;
+        });
+    }
+    
 }

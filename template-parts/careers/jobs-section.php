@@ -1,22 +1,25 @@
 <?php
 
+$headline = get_field('jobs_headline');
+$buttonText = get_field('jobs_button_text');
+$buttonLink = get_field('jobs_button_link');
+$excerpt = get_field('jobs_excerpt');
+
 echo "
 
 <section id='jobs-section'>
 
-	
-	
 		<div class='row'>
 			
 			<div class='col-md-10 text-section'>
 				<div class='container'>
 					<div class='row headline-section'>
 						<div class='col-md-6 title-button-section'>
-							<h2 class='title'>Current Job Openings</h2>
-							<a href='#' class='btn btn-primary'>See All Job Openings</a>
+							<h2 class='title'>$headline</h2>
+							<a href='$buttonLink' class='btn btn-primary'>$buttonText</a>
 						</div>
 						<div class='col-md-6 content-section'>
-							<p>Nullam non blandit lacus. Proin ut vehicula nulla, at venenatis dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus vehicula lacus nec eleifend.</p>
+							$excerpt
 						</div>
 					</div>
 					<div class='job-listings'>
@@ -68,16 +71,17 @@ echo "
 		                    
 		                    </div>
 
-                </div>
+						</div>
+
 					</div>
+
 				</div>
+
 			</div>
 			
 			<div class='col-md-2 black-section'></div>
 			
 		</div>
-		
-	
 	
 </section>
 

@@ -1,6 +1,6 @@
 <?php
 
-$parallaxDepth = -0.1;
+$parallaxDepth = 0.1;
 
 echo '<div id="primary-carousel" class="carousel slide carousel-fade" data-ride="carousel">';
 

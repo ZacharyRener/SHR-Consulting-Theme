@@ -16,7 +16,7 @@ export function positionContentSection() {
         let maxWidth = threePathways.innerWidth() - 400;
         let whiteSectionWidth = jQuery(document).innerWidth() - ( maxWidth + leftOffset );
 
-        mainBlog.attr('style', `position:relative; left: ${leftOffset}px; width:${maxWidth}px`);
+        mainBlog.attr('style', `position:relative; left: ${leftOffset}px; width:${maxWidth+1}px`);
         whiteSection.attr('style', `width: ${whiteSectionWidth}px; height: ${mainBlog.innerHeight()}px; top:${topOffset}px`);
 
         backgroundSection.attr('style', `width: ${leftOffset}px`);
@@ -51,4 +51,20 @@ export function positionVideoSection() {
 
     }
 
+}
+
+export function mobileMenuToggling(){
+
+    let mobileMenu = jQuery('.mobile-menu');
+
+    
+
+    jQuery('.fa-times').click( () => {
+        mobileMenu.toggleClass('showing'); 
+    });
+
+    jQuery('.fa-bars').click( () => {
+        mobileMenu.toggleClass('showing'); 
+    });
+    
 }

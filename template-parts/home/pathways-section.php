@@ -17,7 +17,7 @@ $quickhitCopy = !empty(get_field('quickhit_top_text'))
     : '';
 
 
-echo '<section id="pathways" style="background-image:url('.$backgroundImage.');">';
+echo '<section id="pathways" style="background:url('.$backgroundImage.'), linear-gradient(180deg,#000 0,#000 68%,#fff 68%);">';
 
     echo '<div class="container">';
 

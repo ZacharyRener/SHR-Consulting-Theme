@@ -9,8 +9,49 @@
                 font-family: $font-family-primary;
                 font-size: 11px;
                 text-transform:uppercase;
-                font-weight: 600;
+                font-weight: 500;
+                letter-spacing:0.10em;
+                @include phone {
+                    line-height: 16px;
+                    margin-bottom: 15px;
+                }
             }
         }
     }
+    .right-half-wrapper li a {
+        @include desktop {
+            text-align: right;
+        }
+        color: #818181;
+        margin-bottom: 0;
+        font-family: $font-family-primary;
+        font-size: 11px;
+        text-transform:uppercase;
+        font-weight: 500;
+        letter-spacing:0.10em;
+    }
+    ul#menu-footer-menu {
+        display: block;
+        
+    }
+
+    .right-half-wrapper {
+        position: relative;
+        top: 3px;
+        @include desktop {
+            float:right;
+        }
+    }
+
+    #menu-footer-menu li a, #menu-footer-menu li {
+        @include desktop {
+            display: inline;
+            padding-left: 20px;
+        }
+    }
+
+    #menu-footer-menu li a:hover {
+        color: #b7b7b7;
+    }
+   
 }

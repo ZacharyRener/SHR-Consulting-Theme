@@ -5,6 +5,7 @@ $sidebarTitle = !empty($sidebarHeading) ? $sidebarHeading : '';
 $titleUrl = get_field('sidebar_heading_url');
 $sidebarContent = get_field('extra_sidebar_content');
 
+
 echo "
 
 <div class='col-md-4 sidebar-section'>
@@ -65,7 +66,7 @@ echo "
         endif;
         echo"
         <div class='extra-sidebar-content'>
-                    $sidebarContent
+            $sidebarContent
         </div>
         </section>
 

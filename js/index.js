@@ -2,7 +2,7 @@ import { Router } from './Router.js';
 import { toAnimate } from "./animations.js";
 import { transparentNavigation, dropMenuOnHover } from "./transparent-nav.js";
 import { makePathwaysResponsive, fromBlogResize, scrollToSection } from "./responsiveSizing.js"
-import { positionContentSection, positionVideoSection } from './extendMainContent.js';
+import { positionContentSection, positionVideoSection, mobileMenuToggling } from './extendMainContent.js';
 
 function main() {
 
@@ -32,6 +32,7 @@ function main() {
             toAnimate();
             //transparentNavigation();
         });
+        mobileMenuToggling();
         window.scrollToSection = scrollToSection;
     });
 

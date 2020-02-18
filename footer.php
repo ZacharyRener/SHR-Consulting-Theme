@@ -25,11 +25,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class='row'>
 
-						<p>© 2019 SHR Consulting Group. All Rights Reserved</p>
+						<div class='col-md-6'>
 
-					</div><!-- .site-info -->
+							<div class="site-info">
+
+								<p>© 2019 SHR Consulting Group. All Rights Reserved</p>
+
+							</div><!-- .site-info -->
+
+						</div>
+
+						<div class='col-md-6'>
+							<div class='right-half-wrapper'>
+								
+								<?php wp_nav_menu(
+									array(
+										'menu'  => 4,
+										'container_id'    => 'navbarNavDropdown',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'depth'           => 4,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+								?>
+								
+							</div>
+						</div>
+
+					</div>
 
 				</footer><!-- #colophon -->
 

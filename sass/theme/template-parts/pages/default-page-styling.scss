@@ -8,8 +8,13 @@ body:not(.home) {
     .main-content {
         @include phone {
             order: -1;
-            padding-top: 30px;
+            padding-top: 15px;
             padding-bottom: 50px;
+            /** clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 99%, 0 54%); **/
+            background-image:url(/wp-content/uploads/2020/02/mobile-main-content.png);
+            background-size:auto;
+            background-position: bottom left;
+            background-repeat: no-repeat;
         }
         background-color: white;
         min-height: calc( 100vh - 268px );
@@ -19,14 +24,10 @@ body:not(.home) {
         }
         @extend p;
     }
-
+   
     h1 {
         margin-bottom: 10px;
         margin-top: 10px;
     }
 
-}
-
-.page-id-357 .col-md-4 div#navbarNavDropdown {
-    display: none;
 }

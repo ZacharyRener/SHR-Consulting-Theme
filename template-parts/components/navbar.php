@@ -40,9 +40,7 @@
 
 			<a class="navbar-brand" href="/"><img src="http://shr.hingedev.com/wp-content/uploads/2020/01/SHR_coloronbg_rgb.png"></a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<i class="fa fa-bars"></i>
 
 			<div class="right-section">
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -67,4 +65,21 @@
 
 	</nav>
 
+</div>
+
+<div class='mobile-menu'>
+	<i class="fa fa-times"></i>
+	<div class='menu-wrapper'>
+	<?php wp_nav_menu(
+			array(
+				'menu'  => 3,
+				'container_id'    => 'navbarNavDropdown',
+				'menu_class'      => 'navbar-nav ml-auto',
+				'fallback_cb'     => '',
+				'depth'           => 3,
+				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+			)
+		);
+		?>
+	</div>
 </div>

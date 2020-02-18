@@ -11665,7 +11665,10 @@ strong {
       content: url(/wp-content/uploads/2020/02/blackstar.png);
       position: absolute;
       right: 10px;
-      top: auto; }
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding-top: 3px; }
 
 .btn-primary:hover {
   background-color: #c6c6c6;
@@ -11878,7 +11881,37 @@ body #primary-nav.hasBackground {
     font-family: "Montserrat", sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 500;
+    letter-spacing: 0.10em; }
+    @media (max-width: 768px) {
+      #wrapper-footer .site-footer .site-info p, #wrapper-footer .site-footer .site-info strong, #wrapper-footer .site-footer .site-info body:not(.home) .main-content, body:not(.home) #wrapper-footer .site-footer .site-info .main-content {
+        line-height: 16px;
+        margin-bottom: 15px; } }
+  #wrapper-footer .right-half-wrapper li a {
+    color: #818181;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.10em; }
+    @media (min-width: 768px) {
+      #wrapper-footer .right-half-wrapper li a {
+        text-align: right; } }
+  #wrapper-footer ul#menu-footer-menu {
+    display: block; }
+  #wrapper-footer .right-half-wrapper {
+    position: relative;
+    top: 3px; }
+    @media (min-width: 768px) {
+      #wrapper-footer .right-half-wrapper {
+        float: right; } }
+  @media (min-width: 768px) {
+    #wrapper-footer #menu-footer-menu li a, #wrapper-footer #menu-footer-menu li {
+      display: inline;
+      padding-left: 20px; } }
+  #wrapper-footer #menu-footer-menu li a:hover {
+    color: #b7b7b7; }
 
 .sidebar-section {
   padding-top: 66px; }
@@ -12101,10 +12134,6 @@ body:not(.logged-in) img {
 
 section#pathways {
   padding-bottom: 100px;
-  background-size: contain;
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-color: #000;
   overflow: hidden; }
   @media (max-height: 870px) {
     section#pathways {
@@ -12114,7 +12143,14 @@ section#pathways {
       padding-top: 125px; } }
   @media (max-width: 768px) {
     section#pathways {
-      padding-top: 30px; } }
+      padding-top: 0px;
+      background-repeat: no-repeat !important; } }
+  @media (min-width: 768px) {
+    section#pathways {
+      background-size: contain !important;
+      background-position: top left !important;
+      background-repeat: no-repeat !important;
+      background-color: #000 !important; } }
   section#pathways .fa.fa-star {
     color: white;
     position: absolute;
@@ -12234,18 +12270,19 @@ section#from-our-blog {
   background-color: white; }
   @media (max-width: 768px) {
     section#from-our-blog {
-      padding-top: 70px;
+      padding-top: 0;
       padding-bottom: 70px; }
       section#from-our-blog .blog-posts {
         padding-bottom: 30px; } }
   section#from-our-blog .arrow-down-section {
-    bottom: unset;
-    top: -80px; }
+    bottom: unset; }
     @media (min-width: 768px) {
       section#from-our-blog .arrow-down-section {
+        top: -80px;
         left: -130px; } }
     @media (max-width: 768px) {
       section#from-our-blog .arrow-down-section {
+        top: -45px;
         left: 0; } }
     section#from-our-blog .arrow-down-section i {
       color: #808080; }
@@ -12315,7 +12352,8 @@ section#from-our-blog {
         @media (max-width: 768px) {
           section#from-our-blog .main-blog-section .blog-posts .main-post hr {
             margin-top: 3px;
-            margin-bottom: 3px; } }
+            margin-bottom: 3px;
+            display: none; } }
       @media (max-width: 768px) {
         section#from-our-blog .main-blog-section .blog-posts .main-post p.date, section#from-our-blog .main-blog-section .blog-posts .main-post strong.date, section#from-our-blog .main-blog-section .blog-posts .main-post body:not(.home) .date.main-content, body:not(.home) section#from-our-blog .main-blog-section .blog-posts .main-post .date.main-content {
           display: inline;
@@ -12394,6 +12432,19 @@ section#offers-section {
     section#offers-section .offer-1 {
       padding-left: 40px; } }
 
+@media (max-width: 768px) {
+  #offers-section .col-md-8.text-section {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%, 0 93%, 0 54%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%, 0 93%, 0 54%); }
+  #offers-section a.btn.btn-primary {
+    padding-left: 30px; }
+  section#offers-section p.title, section#offers-section strong.title, section#offers-section body:not(.home) .title.main-content, body:not(.home) section#offers-section .title.main-content {
+    line-height: 26px; }
+  section#offers-section .text-section .wrapper {
+    padding-bottom: 45px; }
+  #offers-section .text-section p, #offers-section .text-section strong, #offers-section .text-section body:not(.home) .main-content, body:not(.home) #offers-section .text-section .main-content {
+    line-height: 23px; } }
+
 section#seo-section {
   background-repeat: no-repeat;
   padding-top: 75px; }
@@ -12467,17 +12518,19 @@ body:not(.home) {
         -webkit-box-ordinal-group: 0;
             -ms-flex-order: -1;
                 order: -1;
-        padding-top: 30px;
-        padding-bottom: 50px; } }
+        padding-top: 15px;
+        padding-bottom: 50px;
+        /** clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 99%, 0 54%); **/
+        background-image: url(/wp-content/uploads/2020/02/mobile-main-content.png);
+        background-size: auto;
+        background-position: bottom left;
+        background-repeat: no-repeat; } }
     @media (min-width: 768px) {
       body:not(.home) .main-content {
         padding: 50px; } }
   body:not(.home) h1 {
     margin-bottom: 10px;
     margin-top: 10px; }
-
-.page-id-357 .col-md-4 div#navbarNavDropdown {
-  display: none; }
 
 /** Team Page Styling **/
 .team-members:not(.single-team) {
@@ -12488,8 +12541,19 @@ body:not(.home) {
   .team-members .team-member .image-section {
     padding-right: 0; }
     .team-members .team-member .image-section .bio-image {
-      width: 100%;
-      height: auto; }
+      height: auto;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0% 25%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0% 25%); }
+      @media (min-width: 768px) {
+        .team-members .team-member .image-section .bio-image {
+          width: 100%; } }
+      @media (max-width: 768px) {
+        .team-members .team-member .image-section .bio-image {
+          margin-bottom: 25px;
+          width: 60%; } }
+  @media (min-width: 768px) {
+    .team-members .team-member .text-section {
+      padding-left: 40px; } }
   .team-members .team-member .text-section .h1-title {
     color: black;
     margin-bottom: 0; }
@@ -12596,11 +12660,31 @@ body:not(.home) {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #666666; }
+    color: #666666;
+    letter-spacing: 0.12em; }
 
 /** Single Styling **/
 .single .featured-image {
   margin-bottom: 30px; }
+
+.single-leadership .alignright img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0% 25%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0% 25%);
+  margin-bottom: 10px; }
+
+@media (max-width: 768px) {
+  .single-leadership .alignright {
+    display: block !important;
+    float: unset;
+    margin-left: 0;
+    margin-bottom: 22px; }
+    .single-leadership .alignright .icon {
+      margin: 0 10px; }
+  .single-leadership .col-md-4.sidebar-section {
+    display: none; } }
+
+.search .col-md-4.sidebar-section {
+  display: none; }
 
 /** Insights Page Styling **/
 .insights .featured-offer {
@@ -12712,13 +12796,15 @@ div.blog {
 .page-template-template-careers .video-wrapper, .page-template-template-careers .row, .page-template-template-careers .container {
   position: static; }
 
-@media (min-width: 768px) {
-  .page-template-template-careers .white-bg {
-    min-height: 445px; } }
-
-.page-template-template-careers .white-bg iframe {
-  width: 100%;
-  height: 100%; }
+.page-template-template-careers .white-bg {
+  -webkit-clip-path: polygon(95% 0, 100% 10%, 100% 100%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(95% 0, 100% 10%, 100% 100%, 50% 100%, 0 100%, 0 0); }
+  @media (min-width: 768px) {
+    .page-template-template-careers .white-bg {
+      min-height: 445px; } }
+  .page-template-template-careers .white-bg iframe {
+    width: 100%;
+    height: 100%; }
 
 @media (min-width: 900px) {
   .page-template-template-careers .text-content {
@@ -12728,16 +12814,31 @@ div.blog {
   max-width: 450px; }
 
 .page-template-template-careers #primary-carousel .slide-count {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.12em; }
+
+.page-template-template-careers #primary-carousel .carousel-item img {
+  width: 120vw;
+  height: 120vh; }
+
+.page-template-template-careers #primary-carousel h1 {
+  margin: 0; }
+
+.page-template-template-careers #primary-carousel .btn,
+.page-template-template-careers #primary-carousel .wpcf7 input[type=submit], .wpcf7 .page-template-template-careers #primary-carousel input[type=submit] {
+  margin-top: 5px; }
 
 .page-template-template-careers .videos-wrapper {
   height: 100vh;
   max-height: 850px;
-  background-size: 100vw auto;
+  background-size: auto;
+  background-position: top right;
   background-color: black;
   background-repeat: no-repeat;
   position: relative;
   padding-bottom: 100px; }
+  .page-template-template-careers .videos-wrapper .arrow-down-section {
+    bottom: 30px; }
   .page-template-template-careers .videos-wrapper .text-wrapper {
     color: white;
     text-align: center; }
@@ -12753,7 +12854,7 @@ div.blog {
       font-family: "Montserrat", sans-serif;
       font-size: 35px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.12em;
       padding-top: 20px;
       -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
       transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
@@ -12772,6 +12873,17 @@ div.blog {
   background-image: url(/wp-content/uploads/2020/01/blog-section.png);
   background-size: cover;
   background-position: center; }
+  .page-template-template-careers #from-our-blog .content-section p, .page-template-template-careers #from-our-blog .content-section strong, .page-template-template-careers #from-our-blog .content-section body:not(.home) .main-content, body:not(.home) .page-template-template-careers #from-our-blog .content-section .main-content {
+    line-height: 26px; }
+  .page-template-template-careers #from-our-blog #upperContent {
+    position: relative;
+    padding-bottom: 50px; }
+    .page-template-template-careers #from-our-blog #upperContent .arrow-down-section {
+      bottom: 0;
+      left: 35px;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
   .page-template-template-careers #from-our-blog .right-white-section {
     z-index: 0 !important; }
   .page-template-template-careers #from-our-blog .arrow-down-section {
@@ -12795,7 +12907,7 @@ div.blog {
     z-index: 1 !important; }
     @media (max-width: 768px) {
       .page-template-template-careers #from-our-blog .main-blog-section .content-section {
-        padding: 0 20px; } }
+        padding: 15px 20px; } }
     @media (min-width: 768px) {
       .page-template-template-careers #from-our-blog .main-blog-section {
         -webkit-clip-path: polygon(10% 0, 100% 0, 100% 75%, 100% 100%, 0 100%, 0 5%);
@@ -12811,8 +12923,9 @@ div.blog {
       margin-bottom: 20px; }
     .page-template-template-careers #from-our-blog .main-blog-section .mt-5 {
       margin-top: 125px !important; }
-    .page-template-template-careers #from-our-blog .main-blog-section li {
-      margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .page-template-template-careers #from-our-blog .main-blog-section li {
+        margin-bottom: 20px; } }
     .page-template-template-careers #from-our-blog .main-blog-section ul {
       margin-top: 20px;
       margin-left: 0;
@@ -12835,11 +12948,18 @@ div.blog {
       .page-template-template-careers #jobs-section .text-section {
         -webkit-clip-path: polygon(86% 0, 100% 5%, 100% 75%, 100% 100%, 0 100%, 0 0);
                 clip-path: polygon(86% 0, 100% 5%, 100% 75%, 100% 100%, 0 100%, 0 0); } }
-    .page-template-template-careers #jobs-section .text-section > .container {
-      padding-top: 85px;
-      padding-bottom: 115px;
-      padding-left: 50px;
-      padding-right: 50px; }
+    @media (min-width: 768px) {
+      .page-template-template-careers #jobs-section .text-section > .container {
+        padding-top: 85px;
+        padding-bottom: 115px;
+        padding-left: 50px;
+        padding-right: 50px; } }
+    @media (max-width: 768px) {
+      .page-template-template-careers #jobs-section .text-section > .container {
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        .page-template-template-careers #jobs-section .text-section > .container hr {
+          visibility: hidden; } }
     @media (max-width: 768px) {
       .page-template-template-careers #jobs-section .text-section .headline-section .content-section {
         margin-top: 25px; } }
@@ -12849,7 +12969,7 @@ div.blog {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
       font-size: 30px;
-      letter-spacing: 2px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 30px; }
     .page-template-template-careers #jobs-section .text-section #jobs-section > .row {
@@ -12859,7 +12979,7 @@ div.blog {
         margin-top: 70px; } }
     @media (max-width: 768px) {
       .page-template-template-careers #jobs-section .text-section .job-listings {
-        margin-top: 40px; } }
+        margin-top: 0px; } }
     @media (max-width: 768px) {
       .page-template-template-careers #jobs-section .text-section .job-listings .main-post {
         margin-top: 20px;
@@ -12873,7 +12993,9 @@ div.blog {
       margin-bottom: 0;
       color: black;
       font-size: 18px;
-      font-weight: 600; }
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: 0.12em; }
     .page-template-template-careers #jobs-section .text-section .job-listings .main-post .department, .page-template-template-careers #jobs-section .text-section .job-listings .main-post .date {
       font-family: Roboto,sans-serif;
       text-transform: uppercase;
@@ -12882,10 +13004,82 @@ div.blog {
       margin-bottom: 0;
       line-height: 18px;
       font-weight: 400;
-      letter-spacing: .5px; }
+      letter-spacing: .05em; }
 
 .page-template-template-careers .black-section {
   padding-right: 0; }
+
+/** Mobile Menu Styling **/
+@media (max-width: 768px) {
+  nav#primary-nav {
+    position: relative; }
+    nav#primary-nav .container {
+      position: relative; }
+    nav#primary-nav i.fa.fa-bars {
+      color: white;
+      font-size: 34px;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    width: 70vw;
+    top: 0;
+    -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+    .mobile-menu div#navbarNavDropdown {
+      width: 186px; }
+    .mobile-menu a.dropdown-item {
+      white-space: pre-wrap;
+      padding: 10px 0;
+      padding-left: 10px; }
+    .mobile-menu:not(.showing) {
+      right: -100vw; }
+    .mobile-menu.showing {
+      right: 0;
+      background-color: #eee; }
+      .mobile-menu.showing ul.dropdown-menu.show {
+        position: static !important;
+        -webkit-transform: none !important;
+                transform: none !important;
+        background-color: transparent;
+        border: 0; }
+      .mobile-menu.showing .dropdown-menu {
+        -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+      .mobile-menu.showing .fa-times {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        color: #000;
+        font-size: 32px; }
+      .mobile-menu.showing .menu-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 100%; }
+        .mobile-menu.showing .menu-wrapper .nav-link {
+          color: black;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          font-weight: 600; } }
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none; }
+  i.fa.fa-bars {
+    display: none; } }
 
 /*
 * Use existing Bootstrap 4 classes and

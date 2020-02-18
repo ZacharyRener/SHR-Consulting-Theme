@@ -56,7 +56,9 @@ strong {
             content: url(/wp-content/uploads/2020/02/blackstar.png);
             position: absolute;
             right: 10px;
-            top: auto;
+            top: 50%;
+            transform:translateY(-50%);
+            padding-top:3px;
         }
     }
 }

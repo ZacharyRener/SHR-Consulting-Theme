@@ -6,6 +6,8 @@
 
 	.white-bg {
 
+		clip-path: polygon(95% 0, 100% 10%, 100% 100%, 50% 100%, 0 100%, 0 0);
+
 		@include desktop {
 			min-height: 445px;
 		}
@@ -27,12 +29,32 @@
 			max-width: 450px;
 		}
 
+		
+
 	}
 
 	#primary-carousel {
 
 		.slide-count {
 			text-transform: uppercase;
+			letter-spacing: $va-120;
+		}
+
+		.carousel-item img {
+			width: 120vw;
+			height: 120vh;
+		}
+
+		.carousel-wrapper > div > div {
+			
+		}
+
+		h1 {
+			margin:0;
+		}
+
+		.btn {
+			margin-top: 5px;
 		}
 
 	}
@@ -42,13 +64,18 @@
 		height: 100vh;
 		max-height: 850px;
 
-		background-size: 100vw auto;
+		background-size: auto;
+		background-position: top right;
 		background-color: black;
 		background-repeat: no-repeat;
 
 		position:relative;
 
 		padding-bottom: 100px;
+
+		.arrow-down-section {
+			bottom: 30px;
+		}
 
 		.text-wrapper {
 
@@ -71,7 +98,7 @@
 				font-family: $font-family-primary;
 				font-size: 35px;
 				text-transform: uppercase;
-				letter-spacing: 2px;
+				letter-spacing: $va-120;
 				padding-top: 20px;
 				
 				transition: $transition-primary;
@@ -101,6 +128,22 @@
 	}
 
 	#from-our-blog {
+
+		.content-section {
+			p {
+				line-height: 26px;
+			}
+		}
+
+		#upperContent {
+			position: relative;
+			padding-bottom: 50px;
+			.arrow-down-section {
+				bottom: 0;
+				left: 35px;
+				justify-content: flex-start;
+			}
+		}
 
 		.right-white-section {
 			z-index: 0 !important;
@@ -136,7 +179,7 @@
 
 			.content-section {
 				@include phone {
-					padding: 0 20px;
+					padding: 15px 20px;
 				}
 			}
 
@@ -166,7 +209,9 @@
 			}
 
 			li {
-				margin-bottom: 20px;
+				@include desktop{
+					margin-bottom: 20px;
+				}
 			}
 
 			ul {
@@ -204,10 +249,19 @@
 			}
 
 			> .container {
-				padding-top: 85px;
-				padding-bottom: 115px;
-				padding-left: 50px;
-				padding-right: 50px;
+				@include desktop {
+					padding-top: 85px;
+					padding-bottom: 115px;
+					padding-left: 50px;
+					padding-right: 50px;
+				}
+				@include phone {
+					padding-top: 50px;
+					padding-bottom: 50px;
+					hr {
+						visibility: hidden;
+					}
+				}
 			}
 
 			.headline-section {
@@ -226,7 +280,7 @@
 					font-family: $font-family-primary;
 					font-weight: 400;
 					font-size: 30px;
-					letter-spacing: 2px;
+					letter-spacing: $va-120;
 					text-transform: uppercase;
 					margin-bottom: 30px;
 				}
@@ -244,7 +298,7 @@
 				}
 
 				@include phone {
-					margin-top: 40px;
+					margin-top: 0px;
 				}
 
 				.main-post {
@@ -268,6 +322,8 @@
 						color: black;
 						font-size: 18px;
 						font-weight: 600;
+						line-height:30px;
+						letter-spacing: $va-120;
 					}
 
 					.job-title {
@@ -282,8 +338,8 @@
 						margin-bottom: 0;
 						line-height: 18px;
 						font-weight: 400;
-						letter-spacing: .5px;
-
+						letter-spacing: .05em;
+						
 					}
 
 					.date {

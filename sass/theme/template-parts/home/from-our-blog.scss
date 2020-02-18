@@ -15,7 +15,7 @@ section#from-our-blog {
     background-color: white;
 
     @include phone {
-        padding-top: 70px;
+        padding-top: 0;
         padding-bottom: 70px;
         .blog-posts {
             padding-bottom: 30px;
@@ -25,13 +25,14 @@ section#from-our-blog {
     .arrow-down-section {
 
         bottom:unset;
-        top: -80px;
 
         @include desktop {
+            top: -80px;
             left: -130px;
         }
 
         @include phone {
+            top: -45px;
             left: 0;
         }
 
@@ -124,6 +125,7 @@ section#from-our-blog {
                     @include phone {
                         margin-top: 3px;
                         margin-bottom: 3px;
+                        display:none;
                     }
                 }
                 @include phone {
