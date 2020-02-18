@@ -73,6 +73,14 @@
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				padding-top: 20px;
+				
+				transition: $transition-primary;
+				&:not(.animateNow) {
+					
+				}
+				&.animateNow {
+					
+				}
 			}
 
 		}

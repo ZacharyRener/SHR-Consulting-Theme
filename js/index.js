@@ -1,14 +1,14 @@
 import { Router } from './Router.js';
 import { toAnimate } from "./animations.js";
 import { transparentNavigation, dropMenuOnHover } from "./transparent-nav.js";
-import { makePathwaysResponsive, fromBlogResize, pathwayResize, scrollToSection } from "./responsiveSizing.js"
+import { makePathwaysResponsive, fromBlogResize, scrollToSection } from "./responsiveSizing.js"
 import { positionContentSection, positionVideoSection } from './extendMainContent.js';
 
 function main() {
 
     const router = new Router();
 
-    // Careers page
+    // Careers pages
     router.get('/careers.*', function(req){
         positionContentSection();
         positionVideoSection();
@@ -30,7 +30,7 @@ function main() {
         dropMenuOnHover();
         jQuery(document).scroll( () => {
             toAnimate();
-            transparentNavigation();
+            //transparentNavigation();
         });
         window.scrollToSection = scrollToSection;
     });
@@ -41,9 +41,4 @@ function main() {
 
 jQuery(document).ready( () => {
     main();
-});
-
-jQuery(window).resize( () => {
-    // TODO: implement this
-    pathwayResize();
 });

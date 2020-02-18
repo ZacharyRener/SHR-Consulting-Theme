@@ -27,7 +27,7 @@ echo "
                             <div class='col-md-8 text-section'>
                                 <div class='wrapper'>
                                     <p class='title'>$title</p>
-                                    <p class='content'>$content</p>
+                                    $content
                                     <a class='btn btn-primary' href='$ctaUrl'>$ctaText</a>
                                 </div>
                             </div>

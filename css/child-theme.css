@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-p, body:not(.home) .main-content {
+p, strong, body:not(.home) .main-content {
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -1897,7 +1897,7 @@ textarea.form-control,
 .wpcf7 textarea, .wpcf7 textarea.wpcf7-validation-errors {
   height: auto; }
 
-.form-group, .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form body:not(.home) .main-content, body:not(.home) .wpcf7 .wpcf7-form .main-content {
+.form-group, .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form strong, .wpcf7 .wpcf7-form body:not(.home) .main-content, body:not(.home) .wpcf7 .wpcf7-form .main-content {
   margin-bottom: 1rem; }
 
 .form-text {
@@ -2428,7 +2428,7 @@ textarea.form-control,
           -ms-flex-pack: center;
               justify-content: center;
       margin-bottom: 0; }
-    .form-inline .form-group, .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .form-inline p, .form-inline .wpcf7 .wpcf7-form body:not(.home) .main-content, .wpcf7 .wpcf7-form body:not(.home) .form-inline .main-content, .form-inline body:not(.home) .wpcf7 .wpcf7-form .main-content, body:not(.home) .wpcf7 .wpcf7-form .form-inline .main-content {
+    .form-inline .form-group, .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .form-inline p, .form-inline .wpcf7 .wpcf7-form strong, .wpcf7 .wpcf7-form .form-inline strong, .form-inline .wpcf7 .wpcf7-form body:not(.home) .main-content, .wpcf7 .wpcf7-form body:not(.home) .form-inline .main-content, .form-inline body:not(.home) .wpcf7 .wpcf7-form .main-content, body:not(.home) .wpcf7 .wpcf7-form .form-inline .main-content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -9144,7 +9144,7 @@ a.text-dark:hover, a.text-dark:focus {
   tr,
   img {
     page-break-inside: avoid; }
-  p, body:not(.home) .main-content,
+  p, strong, body:not(.home) .main-content,
   h2,
   h3 {
     orphans: 3;
@@ -11627,26 +11627,58 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px; }
 
-p, body:not(.home) .main-content {
+.main-content h2 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-indent: 0px;
+  font-size: 23px;
+  color: #a62502;
+  font-weight: 600;
+  margin-top: 30px; }
+
+p, strong, body:not(.home) .main-content {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 34px; }
 
+.main-content a {
+  color: #d81405;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px; }
+
+strong {
+  font-weight: 500; }
+
 .btn,
 .wpcf7 input[type=submit] {
   text-transform: uppercase;
-  position: relative; }
+  position: relative;
+  letter-spacing: 0.12em; }
   .btn:not(.no-star), .wpcf7 input:not(.no-star)[type=submit] {
     padding-right: 70px; }
     .btn:not(.no-star)::after, .wpcf7 input[type=submit]:not(.no-star)::after {
-      content: '\f005';
+      content: url(/wp-content/uploads/2020/02/blackstar.png);
       position: absolute;
       right: 10px;
-      font-family: FontAwesome; }
+      top: auto; }
+
+.btn-primary:hover {
+  background-color: #c6c6c6;
+  border-color: #c6c6c6; }
 
 .arrow-down-section span {
   cursor: pointer; }
+
+a.dropdown-item {
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em; }
 
 #wrapper-navbar nav#utility-nav {
   z-index: 1;
@@ -11840,7 +11872,7 @@ body #primary-nav.hasBackground {
 #wrapper-footer {
   padding: 15px 0;
   background-color: #292929; }
-  #wrapper-footer .site-footer .site-info p, #wrapper-footer .site-footer .site-info body:not(.home) .main-content, body:not(.home) #wrapper-footer .site-footer .site-info .main-content {
+  #wrapper-footer .site-footer .site-info p, #wrapper-footer .site-footer .site-info strong, #wrapper-footer .site-footer .site-info body:not(.home) .main-content, body:not(.home) #wrapper-footer .site-footer .site-info .main-content {
     color: #818181;
     margin-bottom: 0;
     font-family: "Montserrat", sans-serif;
@@ -11892,7 +11924,7 @@ body #primary-nav.hasBackground {
     .sidebar-section #sidebar-offers .container {
       padding-top: 20px;
       padding-bottom: 20px; }
-      .sidebar-section #sidebar-offers .container p, .sidebar-section #sidebar-offers .container body:not(.home) .main-content, body:not(.home) .sidebar-section #sidebar-offers .container .main-content {
+      .sidebar-section #sidebar-offers .container p, .sidebar-section #sidebar-offers .container strong, .sidebar-section #sidebar-offers .container body:not(.home) .main-content, body:not(.home) .sidebar-section #sidebar-offers .container .main-content {
         color: white;
         font-family: "Roboto", sans-serif;
         font-size: 15px;
@@ -11906,7 +11938,7 @@ body #primary-nav.hasBackground {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 20px; }
-    .sidebar-section .extra-sidebar-content p, .sidebar-section .extra-sidebar-content body:not(.home) .main-content, body:not(.home) .sidebar-section .extra-sidebar-content .main-content {
+    .sidebar-section .extra-sidebar-content p, .sidebar-section .extra-sidebar-content strong, .sidebar-section .extra-sidebar-content body:not(.home) .main-content, body:not(.home) .sidebar-section .extra-sidebar-content .main-content {
       color: white; }
 
 /** Homepage Styling **/
@@ -11960,6 +11992,11 @@ body:not(.logged-in) img {
     @media (max-width: 768px) {
       #primary-carousel .carousel-wrapper {
         padding: 0 30px; } }
+  @media (min-width: 768px) {
+    #primary-carousel .carousel-item h1 {
+      font-size: 39px;
+      width: 110%;
+      letter-spacing: 0.12em; } }
   #primary-carousel .carousel-item i.fa.fa-chevron-right {
     padding-left: 7px;
     font-size: 7px;
@@ -12078,16 +12115,17 @@ section#pathways {
   @media (max-width: 768px) {
     section#pathways {
       padding-top: 30px; } }
-  section#pathways i.fa.fa-star {
+  section#pathways .fa.fa-star {
     color: white;
     position: absolute;
     right: 15px;
     top: 11px; }
-  section#pathways .pathways-top-text p, section#pathways .pathways-top-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-top-text .main-content, section#pathways .pathways-bottom-text p, section#pathways .pathways-bottom-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-bottom-text .main-content {
+  section#pathways .pathways-top-text p, section#pathways .pathways-top-text strong, section#pathways .pathways-top-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-top-text .main-content, section#pathways .pathways-bottom-text p, section#pathways .pathways-bottom-text strong, section#pathways .pathways-bottom-text body:not(.home) .main-content, body:not(.home) section#pathways .pathways-bottom-text .main-content {
     font-family: "Montserrat", sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 24px;
+    letter-spacing: 0.12em;
     margin-bottom: 0; }
   section#pathways .pathways-top-text {
     position: relative;
@@ -12117,11 +12155,11 @@ section#pathways {
       section#pathways .quickhit-copy {
         margin-top: 15px; } }
     @media (max-height: 760px) {
-      section#pathways .quickhit-copy p, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
+      section#pathways .quickhit-copy p, section#pathways .quickhit-copy strong, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
         font-size: 17px;
         line-height: 25px; } }
     @media (max-height: 830px) and (min-height: 760px) {
-      section#pathways .quickhit-copy p, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
+      section#pathways .quickhit-copy p, section#pathways .quickhit-copy strong, section#pathways .quickhit-copy body:not(.home) .main-content, body:not(.home) section#pathways .quickhit-copy .main-content {
         line-height: 30px; } }
   section#pathways .three-pathways * {
     z-index: 2; }
@@ -12152,7 +12190,7 @@ section#pathways {
     @media (max-width: 768px) {
       section#pathways .three-pathways .main-pathway {
         margin-top: 20px; } }
-    section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
+    section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway strong, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
       position: absolute;
       left: 40px;
       padding-right: 70px; }
@@ -12168,14 +12206,14 @@ section#pathways {
       max-width: unset;
       -o-object-fit: cover;
          object-fit: cover; }
-    section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
+    section#pathways .three-pathways .main-pathway p, section#pathways .three-pathways .main-pathway strong, section#pathways .three-pathways .main-pathway body:not(.home) .main-content, body:not(.home) section#pathways .three-pathways .main-pathway .main-content {
       color: white;
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 20px;
       margin-bottom: 0;
       line-height: 30px;
-      letter-spacing: 2px; }
+      letter-spacing: 0.12em; }
     @media (min-height: 760px) {
       section#pathways .three-pathways .main-pathway {
         height: 200px; } }
@@ -12250,7 +12288,12 @@ section#from-our-blog {
         font-weight: 500;
         font-size: 18px;
         text-transform: uppercase;
-        color: black; }
+        color: black;
+        letter-spacing: 0.05em; }
+        @media (min-width: 768px) {
+          section#from-our-blog .main-blog-section .blog-posts .main-post .title {
+            line-height: 30px;
+            margin-bottom: 0; } }
         @media (max-height: 780px) {
           section#from-our-blog .main-blog-section .blog-posts .main-post .title {
             line-height: 25px; } }
@@ -12266,7 +12309,7 @@ section#from-our-blog {
         margin-bottom: 0;
         line-height: 18px;
         font-weight: 400;
-        letter-spacing: 0.5px; }
+        letter-spacing: 0.05em; }
       section#from-our-blog .main-blog-section .blog-posts .main-post hr {
         border-color: #d9d9d9; }
         @media (max-width: 768px) {
@@ -12274,10 +12317,10 @@ section#from-our-blog {
             margin-top: 3px;
             margin-bottom: 3px; } }
       @media (max-width: 768px) {
-        section#from-our-blog .main-blog-section .blog-posts .main-post p.date, section#from-our-blog .main-blog-section .blog-posts .main-post body:not(.home) .date.main-content, body:not(.home) section#from-our-blog .main-blog-section .blog-posts .main-post .date.main-content {
+        section#from-our-blog .main-blog-section .blog-posts .main-post p.date, section#from-our-blog .main-blog-section .blog-posts .main-post strong.date, section#from-our-blog .main-blog-section .blog-posts .main-post body:not(.home) .date.main-content, body:not(.home) section#from-our-blog .main-blog-section .blog-posts .main-post .date.main-content {
           display: inline;
           padding-left: 5px; }
-        section#from-our-blog .main-blog-section .blog-posts .main-post p.author, section#from-our-blog .main-blog-section .blog-posts .main-post body:not(.home) .author.main-content, body:not(.home) section#from-our-blog .main-blog-section .blog-posts .main-post .author.main-content {
+        section#from-our-blog .main-blog-section .blog-posts .main-post p.author, section#from-our-blog .main-blog-section .blog-posts .main-post strong.author, section#from-our-blog .main-blog-section .blog-posts .main-post body:not(.home) .author.main-content, body:not(.home) section#from-our-blog .main-blog-section .blog-posts .main-post .author.main-content {
           display: inline;
           padding-right: 10px; } }
   section#from-our-blog .headline-section {
@@ -12293,7 +12336,8 @@ section#from-our-blog {
     section#from-our-blog .headline-section h2 {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
-      padding-top: 30px; }
+      padding-top: 30px;
+      letter-spacing: 0.12em; }
     section#from-our-blog .headline-section a.btn {
       margin-top: 30px; }
     @media (min-width: 768px) {
@@ -12327,7 +12371,8 @@ section#offers-section {
     section#offers-section .text-section .title {
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 0.12em; }
     section#offers-section .text-section .btn,
     section#offers-section .text-section .wpcf7 input[type=submit], .wpcf7 section#offers-section .text-section input[type=submit] {
       position: absolute;
@@ -12368,7 +12413,7 @@ section#seo-section {
     padding-bottom: 20px; }
     section#seo-section .seo-copy h1 {
       font-size: 24px;
-      letter-spacing: 2px;
+      letter-spacing: 0.12em;
       margin-bottom: 30px; }
   section#seo-section .credentials {
     text-align: center;
@@ -12379,11 +12424,11 @@ section#seo-section {
         background-color: black;
         padding-top: 50px;
         padding-bottom: 75px; } }
-    section#seo-section .credentials p, section#seo-section .credentials body:not(.home) .main-content, body:not(.home) section#seo-section .credentials .main-content {
+    section#seo-section .credentials p, section#seo-section .credentials strong, section#seo-section .credentials body:not(.home) .main-content, body:not(.home) section#seo-section .credentials .main-content {
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 14px;
-      letter-spacing: 2px;
+      letter-spacing: 0.12em;
       margin-bottom: 5px; }
     section#seo-section .credentials hr {
       border-color: #272727;
@@ -12430,6 +12475,9 @@ body:not(.home) {
   body:not(.home) h1 {
     margin-bottom: 10px;
     margin-top: 10px; }
+
+.page-id-357 .col-md-4 div#navbarNavDropdown {
+  display: none; }
 
 /** Team Page Styling **/
 .team-members:not(.single-team) {
@@ -12589,7 +12637,7 @@ body:not(.home) {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     margin-bottom: 0; }
-  .insights .featured-offer .content, .insights .featured-offer .text-section p, .insights .featured-offer .text-section body:not(.home) .main-content, body:not(.home) .insights .featured-offer .text-section .main-content {
+  .insights .featured-offer .content, .insights .featured-offer .text-section p, .insights .featured-offer .text-section strong, .insights .featured-offer .text-section body:not(.home) .main-content, body:not(.home) .insights .featured-offer .text-section .main-content {
     color: white;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -12676,7 +12724,7 @@ div.blog {
   .page-template-template-careers .text-content {
     min-width: 781px; } }
 
-.page-template-template-careers .text-content p, .page-template-template-careers .text-content body:not(.home) .main-content, body:not(.home) .page-template-template-careers .text-content .main-content {
+.page-template-template-careers .text-content p, .page-template-template-careers .text-content strong, .page-template-template-careers .text-content body:not(.home) .main-content, body:not(.home) .page-template-template-careers .text-content .main-content {
   max-width: 450px; }
 
 .page-template-template-careers #primary-carousel .slide-count {
@@ -12706,7 +12754,9 @@ div.blog {
       font-size: 35px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      padding-top: 20px; }
+      padding-top: 20px;
+      -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
   .page-template-template-careers .videos-wrapper #video-section {
     position: relative;
     min-height: 445px; }
@@ -12793,7 +12843,7 @@ div.blog {
     @media (max-width: 768px) {
       .page-template-template-careers #jobs-section .text-section .headline-section .content-section {
         margin-top: 25px; } }
-    .page-template-template-careers #jobs-section .text-section .headline-section .content-section p, .page-template-template-careers #jobs-section .text-section .headline-section .content-section body:not(.home) .main-content, body:not(.home) .page-template-template-careers #jobs-section .text-section .headline-section .content-section .main-content {
+    .page-template-template-careers #jobs-section .text-section .headline-section .content-section p, .page-template-template-careers #jobs-section .text-section .headline-section .content-section strong, .page-template-template-careers #jobs-section .text-section .headline-section .content-section body:not(.home) .main-content, body:not(.home) .page-template-template-careers #jobs-section .text-section .headline-section .content-section .main-content {
       line-height: 25px; }
     .page-template-template-careers #jobs-section .text-section .headline-section .title {
       font-family: "Montserrat", sans-serif;

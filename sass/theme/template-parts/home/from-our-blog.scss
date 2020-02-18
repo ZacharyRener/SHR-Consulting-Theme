@@ -95,6 +95,11 @@ section#from-our-blog {
                     font-size: $p-font-size;
                     text-transform: uppercase;
                     color:black;
+                    letter-spacing: 0.05em;
+                    @include desktop {
+                        line-height: 30px;
+                        margin-bottom: 0;
+                    }
                     @media(max-height: 780px){
                         line-height: 25px;
                     }
@@ -111,7 +116,8 @@ section#from-our-blog {
                     margin-bottom:0;
                     line-height:18px;
                     font-weight: 400;
-                    letter-spacing: 0.5px;
+                    letter-spacing: 0.05em;
+
                 }
                 hr {
                     border-color: #d9d9d9;
@@ -153,6 +159,7 @@ section#from-our-blog {
             font-family: $font-family-primary;
             font-weight: 400;
             padding-top:30px;
+            letter-spacing: 0.12em;
         }
 
         a.btn {

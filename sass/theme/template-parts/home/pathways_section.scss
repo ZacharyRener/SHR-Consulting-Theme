@@ -39,7 +39,7 @@ section#pathways {
 
 
 
-    i.fa.fa-star {
+    .fa.fa-star {
         color: white;
         position: absolute;
         right: 15px;
@@ -52,6 +52,7 @@ section#pathways {
             color: $primary;
             text-transform:uppercase;
             font-size: $quick-hit-headline-size;
+            letter-spacing: 0.12em;
             margin-bottom: 0;
         }
     }
@@ -123,6 +124,7 @@ section#pathways {
                 position: absolute;
                 left: 40px;
                 padding-right: 70px;
+                
             }
             overflow: hidden;
             transition: $transition-primary;
@@ -154,7 +156,7 @@ section#pathways {
                 font-size: 20px;
                 margin-bottom: 0;
                 line-height: 30px;
-                letter-spacing: 2px;
+                letter-spacing: 0.12em;
             }
             @media(min-height:760px){
                 height: 200px;

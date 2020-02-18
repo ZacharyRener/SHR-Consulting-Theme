@@ -76,8 +76,9 @@ echo '<section id="pathways" style="background-image:url('.$backgroundImage.');"
 					                <div data-depth='-0.1'>
 					                    <img class='prlx-image' src='$background_image' />
 					                </div>
-					            </div>
-					            <i class='fa fa-star'></i>
+                                </div>
+                                <img class='fa fa-star' src='/wp-content/uploads/2020/02/whitestar.png' />
+					            
 	                            <p>$textHeadline</p> 
                             </div>
 				            

@@ -22,7 +22,7 @@ section#seo-section {
     .seo-copy {
         h1 {
             font-size:24px;
-            letter-spacing: 2px;
+            letter-spacing: 0.12em;
             margin-bottom: 30px;
         }
         padding-bottom: 20px;
@@ -43,7 +43,7 @@ section#seo-section {
             font-family: $font-family-primary;
             text-transform:uppercase;
             font-size:14px;
-            letter-spacing: 2px;
+            letter-spacing: 0.12em;
             margin-bottom: 5px;
         }
         hr {

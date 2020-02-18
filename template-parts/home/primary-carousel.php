@@ -57,8 +57,8 @@ echo '<section id="primary-carousel" class="carousel slide carousel-fade" data-r
               echo 'let excerpt = jQuery(".slide-'.$slideCount.' .excerpt");';
               echo 'let button = jQuery(".slide-'.$slideCount.' .btn");';
 
-              echo 'let leftValue = -(topText.innerWidth() / 6);';
-              echo 'let rightValue = bottomText.innerWidth() / 6;';
+              echo 'let leftValue = -(topText.innerWidth() / 5);';
+              echo 'let rightValue = bottomText.innerWidth() / 5;';
 
               echo 'let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;';
               echo 'if (!isMobile) {';

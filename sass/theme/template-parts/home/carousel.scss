@@ -51,6 +51,14 @@ body:not(.logged-in){
     
     .carousel-item {
 
+        @include desktop {
+            h1 {
+                font-size:39px;
+                width: 110%;
+                letter-spacing: 0.12em;
+            }
+        }
+
 
         i.fa.fa-chevron-right {
             padding-left: 7px;

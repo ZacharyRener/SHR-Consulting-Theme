@@ -16,7 +16,7 @@
 			</div>
 
 			<div class="right-section">
-				<a href="">Contact</a>
+				<a href="/contact-us">Contact</a>
 				<form action="/" method="get">
 					<input class="form-control searchForm" name="s" type="text" placeholder="Search" aria-label="Search">
 				</form>
