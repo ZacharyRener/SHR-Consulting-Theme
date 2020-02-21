@@ -28,7 +28,14 @@
 }
 
 .search {
-    .col-md-4.sidebar-section {
-        display: none;
+    @include phone {
+        .col-md-4.sidebar-section {
+            display: none;
+        }
+    }
+    @include desktop {
+        #sidebar {
+            display:none;
+        }
     }
 }

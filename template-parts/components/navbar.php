@@ -11,8 +11,12 @@
 			</button>
 
 			<div class="social-icons">
-				<a href="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-				<a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+				<?php if(get_field('linkedin_url', 'options')): ?>
+				<a href="<?php the_field('linkedin_url', 'options'); ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<?php endif;
+				if(get_field('linkedin_url', 'options')): ?>
+				<a href="<?php the_field('linkedin_url', 'options'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+				<?php endif; ?>
 			</div>
 
 			<div class="right-section">

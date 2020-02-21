@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<div class="site-info">
 
-								<p>© 2019 SHR Consulting Group. All Rights Reserved</p>
+								<p>© 2019 SHR Consulting Group. All Rights Reserved. <a target='_blank' href='https://hingemarketing.com/'>Design by Hinge</a></p>
 
 							</div><!-- .site-info -->
 

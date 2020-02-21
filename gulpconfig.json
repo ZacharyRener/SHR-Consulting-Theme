@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "shr-consulting.local",
+    "proxy": "localhost",
     "notify": false
   },
   "browserSyncWatchFiles" : [
