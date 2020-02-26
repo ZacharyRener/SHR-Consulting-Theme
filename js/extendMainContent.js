@@ -55,16 +55,16 @@ export function positionVideoSection() {
 
 export function mobileMenuToggling(){
 
-    let mobileMenu = jQuery('.mobile-menu');
+    if(window.innerWidth < 768){
+        let mobileMenu = jQuery('.mobile-menu');
 
-    
+        jQuery('.fa-times').click( () => {
+            mobileMenu.toggleClass('showing'); 
+        });
 
-    jQuery('.fa-times').click( () => {
-        mobileMenu.toggleClass('showing'); 
-    });
-
-    jQuery('.fa-bars').click( () => {
-        mobileMenu.toggleClass('showing'); 
-    });
+        jQuery('.fa-bars').click( () => {
+            mobileMenu.toggleClass('showing'); 
+        });
+    }
     
 }

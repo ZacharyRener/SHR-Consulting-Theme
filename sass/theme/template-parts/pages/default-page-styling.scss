@@ -61,20 +61,51 @@ body:not(.home) {
 
 .services-overlay {
     @extend .blue-overlay;
-    background-image:url(/wp-content/uploads/2020/01/slider-image-two.png);
+    background-image:url(/wp-content/uploads/2020/02/Service-pathway-BG-e1582574511108.png);
     background-size:cover;
     display:inline-flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: Montserrat,sans-serif !important;
+    font-size: 18px;
+    color: white !important;
     a {
         position: absolute;
-        width: 70%;
-        font-weight: 400 !important;
+        font-weight: 500 !important;
         text-transform: uppercase;
         letter-spacing: 1.2px;
         font-family: Montserrat,sans-serif !important;
         font-size: 18px;
         color: white !important;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        text-align: center;
+    }
+}
+
+@include phone {
+    img.size-full.wp-image-506 {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    img.size-full.wp-image-507 {
+        width: 100%;
+    }
+}
+
+a {
+    word-break: break-word;
+    max-width: 100vw;
+    &:hover {
+        text-decoration: none;
     }
 }

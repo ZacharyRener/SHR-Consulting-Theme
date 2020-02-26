@@ -57,6 +57,11 @@ section#offers-section {
         @media(min-height: 835px) {
             background-position: top right;
         }
+        @include desktop {
+            background-size:cover;
+            background-position:center;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 99%, 0 90%, 0% 25%);
+        }
     }
 
     @include desktop {

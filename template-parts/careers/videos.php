@@ -8,7 +8,7 @@ $video = get_field('video_file');
 
 echo "
 
-<div class='videos-wrapper' style='background-image:url($sectionBackgroundUrl)'>
+<div class='videos-wrapper' id='show-video' style='background-image:url($sectionBackgroundUrl)'>
 
 	<div class='content-wrapper'>
 

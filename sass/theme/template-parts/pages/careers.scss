@@ -324,6 +324,10 @@
 						font-weight: 600;
 						line-height:30px;
 						letter-spacing: $va-120;
+						@include desktop {
+							display: flex;
+							align-items: center;
+						}
 					}
 
 					.job-title {

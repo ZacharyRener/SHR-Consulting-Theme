@@ -16,7 +16,7 @@ echo "
 					<div class='row headline-section'>
 						<div class='col-md-6 title-button-section'>
 							<h2 class='title'>$headline</h2>
-							<a href='$buttonLink' class='btn btn-primary'>$buttonText</a>
+							<a href='$buttonLink' target='_blank' class='btn btn-primary'>$buttonText</a>
 						</div>
 						<div class='col-md-6 content-section'>
 							$excerpt
@@ -54,8 +54,8 @@ echo "
 		                                
 		                                <div class='col-md-3 '>
 		                                    <div class='main-post'>
-		                                        <a href='$titleLink'><p class='position-title'>$positionTitle</p></a>
-		                                        <a href='$titleLink'><p class='job-title'>$jobTitle</p></a>
+		                                        <a href='$titleLink' target='_blank'><p class='position-title'>$positionTitle</p></a>
+		                                        <a href='$titleLink' target='_blank'><p class='job-title'>$jobTitle</p></a>
 		                                        <hr/>
 		                                        <p class='department'>$department</p>
 		                                        <p class='date'>Posted: $date</p>

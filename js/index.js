@@ -9,19 +9,21 @@ function main() {
     const router = new Router();
 
     // Careers pages
-    router.get('/careers.*', function(req){
+    router.get('/careers/', function(req){
         positionContentSection();
         positionVideoSection();
         jQuery(window).resize( () => {
             positionContentSection();
             positionVideoSection();
         });
+        jQuery('.position-title').matchHeight();
     });
 
     // Homepage
     router.get('/', function(req){
         makePathwaysResponsive();
         fromBlogResize();
+        jQuery('#offers-section .text-section').matchHeight();
     });
 
     // All pages

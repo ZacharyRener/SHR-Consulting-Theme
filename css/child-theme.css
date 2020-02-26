@@ -12242,7 +12242,7 @@ section#pathways {
       top: 50px;
       opacity: 0; }
     section#pathways .three-pathways .main-pathway .prlx-image {
-      width: 500px;
+      width: 425px;
       height: auto;
       max-width: unset;
       -o-object-fit: cover;
@@ -12431,6 +12431,12 @@ section#offers-section {
     @media (min-height: 835px) {
       section#offers-section .background-section {
         background-position: top right; } }
+    @media (min-width: 768px) {
+      section#offers-section .background-section {
+        background-size: cover;
+        background-position: center;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 99%, 0 90%, 0% 25%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 99%, 0 90%, 0% 25%); } }
   @media (min-width: 768px) {
     section#offers-section .offer-0 {
       padding-right: 40px; }
@@ -12507,6 +12513,13 @@ section#seo-section {
     section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(1), section#seo-section .credentials .carousel-item .col-md-6:nth-last-of-type(2) {
       padding-bottom: 0; }
 
+.col-md-6.credentials {
+  position: relative;
+  top: -86px; }
+
+section#seo-section .credentials hr {
+  margin-bottom: 86px; }
+
 /** Default Page Styling **/
 body:not(.home) {
   background: black; }
@@ -12564,7 +12577,7 @@ body:not(.home) {
        object-position: center; }
 
 .services-overlay {
-  background-image: url(/wp-content/uploads/2020/01/slider-image-two.png);
+  background-image: url(/wp-content/uploads/2020/02/Service-pathway-BG-e1582574511108.png);
   background-size: cover;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -12575,16 +12588,47 @@ body:not(.home) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: Montserrat,sans-serif !important;
+  font-size: 18px;
+  color: white !important; }
   .services-overlay a {
     position: absolute;
-    width: 70%;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-family: Montserrat,sans-serif !important;
     font-size: 18px;
-    color: white !important; }
+    color: white !important;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 15px;
+    text-align: center; }
+
+@media (max-width: 768px) {
+  img.size-full.wp-image-506 {
+    margin-top: 15px;
+    width: 100%; }
+  img.size-full.wp-image-507 {
+    width: 100%; } }
+
+a {
+  word-break: break-word;
+  max-width: 100vw; }
+  a:hover {
+    text-decoration: none; }
 
 /** Team Page Styling **/
 .team-members:not(.single-team) {
@@ -13055,6 +13099,14 @@ div.blog {
       font-weight: 600;
       line-height: 30px;
       letter-spacing: 0.12em; }
+      @media (min-width: 768px) {
+        .page-template-template-careers #jobs-section .text-section .job-listings .main-post .position-title, .page-template-template-careers #jobs-section .text-section .job-listings .main-post .job-title {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
     .page-template-template-careers #jobs-section .text-section .job-listings .main-post .department, .page-template-template-careers #jobs-section .text-section .job-listings .main-post .date {
       font-family: Roboto,sans-serif;
       text-transform: uppercase;

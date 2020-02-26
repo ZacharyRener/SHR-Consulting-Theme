@@ -17,7 +17,7 @@ $quickhitCopy = !empty(get_field('quickhit_top_text'))
     : '';
 
 
-echo '<section id="pathways" style="background:url('.$backgroundImage.'), linear-gradient(180deg,#000 0,#000 68%,#fff 68%);">';
+echo '<section id="pathways" style="background-image:url('.$backgroundImage.');">';
 
     echo '<div class="container">';
 
@@ -70,7 +70,8 @@ echo '<section id="pathways" style="background:url('.$backgroundImage.'), linear
 
                         <div class='col-md-4'>
                             
-                            
+                            <a href='$url'>    
+
                             <div class='main-pathway pathway-$count' >
 	                             <div class='scene' id='pathway-$count-id'>
 					                <div data-depth='-0.1'>
@@ -86,6 +87,8 @@ echo '<section id="pathways" style="background:url('.$backgroundImage.'), linear
 					            var scene = document.getElementById('pathway-$count-id');
 	                            var parallaxInstance = new Parallax(scene, { relativeInput: true });
                             </script>
+
+                            </a>
                         
                         </div>
                         
