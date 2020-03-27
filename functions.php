@@ -33,3 +33,11 @@ function add_child_theme_textdomain() {
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 require('template-parts/functions/_post_types.php');
+
+function admin_style() {
+    wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/css/wp-admin.css');
+}
+
+add_action('admin_enqueue_scripts', 'admin_style');
+
+require_once('wp_bootstrap_navwalker.php');

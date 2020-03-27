@@ -156,3 +156,272 @@ body:not(.logged-in){
         opacity: 0.5;
     }
 }
+
+@include phone {
+
+    .arrow-down-section {
+        display: none;
+    }
+
+    #primary-carousel {
+
+        .bottom-text h1, .top-text h1 {font-size: 25px;margin-bottom: 0;}
+
+        ol.carousel-indicators {
+            right: auto;
+            left: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+        }
+
+        .arrow-down-section {
+            display: none;
+        }
+
+        a.carousel-control-prev, .carousel-control-next {
+            bottom: 0;
+            height: auto !important;
+        }
+
+        span.carousel-control-next-icon {
+            position: absolute;
+            bottom: 28px;
+            right: 120px;
+        }
+
+        span.carousel-control-prev-icon {
+            position: absolute;
+            bottom: 28px;
+            left: 120px;
+        }
+
+        section.excerpt p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        a.btn.btn-primary {
+            font-size: 10px;
+        }
+
+        section.slide-count {
+            font-size: 13px;
+        }
+
+        i.fa.fa-chevron-right {
+            top: -1px !important;
+        }
+
+    }
+
+    #pathways {
+
+        background-image: none !important;
+        background-color: black;
+
+        padding: 50px 20px !important;
+        padding-bottom: 75px !important;
+
+        
+        .pathways-top-text.animateNow {
+            left: 0 !important;
+        }
+        
+        .pathways-top-text p, .pathways-bottom-text p {
+            font-size: 17px !important;
+            line-height: 27px;
+        }
+        
+        .quickhit-copy p {
+            font-size: 16px;
+        }
+        
+        .main-pathway p {
+            padding-right: 35px !important;
+            font-size: 19px !important;
+            line-height: 24px !important;
+        }
+        
+        
+        
+        .main-pathway {
+            margin-bottom: 25px !important;
+        }
+
+    }
+
+    #from-our-blog {
+
+        padding: 20px !important;
+        padding-bottom: 50px !important;
+        clip-path: polygon(0 0,100% 0,100% 100%,15% 100%,0 93%,0 54%);
+        
+        .headline-section h2 {
+            font-size: 23px;
+        }
+        
+        a.btn.btn-secondary:not(.mobile-only) {
+            display: none;
+        }
+        
+        .blog-posts .main-post {
+        }
+        
+        .blog-posts .col-md-4:nth-of-type(1) .main-post {
+            margin-top: 20px !important;
+        }
+        
+        .blog-posts .main-post .title {
+            font-size: 16px !important;
+            line-height: 26px !important;
+        }
+        
+        .main-post hr {
+            display: block !important;
+            margin: 15px 0 !important;
+        }
+        
+        p.author {
+            display: block !important;
+            margin-top: 20px;
+        }
+        
+        p.date {
+            padding-left: 0 !important;
+        }
+        
+        p.date, p.author {
+            font-size: 12px !important;
+            line-height: 7px !important;
+        }
+
+        a.btn.btn-secondary.mobile-only {
+            margin-left: 35px;
+            margin-top: 40px;
+        }
+        
+    }
+
+    #offers-section {
+
+        padding: 70px 50px !important;
+
+        .background-section {
+            height: 144px;
+            background-position: bottom left !important;
+            background-size: cover !important;
+        }
+        
+        .offer-0:nth-of-type(1) {
+            margin-bottom: 60px;
+        }
+        
+        .col-md-8.text-section {
+            padding: 20px !important;
+            padding-bottom: 46px !important;
+        }
+        
+        .wrapper {
+            padding: 0 !important;
+        }
+        
+        .text-section p {
+            font-size: 16px;
+        }
+        
+        p.title {
+            font-size: 19px !important;
+            line-height: 25px !important;
+            margin-bottom: 5px !important;
+        }
+        
+        .col-md-8.text-section {
+            clip-path: polygon(0 0,100% 0,100% 100%,13% 100%,0 83%,0 54%) !important;
+        }
+        
+        a.btn.btn-primary {
+            padding-left: 43px !important;
+            font-size: 13px !important;
+        }
+
+    }
+
+    section#seo-section {
+
+        
+
+        background-image: none !important;
+        padding-top:0 !important;
+        clip-path: polygon(89% 0, 100% 3%, 100% 100%, 50% 100%, 0 100%, 0 0);
+
+        hr {
+            margin-bottom: 15px !important;
+        }
+        
+        .col-md-6.credentials {
+            padding: 50px 40px !important;
+            padding-bottom: 90px !important;
+        }
+        
+        .credentials .carousel-item .col-md-6 img {
+            max-width: 110px !important;
+            height: 60px !important;
+        }
+        
+        p.credential {
+            font-size: 16px !important;
+            padding-bottom: 9px !important;
+        }
+
+        .col-md-6.seo-copy {
+            background-image: url(/wp-content/uploads/2020/01/seo-copy-background.png);
+            background-size: 120%!important;
+            background-position: center center!important;
+            padding: 43px 16px!important;
+            background-repeat: no-repeat;
+        }
+
+        .seo-copy h1 {
+            line-height: 34px;
+        }
+        
+        .seo-copy p {
+            font-size: 16px !important;
+            line-height: 26px;
+            font-weight: 400;
+        }
+
+        .col-md-6.credentials {
+            top: auto;
+        }
+
+    }
+
+
+    #wrapper-footer {
+
+        padding: 20px 10px !important;
+    
+        .site-info p {
+            font-size: 11px !important;
+            letter-spacing: normal !important;
+            margin-bottom: 0 !important;
+        }
+        
+        ul#menu-footer-menu li {
+            display: inline-block !important;
+        }
+        
+        ul#menu-footer-menu li a {
+            font-size: 9px !important;
+            padding-right: 10px;
+        }
+
+    }
+    
+    
+    
+    
+
+}

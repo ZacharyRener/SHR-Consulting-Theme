@@ -18,8 +18,6 @@ echo "
                 
                     <a class='btn btn-secondary' href='$buttonUrl'>$buttonText</a>";
 
-                    arrowDown('#lowerContent');
-
                 echo "
                 </div>
 
@@ -36,8 +34,6 @@ echo "
     </div>
 
     <div class='right-white-section blog-match-height'></div>";
-
-    arrowDown('#jobs-section');
 
 echo "
 </section>

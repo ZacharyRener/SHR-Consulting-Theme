@@ -23,7 +23,7 @@ echo "
 
                     <div class='col-md-6 offer-$count'>
                         <div class='row'>
-                            <div class='col-md-4 background-section' style='background-image:url($imageUrl);'></div>
+                            <div class='col-md-4 background-section' style='background-image:url($imageUrl);'><a href='$ctaUrl'><div></div></a></div>
                             <div class='col-md-8 text-section'>
                                 <div class='wrapper'>
                                     <p class='title'>$title</p>
@@ -45,8 +45,6 @@ echo "
         echo "
         </div>
     </div>";
-
-	arrowDown('#seo-section');
 
 echo
 "</section>

@@ -56,9 +56,7 @@ echo "
 		                                    <div class='main-post'>
 		                                        <a href='$titleLink' target='_blank'><p class='position-title'>$positionTitle</p></a>
 		                                        <a href='$titleLink' target='_blank'><p class='job-title'>$jobTitle</p></a>
-		                                        <hr/>
-		                                        <p class='department'>$department</p>
-		                                        <p class='date'>Posted: $date</p>
+
 		                                    </div>
 		                                </div>
 		                                
@@ -67,7 +65,8 @@ echo "
 		                            endwhile;
 		                        endif;
 
-		                        echo "
+								echo "
+								<a href='$buttonLink' target='_blank' class='btn btn-primary mobile-only'>$buttonText</a>
 		                    
 		                    </div>
 

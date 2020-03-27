@@ -95,4 +95,67 @@ nav#primary-nav {
     i.fa.fa-bars {
         display: none;
     }
+    
 }
+
+@include phone {
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .dropdown.show .dropdown-menu.show {
+        display: none;
+    }
+    .showNow {
+        position: static!important;
+        -webkit-transform: none!important;
+        transform: none!important;
+        background-color: transparent !important;
+        border: 0 !important;
+        -webkit-transition: .8s cubic-bezier(.2,1,.3,1) !important;
+        transition: .8s cubic-bezier(.2,1,.3,1) !important;
+        display: block !important;
+    }
+    
+    ul.sub-menu:not(.showMenu) {
+        height: 0;
+        opacity: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    i.fa.fa-sort-down.onMobileNav {
+        position: relative;
+        left: 15px;
+        color: white;
+        top: -3px;
+    }
+    
+    #menu-primary-nav-1 > .menu-item > a {
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        font-family: Montserrat,sans-serif;
+        font-size: 17px;
+    }
+    
+    #menu-primary-nav-1 > .menu-item > .sub-menu {font-family: 'Montserrat';text-transform: uppercase;font-size: 14px;padding: 20px 15px;list-style: none;}
+    
+    #menu-primary-nav-1 > .menu-item > .sub-menu li {
+        padding: 10px 0;
+    }
+    
+    .navbar-nav > li.menu-item {
+        margin: 10px 0;
+    }
+
+    ul.sub-menu {
+        transition: $transition-primary;
+    }
+    
+    
+    .navbar-nav>li.menu-item {
+        z-index: 200;
+    }
+    
+}
+

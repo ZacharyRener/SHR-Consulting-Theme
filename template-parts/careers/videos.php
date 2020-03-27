@@ -41,8 +41,6 @@ echo "
 	
 	</section>";
 
-	arrowDown('.main-blog-section');
-
 	echo "
 </div>
 </div>

@@ -1,12 +1,27 @@
 .page-template-template-careers {
 
+	p.position-title {
+		/** height: auto !important;  **/
+		align-items: flex-start !important;
+	}
+
+	#upperContent h2, #lowerContent h2 {
+		letter-spacing: .12em;
+	}
+
 	.video-wrapper, .row, .container {
 		position:static;
 	}
 
+
 	.white-bg {
 
 		clip-path: polygon(95% 0, 100% 10%, 100% 100%, 50% 100%, 0 100%, 0 0);
+
+		@include desktop {
+			background-color: black !important;
+			max-width: 46%;
+		}
 
 		@include desktop {
 			min-height: 445px;
@@ -205,7 +220,9 @@
 			}
 
 			.mt-5 {
-				margin-top: 125px !important;
+				@include desktop {
+					margin-top: 125px !important;
+				}
 			}
 
 			li {
@@ -332,6 +349,11 @@
 
 					.job-title {
 						@extend .position-title;
+						font-size: 12px !important;
+						line-height: 27px !important;
+						color: #333 !important;
+						margin-top: 20px;
+						text-transform:none !important;
 					}
 
 					.department {
@@ -360,6 +382,231 @@
 
 	.black-section {
 		padding-right: 0;
+	}
+
+}
+
+
+@include phone {
+
+	.page-template-template-careers {
+
+		p.title {
+			text-align: left;
+			font-size: 23px !important;
+			line-height: 39px;
+			margin-bottom: 0 !important;
+			padding-top: 0 !important;
+		}
+		
+		.container.text-wrapper {
+			padding: 0 !important;
+		}
+		
+		.col-md-6.video-wrapper {
+			padding: 0 !important;
+			margin: 25px 0;
+		}
+		
+		.col-md-6.credentials {
+			padding: 0 !important;
+			top: auto !important;
+		}
+		
+		div#show-video {
+			padding: 50px 30px !important;
+		}
+		
+		.container.text-wrapper {
+			padding: 0 !important;
+		}
+		
+		div#show-video {
+			height: auto !important;
+			background-image: none !important;
+		}
+		
+		.credentials .container {
+			padding: 0 !important;
+		}
+		
+		.white-bg {
+			height: 167px !important;
+			width: 100% !important;
+		}
+		
+		.credentials p {
+			font-size: 16px;
+			line-height: 27px;
+			margin-bottom: 0 !important;
+		}
+		
+		section#video-section {
+			min-height: unset !important;
+		}
+
+		section#from-our-blog {
+			padding: 0 !important;
+			padding-top: 100px !important;
+			background-size: contain !important;
+			clip-path: none !important;
+			background-position: top !important;
+		}
+		
+		.main-blog-section.blog-match-height {
+			clip-path: polygon(87% 0, 100% 3%, 100% 100%, 50% 100%, 0 100%, 0 0) !important;
+			padding: 0 !important;
+		}
+		
+		.content-section {}
+		
+		.content-section {
+			padding: 50px 30px !important;
+		}
+		
+		#upperContent h2 {
+			text-align: left;
+			font-size: 27px!important;
+			line-height: 39px;
+		}
+		
+		#upperContent p {
+			font-weight: 400;
+			font-size: 16px !important;
+			line-height: 27px !important;
+		}
+		
+		#upperContent a.btn.btn-secondary {
+			display: inline-block !important;
+			margin-top: 20px;
+		}
+		
+		div#upperContent {
+			padding-bottom: 0 !important;
+		}
+		
+		#lowerContent h2.mt-5 {
+			margin-top: 75px !important;
+			text-align: left;
+			font-size: 27px!important;
+			line-height: 39px;
+			margin-bottom: 15px !important;
+		}
+		
+		.main-blog-section ul {
+			margin: 0 !important;
+		}
+		
+		#lowerContent li {
+			margin: 13px 0;
+		}
+		
+		#lowerContent li * {
+			font-size: 16px;
+		}
+		
+		.main-blog-section .blog-posts {
+			display: none !important;
+		}
+		
+		.col-md-10.text-section {
+			clip-path: polygon(84% 0, 100% 7%, 100% 100%, 50% 100%, 0 100%, 0 0) !important;
+		}
+
+		.main-blog-section.blog-match-height {
+			margin-bottom: 0 !important;
+		}
+		
+		section#jobs-section {
+			background-image: url(/wp-content/uploads/2020/03/second-bg-image-mobile.png);
+			padding-top: 220px !important;
+			background-size: 125% !important;
+			background-repeat: no-repeat !important;
+			background-position: top left !important;
+		}
+		
+		#jobs-section a.btn.btn-primary:not(.mobile-only) {
+			display: none;
+		}
+		
+		#jobs-section .col-md-6.content-section {
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+		
+		#jobs-section .container {
+			padding: 0 !important;
+		}
+		
+		.col-md-10.text-section {
+			padding: 50px 30px 
+		!important;
+			margin: 0 !important;
+		}
+		
+		#jobs-section h2.title {
+			text-align: left;
+			font-size: 27px!important;
+			line-height: 39px;
+			margin-bottom: 15px !important;
+		}
+		
+		.job-listings .row {
+			margin: 0 !important;
+		}
+		
+		.row.headline-section {
+			margin: 0 !important;
+		}
+		
+		p.position-title {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+		}
+		
+		.job-listings hr {
+			display: block !important;
+			visibility: visible !important;
+			margin: 15px 0 !important;
+		}
+		
+		p.position-title {
+			line-height: 15px !important;
+		}
+		
+		.job-listings {
+			margin-top: 10px !important;
+		}
+		
+		p.department, p.date {
+			font-size: 12px!important;
+			line-height: 25px!important;
+		}
+		
+		.col-md-10.text-section {
+			background-size: contain !important;
+			background-repeat: no-repeat;
+			background-position: center !important;
+			background-color: #f5f5f5 !important;
+		}
+
+		.white-bg {
+			clip-path: polygon(77% 0,100% 30%,100% 100%,43% 100%,0 100%,0 0) !important;
+		}
+
+		
+		.col-md-6.credentials {
+			margin-top: 10px;
+		}
+
+		a.btn.btn-primary.mobile-only {
+			margin-top: 40px;
+			margin-left: 15px;
+			margin-bottom: 25px;
+		}
+
+		
+
 	}
 
 }

@@ -9,7 +9,8 @@ function offset(el) {
 export function scrollToSection(section) {
     var div = document.querySelector(section);
     var divOffset = offset(div);
-    var topValue = divOffset.top - 105;
+
+    var topValue = divOffset.top - (jQuery('body').hasClass('logged-in') ? 105 : 0);
     window.scroll({
         top: topValue,
         left: 0,

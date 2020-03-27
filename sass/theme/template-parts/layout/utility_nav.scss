@@ -13,7 +13,7 @@
             position: relative;
         }
 
-        @media(max-width:768px){
+        @include phone {
             padding-bottom: 0 !important;
             padding-top: 0 !important;
             .social-icons {
@@ -69,5 +69,16 @@
                 }
             }
         }
+    }
+}
+
+@include phone {
+    #utility-nav .social-icons {
+        left: 10px;
+        z-index: 2000;
+    }
+    #utility-nav i.fa.fa-facebook {
+        position: relative;
+        left: 20px;
     }
 }

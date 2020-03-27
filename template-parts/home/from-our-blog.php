@@ -10,11 +10,9 @@ echo "
 
             <div class='headline-section'>";
 
-            arrowDown('#from-our-blog .headline-section');
-
                 echo "
-                <div><h2>FROM OUR BLOG</h2></div>
-                <div><a href='#' class='btn btn-secondary'>Go to the blog</a></div>
+                <div><h2>IN THE NEWS</h2></div>
+                <div><a href='/about-us/news-events/' class='btn btn-secondary'>Read More</a></div>
             </div>
 
             <div class='blog-posts'>
@@ -22,7 +20,7 @@ echo "
                 <div class='row'>";
 
                     $args = [
-                        'post_type' => 'post',
+                        'post_type' => 'newsevents',
                         'posts_per_page' => 3,
                         'orderby' => 'date',
                         'order' => 'DESC',
@@ -46,7 +44,7 @@ echo "
                                 <div class='main-post'>
                                     <a href='$titleLink'><p class='title match-height'>$title</p></a>
                                     <hr/>
-                                    <p class='author'>By $author</p>
+                                    <!-- <p class='author'>By $author</p> -->
                                     <p class='date'>$date</p>
                                 </div>
                             </div>
@@ -57,7 +55,8 @@ echo "
                     endif;
 
                     echo "
-                
+                    <a href='#' class='btn btn-secondary mobile-only'>Read More</a>
+
                 </div>
 
             </div>

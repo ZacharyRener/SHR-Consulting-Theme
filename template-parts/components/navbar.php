@@ -14,8 +14,8 @@
 				<?php if(get_field('linkedin_url', 'options')): ?>
 				<a href="<?php the_field('linkedin_url', 'options'); ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 				<?php endif;
-				if(get_field('linkedin_url', 'options')): ?>
-				<a href="<?php the_field('linkedin_url', 'options'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+				if(get_field('facebook_url', 'options')): ?>
+				<a href="<?php the_field('facebook_url', 'options'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
 				<?php endif; ?>
 			</div>
 
@@ -81,7 +81,6 @@
 				'menu_class'      => 'navbar-nav ml-auto',
 				'fallback_cb'     => '',
 				'depth'           => 3,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 			)
 		);
 		?>
