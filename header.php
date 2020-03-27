@@ -14,10 +14,11 @@
     </script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-    <script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/js/index.js" ></script>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie-only.css" />
+    <?php wp_head(); ?>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/index-babel.js" ></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.min.js"></script>
-	<?php wp_head(); ?>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.matchHeight.js" type="text/javascript"></script>
 </head>
 <?php $bodyClass = get_field('transparent_navigation') ? 'transparentNav' : 'hasBackgroundNav'; ?>
