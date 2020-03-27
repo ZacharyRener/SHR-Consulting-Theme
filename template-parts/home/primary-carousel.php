@@ -47,37 +47,38 @@ echo '<section id="primary-carousel" class="carousel slide carousel-fade" data-r
             echo '</div>';
           echo '</div>';
 
-          echo '<script>';
+          echo "<script>
 
-            echo 'function slide'.$slideCount.'Functionality() {';
+            function slide".$slideCount."Functionality() {
 
-              echo 'let topText = jQuery(".slide-'.$slideCount.' .top-text");';
-              echo 'let bottomText = jQuery(".slide-'.$slideCount.' .bottom-text");';
-              echo 'let slideCount = jQuery(".slide-'.$slideCount.' .slide-count");';
-              echo 'let excerpt = jQuery(".slide-'.$slideCount.' .excerpt");';
-              echo 'let button = jQuery(".slide-'.$slideCount.' .btn");';
+              var topText = jQuery('.slide-$slideCount .top-text');
+              var bottomText = jQuery('.slide-$slideCount .bottom-text');
+              var slideCount = jQuery('.slide-$slideCount .slide-count');
+              var excerpt = jQuery('.slide-$slideCount .excerpt');
+              var button = jQuery('.slide-$slideCount .btn');
 
-              echo 'let leftValue = -(topText.innerWidth() / 5);';
-              echo 'let rightValue = bottomText.innerWidth() / 5;';
+              var leftValue = -(topText.innerWidth() / 5);
+              var rightValue = bottomText.innerWidth() / 5;
 
-              echo 'let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;';
-              echo 'if (!isMobile) {';
-                echo 'topText.attr("style", `left: ${leftValue}px !important;`);';
-                echo 'bottomText.attr("style", `left: ${rightValue}px !important;`);';
-                echo 'slideCount.attr("style", "left: 0 !important;");';
-                echo 'excerpt.attr("style", "left: 35% !important;");';
-                echo 'button.attr("style", "left: 35% !important;");';
-              echo '} else {';
-                echo 'topText.attr("style", `left: 0 !important;`);';
-                echo 'bottomText.attr("style", `left: 0 !important;`);';
-                echo 'slideCount.attr("style", "left: 0 !important;");';
-                echo 'excerpt.attr("style", "left:0 !important;");';
-                echo 'button.attr("style", "left: 0 !important;");';
-              echo '}';
+              var isMobile = window.matchMedia('only screen and (max-width: 760px)').matches;
+              if (!isMobile) {";
+                echo 'topText.attr("style", "left: "+leftValue+"px !important;");';
+                echo 'bottomText.attr("style", "left: "+rightValue+"px !important;");';
+              echo "
+                slideCount.attr('style', 'left: 0 !important;');
+                excerpt.attr('style', 'left: 35% !important;');
+                button.attr('style','left: 35% !important;');
+              } else {
+                topText.attr('style', 'left: 0 !important;');
+                bottomText.attr('style', 'left: 0 !important;');
+                slideCount.attr('style', 'left: 0 !important;');
+                excerpt.attr('style', 'left:0 !important;');
+                button.attr('style', 'left: 0 !important;');
+              }
               
-            echo '}';
+            }
           
-          echo '</script>';
+          </script>";
 
         echo '</div>';
 
@@ -92,7 +93,7 @@ echo '<section id="primary-carousel" class="carousel slide carousel-fade" data-r
 	arrowDown('#pathways');
 
 echo "<script>";
-echo "jQuery(document).ready( () => {";
+echo "jQuery(document).ready(function () {";
 echo "var scene = document.getElementById('scene-0');";
 echo "var parallaxInstance = new Parallax(scene, { relativeInput: true });";
 echo "slide0Functionality();";
